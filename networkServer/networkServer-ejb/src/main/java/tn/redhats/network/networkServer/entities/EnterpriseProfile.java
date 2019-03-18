@@ -21,6 +21,9 @@ public class EnterpriseProfile extends Profile implements Serializable {
 	private List<String> locations;
 	private String website;
 	private int employeesNumber;
+	@Column
+	@ElementCollection(targetClass=String.class)
+	private List<String> followers;
 	private static final long serialVersionUID = 1L;
 
 	public EnterpriseProfile() {

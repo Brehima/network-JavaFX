@@ -28,6 +28,9 @@ public class CandidateProfile extends Profile implements Serializable {
 	private List<String> skills;
 	@Column(nullable=true)
 	private String cv;
+	@Column
+	@ElementCollection(targetClass=String.class)
+	private List<String> followedEnterprises;
 	private static final long serialVersionUID = 1L;
 
 	public CandidateProfile() {
