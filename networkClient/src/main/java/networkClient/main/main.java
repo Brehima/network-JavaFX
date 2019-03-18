@@ -13,7 +13,7 @@ public class main {
 		String jndiName = "networkServer-ear/networkServer-ejb/AdminService!tn.redhats.network.networkServer.services.AdminServiceRemote";
 		Context context =  new InitialContext();
 		AdminServiceRemote proxy = (AdminServiceRemote) context.lookup(jndiName);
-		System.out.print(proxy.sayHello("Hello network !"));
+		System.out.print(proxy.sayHello("Hello test !"));
 
 	}
 
