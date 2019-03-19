@@ -16,6 +16,7 @@ public class Interview implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private Timestamp interviewDate;
 	private String status;

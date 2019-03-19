@@ -16,6 +16,7 @@ public class Profile implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	protected int id;
 	protected String introduction;
 	protected String photo;
