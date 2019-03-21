@@ -73,8 +73,8 @@ public class CandidateProfile extends Profile implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "CandidateProfile [education=" + education + ", volunteeringExperiences=" + volunteeringExperiences
-				+ ", certifications=" + certifications + ", skills=" + skills + ", cv=" + cv + "]";
+		return super.toString();// [education=" + education + ", volunteeringExperiences=" + volunteeringExperiences
+			//	+ ", certifications=" + certifications + ", skills=" + skills + ", cv=" + cv + "]";
 	}
 	
 	

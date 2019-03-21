@@ -16,6 +16,7 @@ public class Event implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String title;
 	private String description;

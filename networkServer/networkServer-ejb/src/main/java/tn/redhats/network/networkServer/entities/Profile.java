@@ -2,6 +2,8 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.logging.Logger;
+
 import javax.persistence.*;
 
 /**
@@ -16,6 +18,7 @@ public class Profile implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	protected int id;
 	protected String introduction;
 	protected String photo;
@@ -57,7 +60,8 @@ public class Profile implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Profile [id=" + id + ", introduction=" + introduction + ", user=" + user + "]";
+		return "Profile [id=" + this.id + ", introduction=" + this.introduction;
+		
 	}
 	
 	

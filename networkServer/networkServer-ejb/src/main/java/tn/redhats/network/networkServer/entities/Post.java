@@ -17,6 +17,7 @@ public class Post implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String description;
 	@Column

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.ejb.Local;
 
+import tn.redhats.network.networkServer.entities.CandidateProfile;
 import tn.redhats.network.networkServer.entities.JobOffer;
 import tn.redhats.network.networkServer.entities.Post;
 import tn.redhats.network.networkServer.entities.User;
@@ -14,11 +15,12 @@ public interface CandidatProfilServiceLocal {
 	User showProfil(User user);
 	User updateProfil(User user);
 	List<User> searchContact(String keyword);
-	Boolean addContact(User user);
+	void addContact(int idCurrentUSER,int idUserToAdd);
 	List<User> searchEntreprise(String keyword);
 	Boolean subEnterprise(String keyword);
 	List<User> showContact();
 	List<User> showFollowedEnterprise();
 	List<JobOffer> showJobs(String keyword);
+	CandidateProfile findCandidatById(int id);
 	
 }

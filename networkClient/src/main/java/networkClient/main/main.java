@@ -4,6 +4,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import tn.redhats.network.networkServer.entities.CandidateProfile;
 import tn.redhats.network.networkServer.entities.User;
 import tn.redhats.network.networkServer.enumeration.Role;
 import tn.redhats.network.networkServer.services.AdminServiceRemote;
@@ -18,12 +19,19 @@ public class main {
 		Context context =  new InitialContext();
 		CandidatProfilServiceRemote proxy = (CandidatProfilServiceRemote) context.lookup(jndiName1);
 		User user = new User();
+		CandidateProfile candidate = new CandidateProfile();
+		candidate.setIntroduction("ceci est une introduction");
+		candidate.setPhoto("photo");
+		
 		user.setFirstName("brehima");
 		user.setLastName("coulibaly");
 		user.setEmail("brehima.coulibaly@esprit.tn");
 		user.setPassword("password");
 		user.setRole(Role.Candidate);
+		candidate.setUser(user);
+		user.setProfile(candidate);
 		System.out.print(proxy.signUp(user));
+		System.out.println(proxy.findCandidatById(1));
 
 	}
 

@@ -16,6 +16,7 @@ public class Notification implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private Timestamp dateNotification;
 	private String type;

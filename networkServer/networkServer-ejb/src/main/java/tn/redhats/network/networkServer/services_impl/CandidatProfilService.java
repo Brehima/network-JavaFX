@@ -6,6 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import tn.redhats.network.networkServer.entities.CandidateProfile;
 import tn.redhats.network.networkServer.entities.JobOffer;
 import tn.redhats.network.networkServer.entities.User;
 import tn.redhats.network.networkServer.services.CandidatProfilServiceLocal;
@@ -19,6 +20,7 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 	@Override
 	public Boolean signUp(User user) {
 		syncDatabase();
+		em.persist(user.getProfile());
 		em.persist(user);
 		return true;
 	}
@@ -40,11 +42,16 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 
 	@Override
-	public Boolean addContact(User user) {
-		// TODO Auto-generated method stub
-		return null;
+	public void addContact(int idCurrentUSER,int idUserToAdd){
+		CandidateProfile candidat = findCandidatById(idCurrentUSER);
+		CandidateProfile friend =  findCandidatById(idUserToAdd);
+		List<User> friendList = candidat.getUser().getUsers();
+		friendList.add(friend.getUser());
+		candidat.getUser().setUsers(friendList);
+		//candidat.getUser().setUsers(users);candidat.getUser().getUsers().add(friend.getUser());
 	}
 
 	@Override
@@ -78,5 +85,14 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 	}
 	public void  syncDatabase() {
 		em.flush();
+	}
+	@Override
+	public CandidateProfile findCandidatById(int id)
+	{
+		syncDatabase();
+		CandidateProfile candidat = em.find(CandidateProfile.class, id);
+		
+		return candidat;
+		
 	}
 }

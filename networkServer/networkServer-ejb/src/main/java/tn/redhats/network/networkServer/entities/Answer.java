@@ -14,6 +14,7 @@ public class Answer implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String answer;
 	@OneToOne(mappedBy="answer")
