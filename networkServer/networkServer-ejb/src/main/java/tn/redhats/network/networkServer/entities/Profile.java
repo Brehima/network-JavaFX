@@ -2,6 +2,9 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -20,13 +23,15 @@ public class Profile implements Serializable {
 	protected int id;
 	protected String introduction;
 	protected String photo;
-	@OneToOne(mappedBy="profile")
-	protected User user;
-	
+	@Column
+	@ElementCollection(targetClass=User.class)
+	@OneToMany (mappedBy="profile")
+	protected List<User> users;
 	private static final long serialVersionUID = 1L;
 
 	public Profile() {
 		super();
+		users= new ArrayList<User>();
 	}   
 	public int getId() {
 		return this.id;
@@ -42,12 +47,7 @@ public class Profile implements Serializable {
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
 	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
+ 
 	
 	
 	public String getPhoto() {
@@ -56,9 +56,16 @@ public class Profile implements Serializable {
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
+	
+	public List<User> getUsers() {
+		return users;
+	}
+	public void setUsers(List<User> users) {
+		this.users = users;
+	}
 	@Override
 	public String toString() {
-		return "Profile [id=" + id + ", introduction=" + introduction + ", user=" + user + "]";
+		return "Profile [id=" + id + ", introduction=" + introduction + "]";
 	}
 	
 	

@@ -27,7 +27,7 @@ public class User implements Serializable {
 	private String username;
 	private String email;
 	private String password;
-	@OneToOne
+	@ManyToOne
 	private Profile profile;
 	@Enumerated(EnumType.STRING)
 	private Role role;
