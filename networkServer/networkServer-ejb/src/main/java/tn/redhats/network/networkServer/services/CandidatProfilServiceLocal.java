@@ -12,14 +12,16 @@ import tn.redhats.network.networkServer.entities.User;
 @Local
 public interface CandidatProfilServiceLocal {
 	Boolean signUp(User user);
-	User showProfil(User user);
-	User updateProfil(User user);
+	void signInStepOne(String id, String password);
+	void signInStepTwo(int code2FA);
+	CandidateProfile showProfil(int id);
+	CandidateProfile updateProfil(CandidateProfile profile);
 	List<User> searchContact(String keyword);
 	void addContact(int idCurrentUSER,int idUserToAdd);
 	List<User> searchEntreprise(String keyword);
 	Boolean subEnterprise(String keyword);
-	List<User> showContact();
-	List<User> showFollowedEnterprise();
+	List<User> showContact(int idUser);
+	List<User> showFollowedEnterprise(int idEnterprise);
 	List<JobOffer> showJobs(String keyword);
 	CandidateProfile findCandidatById(int id);
 	

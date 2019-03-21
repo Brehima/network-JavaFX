@@ -3,8 +3,10 @@ package tn.redhats.network.networkServer.services_impl;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.persistence.Query;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import tn.redhats.network.networkServer.entities.CandidateProfile;
 import tn.redhats.network.networkServer.entities.JobOffer;
@@ -24,23 +26,31 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 		em.persist(user);
 		return true;
 	}
-
+    
 	@Override
-	public User showProfil(User user) {
-		// TODO Auto-generated method stub
-		return null;
+	public CandidateProfile showProfil(int id) {
+	
+		return findCandidatById(id);
 	}
 
 	@Override
-	public User updateProfil(User user) {
-		// TODO Auto-generated method stub
-		return null;
+	public CandidateProfile updateProfil(CandidateProfile profile) {
+		CandidateProfile cand = showProfil(profile.getId());
+		cand = em.find(CandidateProfile.class,profile.getId());
+		cand = profile;
+		syncDatabase();
+		return cand;
 	}
 
 	@Override
 	public List<User> searchContact(String keyword) {
-		// TODO Auto-generated method stub
-		return null;
+		Query query = em.createQuery("SELECT u from CandidateProfile u"+"where u.id like '%"+keyword+"%' "
+																	   + "or u.firstName like '%"+keyword+"%'"
+																	   + "or u.lastName like '%"+keyword+"%'"
+																	   + "or u.username like '%"+keyword+"%'"
+																	   + "or u.email like '%"+keyword+"%'");
+		List<User> users =(List<User>) query.getResultList();
+		return users;
 	}
 	
 
@@ -51,7 +61,6 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 		List<User> friendList = candidat.getUsers().get(0).getUsers();
 		friendList.add(friend.getUsers().get(0));
 		candidat.getUsers().get(0).setUsers(friendList);
-		//candidat.getUser().setUsers(users);candidat.getUser().getUsers().add(friend.getUser());
 	}
 
 	@Override
@@ -67,16 +76,11 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 	}
 
 	@Override
-	public List<User> showContact() {
+	public List<User> showContact(int idUser) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public List<User> showFollowedEnterprise() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public List<JobOffer> showJobs(String keyword) {
@@ -95,4 +99,24 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 		return candidat;
 		
 	}
+
+	@Override
+	public void signInStepOne(String id, String password) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void signInStepTwo(int code2fa) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<User> showFollowedEnterprise(int idEnterprise) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 }
