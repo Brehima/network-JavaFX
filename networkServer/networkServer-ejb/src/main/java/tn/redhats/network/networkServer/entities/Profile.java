@@ -2,6 +2,7 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.List;
 import java.util.logging.Logger;
 
 import javax.persistence.*;
@@ -22,9 +23,8 @@ public class Profile implements Serializable {
 	protected int id;
 	protected String introduction;
 	protected String photo;
-	@OneToOne(mappedBy="profile")
-	protected User user;
-	
+	@OneToMany (mappedBy="profile")
+	protected List<User> users;
 	private static final long serialVersionUID = 1L;
 
 	public Profile() {
@@ -44,11 +44,11 @@ public class Profile implements Serializable {
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
 	}
-	public User getUser() {
-		return user;
+	public List<User> getUsers() {
+		return users;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setUser(List<User> user) {
+		this.users = user;
 	}
 	
 	

@@ -48,9 +48,9 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 	public void addContact(int idCurrentUSER,int idUserToAdd){
 		CandidateProfile candidat = findCandidatById(idCurrentUSER);
 		CandidateProfile friend =  findCandidatById(idUserToAdd);
-		List<User> friendList = candidat.getUser().getUsers();
-		friendList.add(friend.getUser());
-		candidat.getUser().setUsers(friendList);
+		List<User> friendList = candidat.getUsers().get(0).getUsers();
+		friendList.add(friend.getUsers().get(0));
+		candidat.getUsers().get(0).setUsers(friendList);
 		//candidat.getUser().setUsers(users);candidat.getUser().getUsers().add(friend.getUser());
 	}
 
