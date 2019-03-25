@@ -2,6 +2,7 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.persistence.*;
@@ -14,6 +15,10 @@ import javax.persistence.*;
 
 public class CandidateProfile extends Profile implements Serializable {
 
+	@Column
+	private String sexe;
+	@Column
+	private Timestamp dateNaissance;
 	@Column
 	@ElementCollection(targetClass=String.class)
 	private List<String> education;
@@ -70,6 +75,25 @@ public class CandidateProfile extends Profile implements Serializable {
 
 	public void setCv(String cv) {
 		this.cv = cv;
+	}
+	
+	public String getSexe() {
+		return sexe;
+	}
+	public void setSexe(String sexe) {
+		this.sexe = sexe;
+	}
+	public Timestamp getDateNaissance() {
+		return dateNaissance;
+	}
+	public void setDateNaissance(Timestamp dateNaissance) {
+		this.dateNaissance = dateNaissance;
+	}
+	public List<String> getFollowedEnterprises() {
+		return followedEnterprises;
+	}
+	public void setFollowedEnterprises(List<String> followedEnterprises) {
+		this.followedEnterprises = followedEnterprises;
 	}
 	@Override
 	public String toString() {

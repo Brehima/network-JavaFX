@@ -2,6 +2,7 @@ package tn.redhats.network.networkServer.services_impl;
 
 import java.util.List;
 
+import javax.ejb.Stateful;
 import javax.ejb.Stateless;
 import javax.persistence.Query;
 import javax.persistence.EntityManager;
@@ -38,7 +39,8 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 		CandidateProfile cand = showProfil(profile.getId());
 		cand = em.find(CandidateProfile.class,profile.getId());
 		cand = profile;
-		syncDatabase();
+	    
+		//syncDatabase();
 		return cand;
 	}
 

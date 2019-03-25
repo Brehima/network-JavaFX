@@ -2,6 +2,7 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
@@ -58,6 +59,7 @@ public class User implements Serializable {
 
 	public User() {
 		super();
+		users = new ArrayList<User>();
 	}   
 	public int getId() {
 		return this.id;

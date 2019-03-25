@@ -2,6 +2,7 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -29,6 +30,7 @@ public class Profile implements Serializable {
 
 	public Profile() {
 		super();
+		users = new ArrayList<User>();
 	}   
 	public int getId() {
 		return this.id;
