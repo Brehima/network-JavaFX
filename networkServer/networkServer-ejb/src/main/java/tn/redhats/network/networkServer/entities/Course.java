@@ -2,7 +2,9 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -25,12 +27,23 @@ public class Course implements Serializable {
 	private String accomplishmentStatus;
 	private double accomplishmentPercentage;
 	private String validationStatus;
+	private String image_url ;
+	private String Domain;
+	
 	@OneToMany(mappedBy="course")	
 	@Column
 	@ElementCollection(targetClass=CourseEnrollement.class)
 	private List<CourseEnrollement> courses;
+	@OneToMany(mappedBy="course",fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	private Set<Course_chapters> chapters = new HashSet<Course_chapters>() ;
 	
 	
+	public Set<Course_chapters> getChapters() {
+		return chapters;
+	}
+	public void setChapters(Set<Course_chapters> chapters) {
+		this.chapters = chapters;
+	}
 	private static final long serialVersionUID = 1L;
 
 	public Course() {
@@ -103,6 +116,18 @@ public class Course implements Serializable {
 		return "Course [id=" + id + ", courseTitle=" + courseTitle + ", description=" + description + ", rate=" + rate
 				+ ", price=" + price + ", accomplishmentStatus=" + accomplishmentStatus + ", accomplishmentPercentage="
 				+ accomplishmentPercentage + ", validationStatus=" + validationStatus + ", courses=" + courses + "]";
+	}
+	public String getImage_url() {
+		return image_url;
+	}
+	public void setImage_url(String image_url) {
+		this.image_url = image_url;
+	}
+	public String getDomain() {
+		return Domain;
+	}
+	public void setDomain(String domain) {
+		Domain = domain;
 	}
 	
 	

@@ -33,7 +33,7 @@ public class User implements Serializable {
 	private Role role;
 	@OneToMany(mappedBy="user")
 	@Column
-	@ElementCollection(targetClass=CourseEnrollement.class)
+	@ElementCollection(targetClass=CourseEnrollement.class ,fetch=FetchType.EAGER)
 	private List<CourseEnrollement> courses;
 	@OneToMany(mappedBy="user")
 	@Column

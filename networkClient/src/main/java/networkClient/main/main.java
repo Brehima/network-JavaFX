@@ -21,7 +21,7 @@ public class main extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("CoursesClient.fxml"));
             Scene scene = new Scene( root);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Ergacia");
+            primaryStage.setTitle("Network");
             pStage = primaryStage;
             primaryStage.show();
         } catch (IOException ex) {
