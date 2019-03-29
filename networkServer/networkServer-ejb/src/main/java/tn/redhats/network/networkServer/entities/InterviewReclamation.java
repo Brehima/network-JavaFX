@@ -14,6 +14,7 @@ public class InterviewReclamation implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String subject;
 	private String description;

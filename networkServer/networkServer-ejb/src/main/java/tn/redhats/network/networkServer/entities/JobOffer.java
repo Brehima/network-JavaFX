@@ -16,6 +16,7 @@ public class JobOffer implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String description;
 	private String expertiseLevel;

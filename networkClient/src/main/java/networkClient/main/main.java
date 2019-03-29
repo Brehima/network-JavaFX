@@ -1,20 +1,40 @@
 package networkClient.main;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
+import java.io.IOException;
 
-import tn.redhats.network.networkServer.services.AdminServiceRemote;
 
-public class main {
 
-	public static void main(String[] args) throws NamingException{
-		
-		String jndiName = "networkServer-ear/networkServer-ejb/AdminService!tn.redhats.network.networkServer.services.AdminServiceRemote";
-		Context context =  new InitialContext();
-		AdminServiceRemote proxy = (AdminServiceRemote) context.lookup(jndiName);
-		System.out.print(proxy.sayHello("Hello test !"));
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-	}
+public class main extends Application {
+    
+    public static Stage pStage;
+
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("CoursesClient.fxml"));
+            Scene scene = new Scene( root);
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("Ergacia");
+            pStage = primaryStage;
+            primaryStage.show();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
 }

@@ -16,6 +16,7 @@ public class Course implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String courseTitle;
 	private String description;
