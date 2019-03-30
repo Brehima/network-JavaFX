@@ -4,9 +4,11 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.effect.Light.Distant?>
@@ -20,44 +22,46 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.candidateProfile.SignUp_fxmlController">
+<StackPane id="stackPane" prefHeight="757.0" prefWidth="1008.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.candidateProfile.SignUp_fxmlController">
    <children>
-      <TabPane fx:id="tabs" prefHeight="643.0" prefWidth="858.0">
+      <TabPane prefHeight="681.0" prefWidth="858.0" style="-fx-background-color: #2D3447;" tabClosingPolicy="UNAVAILABLE" />
+      <JFXTabPane fx:id="tabs" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab closable="false" text="Sign IN 1/2">
+            <Tab closable="false" text="Sign IN 1/3">
                <content>
-                  <AnchorPane id="AnchorPane" prefHeight="557.0" prefWidth="858.0" style="-fx-background-color: white;">
+                  <AnchorPane id="AnchorPane" prefHeight="557.0" prefWidth="858.0" style="-fx-background-color: #2D3447;">
                      <children>
-                        <ImageView fitHeight="68.0" fitWidth="103.0" layoutX="366.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="270.0" fitWidth="456.0" layoutX="307.0" layoutY="-87.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../../../icon/logo.png" />
+                              <Image url="@signupcandidate1.png" />
                            </image>
                         </ImageView>
-                        <JFXButton buttonType="RAISED" layoutX="710.0" layoutY="23.0" ripplerFill="RED" text="Sign IN" />
-                        <JFXButton buttonType="RAISED" layoutX="74.0" layoutY="23.0" ripplerFill="RED" text="Preview" textFill="#030303" />
-                        <HBox layoutX="194.0" layoutY="118.0" prefHeight="354.0" prefWidth="426.0">
+                        <JFXButton buttonType="RAISED" layoutX="919.0" layoutY="23.0" onMouseClicked="#loadSignIn" ripplerFill="RED" style="-fx-background-color: #151928;" text="Sign IN" textFill="#a0a2ab" />
+                        <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="23.0" onMouseClicked="#loadSignIn" ripplerFill="RED" style="-fx-background-color: #151928;" text="&lt; preview" textFill="#a0a2ab" />
+                        <HBox layoutX="291.0" layoutY="168.0" prefHeight="501.0" prefWidth="426.0">
                            <children>
-                              <VBox prefHeight="354.0" prefWidth="695.0">
+                              <VBox prefHeight="461.0" prefWidth="426.0">
                                  <children>
-                                    <JFXTextField fx:id="firstName" labelFloat="true" onKeyReleased="#validateFirstName" prefHeight="25.0" prefWidth="366.0" promptText="first name" style="-fx-padding: 20;">
+                                    <JFXTextField fx:id="firstName" focusColor="WHITE" labelFloat="true" onKeyReleased="#validateFirstName" prefHeight="25.0" prefWidth="366.0" promptText="first name" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
                                     </JFXTextField>
-                                    <JFXTextField fx:id="lastName" labelFloat="true" layoutX="10.0" layoutY="10.0" onKeyReleased="#validateLastName" prefHeight="25.0" prefWidth="366.0" promptText="last name" style="-fx-padding: 20;" />
-                                    <JFXDatePicker fx:id="birthDate" onAction="#validateDate" overLay="true" prefHeight="25.0" prefWidth="760.0" promptText="your birth date" style="-fx-padding: 20;">
+                                    <JFXTextField fx:id="lastName" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="10.0" onKeyReleased="#validateLastName" prefHeight="25.0" prefWidth="366.0" promptText="last name" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab" />
+                                    <JFXDatePicker fx:id="birthDate" onAction="#validateDate" overLay="true" prefHeight="25.0" prefWidth="760.0" promptText="your birth date" style="-fx-padding: 20; -fx-text-inner-color: white;">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
                                     </JFXDatePicker>
-                                    <JFXComboBox fx:id="sexe" labelFloat="true" prefHeight="28.0" prefWidth="679.0" promptText="Gender" style="-fx-padding: 20;">
+                                    <JFXComboBox fx:id="sexe" focusColor="WHITE" labelFloat="true" prefHeight="28.0" prefWidth="679.0" promptText="Gender" style="-fx-padding: 20; -fx-text-fill: white;" unFocusColor="#a0a2ab">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
                                     </JFXComboBox>
-                                    <JFXTextField fx:id="email" labelFloat="true" layoutX="10.0" layoutY="47.0" prefHeight="25.0" prefWidth="366.0" promptText="email" style="-fx-padding: 20;" />
-                                    <JFXTextField fx:id="username" labelFloat="true" layoutX="10.0" layoutY="174.0" prefHeight="25.0" prefWidth="366.0" promptText="username" style="-fx-padding: 20;" />
-                                    <JFXPasswordField fx:id="password" labelFloat="true" promptText="password" style="-fx-padding: 20;" />
+                                    <JFXTextField fx:id="email" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="47.0" onKeyReleased="#validateEmail" prefHeight="25.0" prefWidth="366.0" promptText="email" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab" />
+                                    <JFXTextField fx:id="username" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="174.0" onKeyReleased="#validateUsername" prefHeight="25.0" prefWidth="366.0" promptText="username" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab" />
+                                    <JFXPasswordField fx:id="password" focusColor="WHITE" labelFloat="true" onKeyReleased="#validatePassword" promptText="password" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab" />
+                                    <Label fx:id="passLabel" prefHeight="39.0" prefWidth="411.0" style="-fx-padding: 20;" textFill="WHITE" />
                                  </children>
                                  <opaqueInsets>
                                     <Insets />
@@ -75,23 +79,23 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <JFXButton layoutX="718.0" layoutY="566.0" onMouseClicked="#goToStep2SignUp" text="next" textAlignment="CENTER" />
+                        <JFXButton layoutX="935.0" layoutY="669.0" onMouseClicked="#goToStep2SignUp" style="-fx-background-color: #151928;" text="next&gt;" textAlignment="CENTER" textFill="#a0a2ab" />
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab closable="false" text="Sign IN 2/2">
+            <Tab closable="false" text="Sign IN 2/3">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2D3447;">
                      <children>
-                        <ImageView fitHeight="76.0" fitWidth="87.0" layoutX="386.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="310.0" fitWidth="491.0" layoutX="291.0" layoutY="-63.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../../../icon/logo.png" />
+                              <Image url="@signupcandidate2.png" />
                            </image>
                         </ImageView>
                         <JFXButton buttonType="RAISED" layoutX="789.0" layoutY="10.0" prefHeight="19.0" prefWidth="55.0" ripplerFill="RED" text="Sign IN" />
-                        <JFXButton buttonType="RAISED" layoutX="-7.0" layoutY="10.0" onMouseClicked="#goToStep1SignUp" ripplerFill="RED" text="Preview" textFill="#030303" />
-                        <HBox layoutX="216.0" layoutY="142.0" prefHeight="354.0" prefWidth="426.0">
+                        <JFXButton buttonType="RAISED" layoutX="-7.0" layoutY="10.0" onMouseClicked="#goToStep1SignUp" ripplerFill="RED" style="-fx-background-color: #151928;" text="&lt; preview" textFill="#a0a2ab" />
+                        <HBox layoutX="319.0" layoutY="247.0" prefHeight="354.0" prefWidth="426.0">
                            <children>
                               <VBox prefHeight="354.0" prefWidth="695.0">
                                  <opaqueInsets>
@@ -108,18 +112,18 @@
                                     </Lighting>
                                  </effect>
                                  <children>
-                                    <JFXTextArea fx:id="introduction" labelFloat="true" prefHeight="85.0" prefWidth="426.0" promptText="tell us about you in less than 50 words">
+                                    <JFXTextArea fx:id="introduction" focusColor="WHITE" labelFloat="true" prefHeight="85.0" prefWidth="426.0" promptText="tell us about you in less than 50 words" style="-fx-text-inner-color: white;" unFocusColor="#a0a2ab">
                                        <padding>
                                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                        </padding></JFXTextArea>
                                     <Pane prefHeight="200.0" prefWidth="200.0">
                                        <children>
-                                          <ImageView fx:id="profileImage" fitHeight="201.0" fitWidth="244.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="profileImage" fitHeight="201.0" fitWidth="244.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../../../../../../../../../../icon/logo.png" />
+                                                <Image url="@logo.png" />
                                              </image>
                                           </ImageView>
-                                          <JFXButton layoutX="245.0" layoutY="174.0" onMouseClicked="#setProfilePicture" text="profile picture" />
+                                          <JFXButton layoutX="245.0" layoutY="174.0" onMouseClicked="#setProfilePicture" style="-fx-background-color: #151928;" text="profile picture" textFill="WHITE" />
                                        </children>
                                        <VBox.margin>
                                           <Insets top="20.0" />
@@ -129,12 +133,53 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <JFXButton buttonType="RAISED" layoutX="737.0" layoutY="509.0" onMouseClicked="#finishSignUp" ripplerFill="#006fff" text="skip and finish" />
+                        <JFXButton layoutX="876.0" layoutY="657.0" onMouseClicked="#finishSignUp" ripplerFill="#006fff" style="-fx-background-color: #151928;" text="next &gt;" textFill="#a0a2ab" />
                      </children>
                   </AnchorPane>
               </content>
             </Tab>
+            <Tab closable="false" text="Sign IN 3/3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2D3447;">
+                     <children>
+                        <ImageView fitHeight="286.0" fitWidth="591.0" layoutX="278.0" layoutY="-46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@signupcandidate3.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton buttonType="RAISED" layoutX="-7.0" layoutY="10.0" onMouseClicked="#goToStep2SignUp" ripplerFill="RED" style="-fx-background-color: #151928;" text="&lt; preview" textFill="#a0a2ab" />
+                        <HBox layoutX="286.0" layoutY="256.0" prefHeight="354.0" prefWidth="426.0">
+                           <children>
+                              <VBox prefHeight="354.0" prefWidth="695.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <children>
+                                    <JFXTextField fx:id="signUpCode" focusColor="WHITE" labelFloat="true" onKeyReleased="#validateFirstName" prefHeight="25.0" prefWidth="366.0" promptText="your validation code" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </JFXTextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <JFXButton layoutX="934.0" layoutY="673.0" onMouseClicked="#verifyUserCode" ripplerFill="#006fff" style="-fx-background-color: #151928;" text="finish" textFill="#a0a2ab" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
          </tabs>
-      </TabPane>
+      </JFXTabPane>
    </children>
 </StackPane>

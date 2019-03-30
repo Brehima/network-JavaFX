@@ -1,11 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.candidateProfile.SignIn_fxmlController">
-    
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="731.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.candidateProfile.SignIn_fxmlController">
+   <children>
+      <ImageView fitHeight="109.0" fitWidth="153.0" layoutX="315.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../resources/fxml/logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="644.0" layoutY="23.0" onMouseClicked="#loadSignUp" ripplerFill="RED" style="-fx-background-color: #151928;" text="Sign UP" textFill="#a0a2ab" />
+      <HBox layoutX="160.0" layoutY="181.0" prefHeight="243.0" prefWidth="383.0">
+         <children>
+            <VBox prefHeight="354.0" prefWidth="695.0">
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="650.0">
+                     <children>
+                        <ImageView fitHeight="61.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../resources/fxml/username.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="userID" focusColor="WHITE" labelFloat="true" prefHeight="57.0" prefWidth="621.0" promptText="username or email" style="-fx-padding: 20; -fx-text-fill: white;" unFocusColor="#a0a2ab">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../resources/fxml/password.png" />
+                           </image>
+                        </ImageView>
+                        <JFXPasswordField fx:id="userpass" focusColor="WHITE" labelFloat="true" prefHeight="57.0" prefWidth="604.0" promptText="password" style="-fx-padding: 20; -fx-text-fill: white;" unFocusColor="#a0a2ab" />
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </VBox>
+         </children>
+      </HBox>
+      <JFXButton layoutX="624.0" layoutY="521.0" onAction="#login" onMouseClicked="#login" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #151928;" text="login" textAlignment="CENTER" textFill="#a0a2ab" />
+   </children>
 </AnchorPane>

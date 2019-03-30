@@ -24,7 +24,8 @@ public class Profile implements Serializable {
 	protected int id;
 	protected String introduction;
 	protected String photo;
-	@OneToMany (mappedBy="profile")
+	@OneToMany (mappedBy="profile",cascade=CascadeType.REMOVE)
+	
 	protected List<User> users;
 	private static final long serialVersionUID = 1L;
 

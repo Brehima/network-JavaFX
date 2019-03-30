@@ -27,12 +27,13 @@ import tn.redhats.network.networkServer.services.CandidatProfilServiceRemote;
 public class candidateFXMain extends Application {
     
     private static CandidatProfilServiceRemote proxy;
-
+    public static Stage stage= new Stage();
 	@Override
     public void start(Stage stage) throws Exception {    
       
-        Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/signUp_fxml.fxml"));
-       
+        //Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/signUp_fxml.fxml"));
+      //  Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/profilePage.fxml"));
+        Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/signIN_fxml.fxml"));
         //JFXDecorator decorator = new JFXDecorator(stage, root);
         //decorator.setCustomMaximize(false);
         //decorator.setBorder(Border.EMPTY);
@@ -42,6 +43,7 @@ public class candidateFXMain extends Application {
          
         stage.setScene(scene);
         stage.setIconified(false);
+        candidateFXMain.stage=stage;
         stage.show();
         
         
