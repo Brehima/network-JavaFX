@@ -33,7 +33,8 @@ public class candidateFXMain extends Application {
       
         //Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/signUp_fxml.fxml"));
       //  Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/profilePage.fxml"));
-        Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/signIN_fxml.fxml"));
+      //Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/signIN_fxml.fxml"));
+        Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/contactPage.fxml"));
         //JFXDecorator decorator = new JFXDecorator(stage, root);
         //decorator.setCustomMaximize(false);
         //decorator.setBorder(Border.EMPTY);

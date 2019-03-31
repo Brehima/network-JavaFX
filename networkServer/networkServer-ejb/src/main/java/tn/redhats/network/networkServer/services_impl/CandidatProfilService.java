@@ -18,6 +18,7 @@ import tn.redhats.network.networkServer.entities.Code2FACandidate;
 import tn.redhats.network.networkServer.entities.JobOffer;
 import tn.redhats.network.networkServer.entities.Profile;
 import tn.redhats.network.networkServer.entities.User;
+import tn.redhats.network.networkServer.entities.invitations;
 import tn.redhats.network.networkServer.enumeration.AccountStatus;
 import tn.redhats.network.networkServer.services.CandidatProfilServiceLocal;
 import tn.redhats.network.networkServer.services.CandidatProfilServiceRemote;
@@ -80,12 +81,13 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
    
 	@Override
 	public List<User> searchContact(String keyword) {
-		Query query = em.createQuery("SELECT u from CandidateProfile u"+"where u.id like '%"+keyword+"%' "
-																	   + "or u.firstName like '%"+keyword+"%'"
+		Query query = em.createQuery("SELECT u from User u "+"where u.firstName like '%"+keyword+"%'"
 																	   + "or u.lastName like '%"+keyword+"%'"
 																	   + "or u.username like '%"+keyword+"%'"
 																	   + "or u.email like '%"+keyword+"%'");
+		//TypedQuery<User> quer = em.createQuery("SELECT u FROM User u where u.username= :username",User.class);
 		List<User> users =(List<User>) query.getResultList();
+		
 		return users;
 	}
 	
@@ -305,6 +307,22 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 			u.setPassword(user.getPassword());
 			//u.setProfile(user.getProfile());
 			u.setUsername(user.getUsername());
+			System.out.println("------------------------------------SIZEUsers"+u.getUsers());
+			System.out.println("-------------------------------user:"+u);
+		   if(u.getUsers().size()>0)
+		   {		   
+			   for(User i:user.getUsers())
+			   {
+				   if(!u.getUsers().contains(i))
+				   {
+					   u.getUsers().add(i);
+				   }
+			   }
+		   }
+		   else
+		   {
+			   u.getUsers().add(user);
+		   }
 			em.flush();
 			//updateUser(user);
 		    return u;
@@ -316,6 +334,68 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 	public User updateLogginAttempts(User user) {
 	
 		return null;
+	}
+
+	@Override
+	public void sendFriendRequest(User sender, User receiver) {
+		// TODO Auto-generated method stub
+		invitations invi = new invitations();
+		invi.setSender(sender);
+		invi.setReceiver(receiver);
+		if(em.find(invitations.class, invi.getId())==null)
+		{
+			em.persist(invi);
+		}
+	}
+
+	@Override
+	public List<invitations> getFriendRequest(User user) {
+		TypedQuery<invitations> query = em.createQuery("SELECT inv FROM  invitations inv where inv.receiver.id= :userId",invitations.class);
+		query.setParameter("userId", user.getId());
+		try {
+			//System.out.println("------------------------------------"+query.getResultList());
+			List<invitations> invitation = query.getResultList();
+			return invitation;
+		} catch (NoResultException e) {
+			System.out.println("no result found");
+		}
+		
+		return null;
+	}
+	
+	@Override
+	public void removeUserFriendList(int idSender,int idReceiver,String status) {
+		TypedQuery<invitations> query = em.createQuery("SELECT inv FROM  invitations inv where inv.receiver.id= :userId",invitations.class);
+	//	TypedQuery<invitations> query = em.createQuery("DELETE inv FROM invitations inv where inv.receiver.id= :receiverId and inv.sender.id= :senderId",invitations.class);
+		query.setParameter("userId", idReceiver);
+		try {
+			//System.out.println("------------------------------------"+query.getResultList());
+			List<invitations> invitation = query.getResultList();
+			for(invitations i: invitation)
+			{
+				if(i.getSender().getId()==idSender  && i.getReceiver().getId()==idReceiver)
+				{
+					if(status.equals("ACCEPT"))
+					{
+						User user = i.getReceiver();
+						user.getUsers().add(i.getSender());
+						
+						if(updateUser(user)!=null)
+						{
+							em.remove(i);
+						}
+					}
+					else
+					{
+						em.remove(i);
+					}
+				}
+			}
+		} catch (NoResultException e) {
+			System.out.println("no result found");
+		}
+		
+    
 	}
 
 	

@@ -30,9 +30,9 @@ public class main {
 	public static void main(String[] args) throws NamingException{
 		
 	//	String jndiName = "networkServer-ear/networkServer-ejb/AdminService!tn.redhats.network.networkServer.services.AdminServiceRemote";
-	//	String jndiName1="networkServer-ear/networkServer-ejb/CandidatProfilService!tn.redhats.network.networkServer.services.CandidatProfilServiceRemote";
-	//	Context context =  new InitialContext();
-		//CandidatProfilServiceRemote proxy= (CandidatProfilServiceRemote) context.lookup(jndiName1);
+		String jndiName1="networkServer-ear/networkServer-ejb/CandidatProfilService!tn.redhats.network.networkServer.services.CandidatProfilServiceRemote";
+		Context context =  new InitialContext();
+		CandidatProfilServiceRemote proxy= (CandidatProfilServiceRemote) context.lookup(jndiName1);
 //		CandidatProfilServiceRemote proxy = getProxy();
 //		User user = new User();
 //		CandidateProfile candidate = new CandidateProfile();
@@ -55,7 +55,7 @@ public class main {
 		System.out.println(proxy.updateProfil(candidate));*/
 		
 		//SignUp_fxmlController.sendEmailBySSl(SignUp_fxmlController.generateCode(),"brehima.coulibaly@esprit.tn");
-		
+		System.out.println(proxy.searchContact("toto"));
 	//  System.out.println(	BCrypt.hashpw("admin", BCrypt.gensalt()) );
 	}
 

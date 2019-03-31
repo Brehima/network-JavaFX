@@ -1,0 +1,713 @@
+Found a 33 line (197 tokens) duplication in the following files: 
+Starting at line 15 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services\CandidatProfilServiceLocal.java
+Starting at line 14 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services\CandidatProfilServiceRemote.java
+
+public interface CandidatProfilServiceLocal {
+	Boolean signUp(User user);
+	User signInStepOne(String id);
+	Code2FACandidate signInStepTwo(int idUser);
+	
+	CandidateProfile showProfil(int id);
+	CandidateProfile updateProfil(CandidateProfile profile);
+	List<User> searchContact(String keyword);
+	void addContact(int idCurrentUSER,int idUserToAdd);
+	List<User> searchEntreprise(String keyword);
+	Boolean subEnterprise(String keyword);
+	List<User> showContact(int idUser);
+	List<User> showFollowedEnterprise(int idEnterprise);
+	List<JobOffer> showJobs(String keyword);
+	CandidateProfile findCandidatById(int id);
+	Boolean checkUserName(String name);
+	Boolean checkEmail(String email);
+	void addCode(Code2FACandidate code);
+	void removeCode(int idUser);
+	void updateCode(int idUser,String newCode);
+	Code2FACandidate  findCode(int idUser);
+	User findUserByUsername(String username);
+	User findUserByEmail(String email);
+
+	void updateAccountStatus(User user);
+	User updateUser(User user);
+	User updateLogginAttempts(User user);
+	
+	void sendFriendRequest(User sender,User receiver);
+	List<invitations> getFriendRequest(User user);	
+	void removeUserFriendList(int idSender,int idReceiver,String status);
+	
+}
+=====================================================================
+Found a 41 line (141 tokens) duplication in the following files: 
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+	public InterviewReclamation() {
+		super();
+	}   
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}   
+	public String getSubject() {
+		return this.subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}   
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}   
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}   
+	public User getUser() {
+		return this.user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	@Override
+	public String toString() {
+		return "InterviewReclamation [id=" + id + ", subject=" + subject + ", description=" + description + ", status="
+=====================================================================
+Found a 11 line (66 tokens) duplication in the following files: 
+Starting at line 34 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 295 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+
+		User u = em.find(User.class, user.getId());
+		if(u!=null)
+		{
+			u.setLastName(user.getLastName());
+			u.setAccountStatus(user.getAccountStatus());
+			
+			u.setEmail(user.getEmail());
+			u.setFirstName(user.getFirstName());
+		
+	
+			u.setLoginAttempts(user.getLoginAttempts());
+=====================================================================
+Found a 18 line (58 tokens) duplication in the following files: 
+Starting at line 25 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseRating.java
+Starting at line 25 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\EnterpriseRating.java
+
+	public CourseRating() {
+		super();
+	}   
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}   
+	public double getRate() {
+		return this.rate;
+	}
+
+	public void setRate(double rate) {
+		this.rate = rate;
+	}   
+	public Course getCourse() {
+=====================================================================
+Found a 18 line (58 tokens) duplication in the following files: 
+Starting at line 30 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobOffer.java
+Starting at line 34 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Post.java
+
+	public JobOffer() {
+		super();
+	}   
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}   
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}   
+	public String getExpertiseLevel() {
+=====================================================================
+Found a 13 line (52 tokens) duplication in the following files: 
+Starting at line 35 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseEnrollementPK.java
+Starting at line 35 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobApplicationPK.java
+
+	}
+	@Override
+	public int hashCode() {
+		return 5;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+=====================================================================
+Found a 15 line (51 tokens) duplication in the following files: 
+Starting at line 52 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Comment.java
+Starting at line 71 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Post.java
+
+	}   
+	public int getLikesNumber() {
+		return this.likesNumber;
+	}
+
+	public void setLikesNumber(int likesNumber) {
+		this.likesNumber = likesNumber;
+	}   
+	public int getDislikesNumber() {
+		return this.dislikesNumber;
+	}
+
+	public void setDislikesNumber(int dislikesNumber) {
+		this.dislikesNumber = dislikesNumber;
+	}   
+=====================================================================
+Found a 15 line (51 tokens) duplication in the following files: 
+Starting at line 42 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 50 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Notification.java
+Starting at line 42 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+	}   
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}   
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}   
+=====================================================================
+Found a 12 line (43 tokens) duplication in the following files: 
+Starting at line 32 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Profile.java
+Starting at line 67 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\User.java
+
+	public Profile() {
+		super();
+		users = new ArrayList<User>();
+	}   
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}   
+	public String getIntroduction() {
+=====================================================================
+Found a 14 line (39 tokens) duplication in the following files: 
+Starting at line 13 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 13 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+public class InterviewReclamation implements Serializable {
+
+	   
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
+	private String subject;
+	private String description;
+	private String status;
+	@ManyToOne
+	private User user;
+	private static final long serialVersionUID = 1L;
+
+	public InterviewReclamation() {
+=====================================================================
+Found a 11 line (35 tokens) duplication in the following files: 
+Starting at line 48 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseRating.java
+Starting at line 48 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\EnterpriseRating.java
+Starting at line 56 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 56 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+	}   
+	public User getUser() {
+		return this.user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	@Override
+	public String toString() {
+		return "CourseRating [id=" + id + ", rate=" + rate + ", course=" + course + ", user=" + user + "]";
+=====================================================================
+Found a 11 line (35 tokens) duplication in the following files: 
+Starting at line 52 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Message.java
+Starting at line 57 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Notification.java
+
+	}   
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	@Override
+	public String toString() {
+		return "Message [id=" + id + ", dateMessage=" + dateMessage + ", message=" + message + ", status=" + status
+=====================================================================
+Found a 13 line (35 tokens) duplication in the following files: 
+Starting at line 145 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 258 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+
+			  .setParameter("email", id);
+		try {
+			User user = query.getSingleResult();
+			return user;
+		} catch (NoResultException e) {
+			System.out.println("no result found");
+		}		
+		return null;
+		
+	}
+
+	@Override
+	public Code2FACandidate signInStepTwo(int idUser) {
+=====================================================================
+Found a 11 line (34 tokens) duplication in the following files: 
+Starting at line 24 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Answer.java
+Starting at line 29 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Comment.java
+Starting at line 36 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Course.java
+Starting at line 29 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Event.java
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 30 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobOffer.java
+Starting at line 33 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\OnlineTest.java
+Starting at line 34 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Post.java
+Starting at line 24 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Question.java
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+	public Answer() {
+		super();
+	}   
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}   
+	public String getAnswer() {
+=====================================================================
+Found a 11 line (34 tokens) duplication in the following files: 
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\ConsultationHistory.java
+Starting at line 27 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Interview.java
+Starting at line 29 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Message.java
+Starting at line 27 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Notification.java
+
+	public ConsultationHistory() {
+		super();
+	}   
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}   
+	public Timestamp getDateConsultation() {
+=====================================================================
+Found a 11 line (34 tokens) duplication in the following files: 
+Starting at line 19 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseEnrollementPK.java
+Starting at line 19 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobApplicationPK.java
+
+	public CourseEnrollementPK() {
+		super();
+	}   
+	public int getIdUser() {
+		return this.idUser;
+	}
+
+	public void setIdUser(int idUser) {
+		this.idUser = idUser;
+	}   
+	public int getIdCourse() {
+=====================================================================
+Found a 11 line (33 tokens) duplication in the following files: 
+Starting at line 24 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Answer.java
+Starting at line 29 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Comment.java
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\ConsultationHistory.java
+Starting at line 36 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Course.java
+Starting at line 25 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseRating.java
+Starting at line 25 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\EnterpriseRating.java
+Starting at line 29 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Event.java
+Starting at line 27 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Interview.java
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 30 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobOffer.java
+Starting at line 29 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Message.java
+Starting at line 27 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Notification.java
+Starting at line 33 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\OnlineTest.java
+Starting at line 34 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Post.java
+Starting at line 24 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Question.java
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+Starting at line 22 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\invitations.java
+
+	public Answer() {
+		super();
+	}   
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}   
+	public String getAnswer() {
+=====================================================================
+Found a 11 line (33 tokens) duplication in the following files: 
+Starting at line 21 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Code2FACandidate.java
+Starting at line 19 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseEnrollementPK.java
+Starting at line 19 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobApplicationPK.java
+
+	public Code2FACandidate() {
+		super();
+	}   
+	public int getIdUser() {
+		return this.idUser;
+	}
+
+	public void setIdUser(int idUser) {
+		this.idUser = idUser;
+	}   
+	public String getCode() {
+=====================================================================
+Found a 11 line (32 tokens) duplication in the following files: 
+Starting at line 147 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 246 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 260 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+
+			User user = query.getSingleResult();
+			return user;
+		} catch (NoResultException e) {
+			System.out.println("no result found");
+		}		
+		return null;
+		
+	}
+
+	@Override
+	public Code2FACandidate signInStepTwo(int idUser) {
+=====================================================================
+Found a 14 line (32 tokens) duplication in the following files: 
+Starting at line 171 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 186 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+
+		query.setParameter("username", name);
+		try {
+			query.getSingleResult();
+			return true;
+		} catch (NoResultException e) {
+			System.out.println("no result found");
+		}
+		
+		return false;
+		
+	}
+
+	@Override
+	public Boolean checkEmail(String email) {
+=====================================================================
+Found a 4 line (31 tokens) duplication in the following files: 
+Starting at line 184 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 256 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+
+	public Boolean checkEmail(String email) {
+		TypedQuery<User> query = em.createQuery("SELECT u FROM User u where u.email= :email",User.class);
+		query.setParameter("email",email);
+		try {
+=====================================================================
+Found a 10 line (30 tokens) duplication in the following files: 
+Starting at line 25 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Answer.java
+Starting at line 30 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Comment.java
+Starting at line 37 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Course.java
+Starting at line 30 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Event.java
+Starting at line 27 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 31 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobOffer.java
+Starting at line 34 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\OnlineTest.java
+Starting at line 35 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Post.java
+Starting at line 34 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Profile.java
+Starting at line 25 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Question.java
+Starting at line 27 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+Starting at line 69 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\User.java
+
+		super();
+	}   
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}   
+	public String getAnswer() {
+=====================================================================
+Found a 7 line (30 tokens) duplication in the following files: 
+Starting at line 94 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Course.java
+Starting at line 124 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\User.java
+
+	}
+	public List<CourseEnrollement> getCourses() {
+		return courses;
+	}
+	public void setCourses(List<CourseEnrollement> courses) {
+		this.courses = courses;
+	}
+=====================================================================
+Found a 7 line (30 tokens) duplication in the following files: 
+Starting at line 60 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobOffer.java
+Starting at line 130 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\User.java
+
+	}
+	public List<JobApplication> getJobApplication() {
+		return jobApplication;
+	}
+	public void setJobApplication(List<JobApplication> jobApplication) {
+		this.jobApplication = jobApplication;
+	}
+=====================================================================
+Found a 10 line (29 tokens) duplication in the following files: 
+Starting at line 27 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\ConsultationHistory.java
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseRating.java
+Starting at line 26 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\EnterpriseRating.java
+Starting at line 28 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Interview.java
+Starting at line 30 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Message.java
+Starting at line 28 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Notification.java
+Starting at line 34 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Profile.java
+Starting at line 69 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\User.java
+Starting at line 23 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\invitations.java
+
+		super();
+	}   
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}   
+	public Timestamp getDateConsultation() {
+=====================================================================
+Found a 9 line (28 tokens) duplication in the following files: 
+Starting at line 42 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 39 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobOffer.java
+Starting at line 50 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Notification.java
+Starting at line 42 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+	}   
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}   
+	public String getStatus() {
+=====================================================================
+Found a 5 line (28 tokens) duplication in the following files: 
+Starting at line 205 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 230 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+
+	public void removeCode(int idUser) {
+		syncDatabase();
+		Code2FACandidate code = em.find(Code2FACandidate.class, idUser);
+		if(code!=null)
+		{
+=====================================================================
+Found a 4 line (28 tokens) duplication in the following files: 
+Starting at line 345 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 361 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+
+		query.setParameter("userId", user.getId());
+		try {
+			System.out.println("------------------------------------"+query.getResultList());
+			List<invitations> invitation = query.getResultList();
+=====================================================================
+Found a 9 line (27 tokens) duplication in the following files: 
+Starting at line 52 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Course.java
+Starting at line 45 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Event.java
+Starting at line 42 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 39 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobOffer.java
+Starting at line 50 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Notification.java
+Starting at line 43 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Post.java
+Starting at line 42 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+	}   
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}   
+	public double getRate() {
+=====================================================================
+Found a 9 line (27 tokens) duplication in the following files: 
+Starting at line 59 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Course.java
+Starting at line 34 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseRating.java
+Starting at line 34 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\EnterpriseRating.java
+
+	}   
+	public double getRate() {
+		return this.rate;
+	}
+
+	public void setRate(double rate) {
+		this.rate = rate;
+	}   
+	public double getPrice() {
+=====================================================================
+Found a 9 line (27 tokens) duplication in the following files: 
+Starting at line 59 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Event.java
+Starting at line 53 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobOffer.java
+
+	}   
+	public String getLocation() {
+		return this.location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}   
+	public EnterpriseProfile getEnterprise() {
+=====================================================================
+Found a 9 line (27 tokens) duplication in the following files: 
+Starting at line 43 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Interview.java
+Starting at line 49 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 30 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobApplication.java
+Starting at line 49 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+	}   
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}   
+	public OnlineTest getOnlineTest() {
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 41 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\EnterpriseRating.java
+Starting at line 66 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Event.java
+
+	}   
+	public EnterpriseProfile getEnterprise() {
+		return this.enterprise;
+	}
+
+	public void setEnterprise(EnterpriseProfile enterprise) {
+		this.enterprise = enterprise;
+	}   
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 43 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Interview.java
+Starting at line 49 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 30 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobApplication.java
+Starting at line 52 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Message.java
+Starting at line 57 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\Notification.java
+Starting at line 49 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+	}   
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}   
+=====================================================================
+Found a 11 line (25 tokens) duplication in the following files: 
+Starting at line 38 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseEnrollement.java
+Starting at line 136 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\User.java
+
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Course getCourse() {
+=====================================================================
+Found a 9 line (25 tokens) duplication in the following files: 
+Starting at line 49 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseEnrollementPK.java
+Starting at line 49 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobApplicationPK.java
+
+		if (idCourse != other.idCourse)
+			return false;
+		if (idUser != other.idUser)
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "CourseEnrollementPK [idUser=" + idUser + ", idCourse=" + idCourse + "]";
+=====================================================================
+Found a 9 line (25 tokens) duplication in the following files: 
+Starting at line 50 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\CourseRating.java
+Starting at line 50 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\EnterpriseRating.java
+Starting at line 58 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\InterviewReclamation.java
+Starting at line 57 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\JobApplication.java
+Starting at line 58 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\entities\TechnicalReclamation.java
+
+		return this.user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	@Override
+	public String toString() {
+		return "CourseRating [id=" + id + ", rate=" + rate + ", course=" + course + ", user=" + user + "]";
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 41 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 304 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+
+			u.setFirstName(user.getFirstName());
+		
+	
+			u.setLoginAttempts(user.getLoginAttempts());
+			
+			u.setPassword(user.getPassword());
+			u.getProfile().setIntroduction(user.getProfile().getIntroduction());
+=====================================================================
+Found a 5 line (25 tokens) duplication in the following files: 
+Starting at line 205 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 216 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+Starting at line 230 of D:\cours\JEE\workspace_PI\networkServer\networkServer-ejb\src\main\java\tn\redhats\network\networkServer\services_impl\CandidatProfilService.java
+
+	public void removeCode(int idUser) {
+		syncDatabase();
+		Code2FACandidate code = em.find(Code2FACandidate.class, idUser);
+		if(code!=null)
+		{

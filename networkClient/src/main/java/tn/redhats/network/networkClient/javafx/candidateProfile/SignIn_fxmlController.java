@@ -64,6 +64,7 @@ public class SignIn_fxmlController implements Initializable {
 				context = new InitialContext();
 				CandidatProfilServiceRemote proxy = (CandidatProfilServiceRemote) context.lookup(jndiName1);
 				User user =  proxy.signInStepOne(id);
+				System.out.println("userConnectedLog1:"+user);
 				if(user!=null)
 				{
 					if(user.getLoginAttempts() <= 3)
@@ -72,30 +73,49 @@ public class SignIn_fxmlController implements Initializable {
 						if(BCrypt.checkpw(userpass.getText(), user.getPassword()))
 							{
 								userConnected = user;
+								
 								generatedCode = SignUp_fxmlController.generateCode();
 								//Code2FACandidate code = new Code2FACandidate();
 								//code.setIdUser(userConnected.getId());
 								//code.setCode(generatedCode);
 								//proxy.addCode(code);
 								SignUp_fxmlController.sendEmailBySSl(generatedCode, user.getEmail());
+								
 								loadStep2Code();
 							}
 						else
 						{
 							user.setLoginAttempts(user.getLoginAttempts()+1);
 							proxy.updateUser(user);
+							Alert alert = new Alert(AlertType.ERROR);
+							alert.setTitle("Account ");
+							alert.setHeaderText("Wrong username or password");
+							alert.showAndWait();	
+						
 						}
 					}
 					else
 					{
-						Alert alert = new Alert(AlertType.ERROR);
-						alert.setTitle("Account ");
-						alert.setHeaderText("Your account is blocked");
-						alert.setContentText("please check your email to proceed your account activation!");
-						alert.showAndWait();
-						generatedCode = SignUp_fxmlController.generateCode();
-						SignUp_fxmlController.sendEmailBySSl(generatedCode, user.getEmail());
-						loadStep2Code();
+						if(BCrypt.checkpw(userpass.getText(), user.getPassword()))
+						{
+							userConnected = user;
+							Alert alert = new Alert(AlertType.ERROR);
+							alert.setTitle("Account ");
+							alert.setHeaderText("Your account is blocked");
+							alert.setContentText("please check your email to proceed your account activation!");
+							alert.showAndWait();
+							generatedCode = SignUp_fxmlController.generateCode();
+							SignUp_fxmlController.sendEmailBySSl(generatedCode, user.getEmail());
+							loadStep2Code();	
+						}
+						else
+						{
+							Alert alert = new Alert(AlertType.ERROR);
+							alert.setTitle("Account ");
+							alert.setHeaderText("Wrong username or password");
+							alert.showAndWait();	
+						}
+						
 					}
 				}
 				System.out.println(user);

@@ -9,6 +9,7 @@ import tn.redhats.network.networkServer.entities.Code2FACandidate;
 import tn.redhats.network.networkServer.entities.JobOffer;
 import tn.redhats.network.networkServer.entities.Post;
 import tn.redhats.network.networkServer.entities.User;
+import tn.redhats.network.networkServer.entities.invitations;
 
 @Local
 public interface CandidatProfilServiceLocal {
@@ -34,7 +35,13 @@ public interface CandidatProfilServiceLocal {
 	Code2FACandidate  findCode(int idUser);
 	User findUserByUsername(String username);
 	User findUserByEmail(String email);
+
 	void updateAccountStatus(User user);
 	User updateUser(User user);
 	User updateLogginAttempts(User user);
+	
+	void sendFriendRequest(User sender,User receiver);
+	List<invitations> getFriendRequest(User user);	
+	void removeUserFriendList(int idSender,int idReceiver,String status);
+	
 }

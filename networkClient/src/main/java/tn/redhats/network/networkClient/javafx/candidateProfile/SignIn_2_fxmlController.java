@@ -20,6 +20,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import networkClient.main.candidateFXMain;
 import tn.redhats.network.networkServer.entities.Code2FACandidate;
 import tn.redhats.network.networkServer.enumeration.AccountStatus;
@@ -67,14 +69,22 @@ public class SignIn_2_fxmlController implements Initializable {
 			try {
 				context = new InitialContext();
 				CandidatProfilServiceRemote proxy = (CandidatProfilServiceRemote) context.lookup(jndiName1);
+				System.out.println("userConnectedLog1:"+SignIn_fxmlController.userConnected);
 				//Code2FACandidate code = proxy.findCode(SignIn_fxmlController.userConnected.getId());
-			    if(SignIn_fxmlController.generatedCode.equals(signUpCode.getText()))
+			    if(SignIn_fxmlController.generatedCode.equals(signUpCode.getText()) && SignIn_fxmlController.generatedCode!="" )
 			      {
 			    	SignIn_fxmlController.userConnected.setLoginAttempts(0);
-			    	proxy.updateUser(SignIn_fxmlController.userConnected);
+			    	SignIn_fxmlController.userConnected= proxy.updateUser(SignIn_fxmlController.userConnected);
 			    	System.out.println("you are logged in");
 			    	goToProfilePage();
 			      }
+			    else
+			    {
+			    	Alert alert = new Alert(AlertType.ERROR);
+					alert.setTitle("Wrong Code ");
+					alert.setContentText("your inserted code is incorrect please check your email");
+					alert.showAndWait();
+			    }
 				
 			} catch (NamingException e) {
 				

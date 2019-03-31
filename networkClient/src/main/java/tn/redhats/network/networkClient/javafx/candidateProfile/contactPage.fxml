@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="886.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.candidateProfile.ContactPageController">
+   <children>
+      <VBox fx:id="friendRequest" layoutX="2.0" layoutY="227.0" prefHeight="657.0" prefWidth="401.0" style="-fx-background-color: #1D2026;">
+         <children>
+            <HBox>
+               <children>
+                  <Label prefHeight="22.0" prefWidth="359.0" text="Invitations" textFill="WHITE">
+                     <font>
+                        <Font name="Jokerman" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXScrollPane prefHeight="611.0" prefWidth="401.0">
+               <children>
+                  <VBox fx:id="friendRequest" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="85.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label prefHeight="17.0" prefWidth="190.0" text="Label" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets top="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button mnemonicParsing="false" text="Button">
+                                 <HBox.margin>
+                                    <Insets top="25.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Button">
+                                 <HBox.margin>
+                                    <Insets top="25.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+               </children>
+            </JFXScrollPane>
+         </children>
+      </VBox>
+      <VBox layoutX="657.0" layoutY="227.0" prefHeight="657.0" prefWidth="401.0" style="-fx-background-color: #1D2026;">
+         <children>
+            <HBox>
+               <children>
+                  <Label prefHeight="22.0" prefWidth="359.0" text="contacts" textFill="WHITE">
+                     <font>
+                        <Font name="Jokerman" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXScrollPane prefHeight="611.0" prefWidth="401.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

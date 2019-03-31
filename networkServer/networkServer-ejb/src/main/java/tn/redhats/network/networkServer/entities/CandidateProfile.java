@@ -20,21 +20,21 @@ public class CandidateProfile extends Profile implements Serializable {
 	@Column
 	private Timestamp dateNaissance;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class,fetch= FetchType.EAGER)
 	private List<String> education;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class,fetch= FetchType.EAGER)
 	private List<String> volunteeringExperiences;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class,fetch= FetchType.EAGER)
 	private List<String> certifications;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class,fetch= FetchType.EAGER)
 	private List<String> skills;
 	@Column(nullable=true)
 	private String cv;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class,fetch= FetchType.EAGER)
 	private List<String> followedEnterprises;
 	private static final long serialVersionUID = 1L;
 
