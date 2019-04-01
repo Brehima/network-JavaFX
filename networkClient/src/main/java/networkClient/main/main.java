@@ -18,7 +18,7 @@ public class main extends Application {
     public void start(Stage primaryStage) throws IOException {
         
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("CoursesClient.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             Scene scene = new Scene( root);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Network");

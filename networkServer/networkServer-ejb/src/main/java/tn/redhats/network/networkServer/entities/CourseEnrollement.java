@@ -12,8 +12,8 @@ import javax.persistence.*;
 public class CourseEnrollement implements Serializable {
 
 	   
-	
-	@EmbeddedId
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private CourseEnrollementPK courseEnrollementPK;
 	
 	@ManyToOne
