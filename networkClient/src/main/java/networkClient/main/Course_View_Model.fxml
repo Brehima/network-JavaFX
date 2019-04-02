@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Course_page_0" accessibleRole="TEXT_FIELD" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="632.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="networkClient.main.Course_View_ModelController">
+   <children>
+      <Pane layoutX="536.0" layoutY="14.0" prefHeight="55.0" prefWidth="82.0" style="-fx-background-color: rgba(247, 202, 24, 1);" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="536.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <Text fill="WHITE" layoutX="24.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rating">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="66.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/ 10">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="rating" fill="WHITE" layoutX="34.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="435.0" layoutY="14.0" prefHeight="55.0" prefWidth="82.0" style="-fx-background-color: rgba(78, 205, 196, 1);" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="435.0" AnchorPane.rightAnchor="101.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <Text fill="WHITE" layoutX="33.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#f8f8f8" layoutX="75.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="14.46875">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="price" fill="WHITE" layoutX="33.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0000">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="Course_title" alignment="CENTER" editable="false" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="55.0" prefWidth="409.0" promptText="Course Title" unFocusColor="WHITE" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="209.0" AnchorPane.topAnchor="7.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="15.81" surfaceScale="2.43">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXTextField>
+      <ScrollPane layoutY="59.0" prefHeight="385.0" prefWidth="632.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="378.0" prefWidth="630.0" style="-fx-background-color: #2D3447;">
+               <children>
+                  <JFXButton fx:id="Enroll" layoutX="485.0" layoutY="338.0" onAction="#enroll_in_course" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #151928 #151928;" text="Enroll" textFill="#a0a2ab" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="485.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="338.0" />
+                  <JFXButton fx:id="Close" layoutX="14.0" layoutY="341.0" onMouseClicked="#close_course_view" style="-fx-background-color: #151928 #151928;" text="Back" textFill="#a0a2ab" />
+                  <Pane layoutX="36.0" layoutY="3.0" prefHeight="319.0" prefWidth="559.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="3.0">
+                     <children>
+                        <Text fx:id="course_desc" fill="#a0a2ab" layoutX="9.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="541.13671875" />
+                        <ImageView fx:id="course_url" fitHeight="150.0" fitWidth="392.0" layoutX="84.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

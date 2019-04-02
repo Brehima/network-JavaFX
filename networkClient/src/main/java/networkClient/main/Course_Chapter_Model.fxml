@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="759.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="networkClient.main.Course_Chapter_ModelController">
+   <children>
+      <JFXButton fx:id="back" layoutX="14.0" layoutY="453.0" onAction="#close" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #151928;" text="Back" textFill="#a0a2ab" />
+      <JFXButton fx:id="finish_chapter" layoutX="650.0" layoutY="453.0" onAction="#Next_chapter" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #151928;" text="Finish course" textFill="#a0a2ab" />
+      <JFXButton fx:id="my_courses" layoutX="557.0" layoutY="453.0" onAction="#my_courses" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #151928;" text="My courses" textFill="#a0a2ab" />
+      <JFXButton fx:id="home" layoutX="109.0" layoutY="453.0" onAction="#go_home" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #151928;" text="Home" textFill="#a0a2ab" />
+      <JFXTextField fx:id="course_title" alignment="CENTER" focusColor="#f5efef" labelFloat="true" layoutX="131.0" prefHeight="25.0" prefWidth="519.0" promptText="Course Tiltle">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <unFocusColor>
+            <LinearGradient endX="0.9666666666666667" endY="1.0" startX="0.02857142857142858">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#3c6b9a" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="1.53" specularExponent="14.42">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXTextField>
+      <Text fx:id="course_link" layoutX="201.0" layoutY="419.0" onDragDetected="#chapter_url_text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="546.9999981075525" />
+      <ScrollPane layoutY="78.0" prefHeight="365.0" prefWidth="750.0" style="-fx-background-color: #2D3447;">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="753.0" style="-fx-background-color: #2D3447;">
+               <children>
+                  <VBox fx:id="Vchapters" layoutY="-4.0" prefHeight="365.0" prefWidth="750.0" spacing="15.0" style="-fx-background-color: #2D3447;" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Text fill="WHITE" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Summary :" wrappingWidth="75.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

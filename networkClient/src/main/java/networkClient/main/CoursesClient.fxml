@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="785.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="networkClient.main.CoursesClientController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="200.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="640.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="Homebutton" alignment="CENTER" layoutX="-2.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="145.0" snapToPixel="false" style="-fx-background-color: #151928;" text="Home" textFill="#a0a2ab" AnchorPane.bottomAnchor="330.0" AnchorPane.topAnchor="10.0" />
+            <JFXButton fx:id="Profilebutton" layoutX="1.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="145.0" style="-fx-background-color: #151928;" text="Profile" textFill="#a0a2ab" AnchorPane.bottomAnchor="270.0" AnchorPane.topAnchor="75.0" />
+            <JFXButton fx:id="JObutton" layoutX="1.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="145.0" style="-fx-background-color: #151928;" text="Job Offers" textFill="#a0a2ab" AnchorPane.bottomAnchor="210.0" AnchorPane.topAnchor="135.0" />
+            <JFXButton fx:id="EnterButton" layoutX="1.0" layoutY="208.0" prefHeight="55.0" prefWidth="145.0" style="-fx-background-color: #151928;" text="Enterprises" textFill="#a0a2ab" AnchorPane.bottomAnchor="150.0" AnchorPane.topAnchor="195.0" />
+            <JFXButton fx:id="Eventbutton" layoutY="258.0" prefHeight="64.0" prefWidth="145.0" style="-fx-background-color: #151928;" text="Events" textFill="#a0a2ab" AnchorPane.bottomAnchor="78.0" AnchorPane.topAnchor="255.0" />
+            <JFXButton fx:id="coursesbutton" layoutX="-2.0" layoutY="320.0" onAction="#all_courses" prefHeight="64.0" prefWidth="145.0" style="-fx-background-color: #151928;" text="Courses" textFill="#a0a2ab" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="327.0" />
+         </children>
+      </AnchorPane>
+      <BorderPane layoutX="145.0" layoutY="26.0" prefHeight="400.0" prefWidth="676.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane style="-fx-background-color: #2D3447;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="56.0" prefWidth="640.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTextArea fx:id="searchCourses" layoutX="14.0" layoutY="10.0" prefHeight="36.0" prefWidth="239.0" text="Search Courses">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <Lighting diffuseConstant="0.03" specularConstant="1.51" specularExponent="1.4" surfaceScale="10.0">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXTextArea>
+                        <JFXButton fx:id="My_courses" layoutX="510.0" layoutY="9.0" onAction="#go_to_my_courses" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #151928;" text="My Courses" textFill="#a0a2ab" />
+                        <JFXButton fx:id="propose_course" alignment="CENTER" layoutX="391.0" layoutY="12.0" onAction="#Propose_a_course_to_admin" prefHeight="33.0" prefWidth="111.0" style="-fx-background-color: #151928;" text="Propose Course" textFill="#a0a2ab" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <ScrollPane prefHeight="171.0" prefWidth="640.0" style="-fx-background-color: #2D3447;" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="642.0" style="-fx-background-color: #2D3447;">
+                     <children>
+                        <VBox fx:id="Vcourses" layoutX="-1.0" layoutY="-3.0" prefHeight="348.0" prefWidth="640.0" spacing="20.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="344.0" prefWidth="0.0" style="-fx-background-color: #2D3447;" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <AnchorPane prefHeight="0.0" prefWidth="640.0" style="-fx-background-color: #2D3447;" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="371.0" prefWidth="580.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="networkClient.main.Course_client_proposeController">
+   <children>
+      <JFXButton fx:id="back" layoutX="14.0" layoutY="332.0" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #151928;" text="Back" textFill="#a0a2ab" />
+      <JFXButton fx:id="propose" layoutX="471.0" layoutY="332.0" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #151928;" text="Propose" textFill="#a0a2ab" />
+      <Text fill="#a0a2ab" layoutX="59.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Title :" wrappingWidth="107.13671875">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#a0a2ab" layoutX="59.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course URL :" wrappingWidth="107.13671535253525">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#a0a2ab" layoutX="59.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course description :" wrappingWidth="178.13671535253525">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="course_p_title" layoutX="195.0" layoutY="45.0" prefHeight="25.0" prefWidth="331.0" promptText="Title">
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="0.0" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#646363" />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXTextField>
+      <JFXTextField fx:id="course_p_url" layoutX="195.0" layoutY="102.0" prefHeight="25.0" prefWidth="331.0" promptText="Web url ....................">
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="0.0" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#646363" />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXTextField>
+      <JFXTextField fx:id="course_p_desc" layoutX="59.0" layoutY="250.0" prefHeight="56.0" prefWidth="469.0" promptText="dazdadmkjadlkuqgsf">
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="0.0" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#646363" />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXTextField>
+      <Text fill="#a0a2ab" layoutX="59.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course domain  :" wrappingWidth="178.13671535253525">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="course_p_domain" layoutX="215.0" layoutY="160.0" prefHeight="25.0" prefWidth="305.0" promptText="cyersecurity,android develpment,etc...">
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#646363" />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXTextField>
+   </children>
+</AnchorPane>
