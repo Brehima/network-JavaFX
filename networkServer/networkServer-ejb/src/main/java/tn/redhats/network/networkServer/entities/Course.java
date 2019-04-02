@@ -32,7 +32,7 @@ public class Course implements Serializable {
 	
 	@OneToMany(mappedBy="course")	
 	@Column
-	@ElementCollection(targetClass=CourseEnrollement.class)
+	@ElementCollection(targetClass=CourseEnrollement.class,fetch=FetchType.EAGER)
 	private List<CourseEnrollement> courses;
 	@OneToMany(mappedBy="course",fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	private Set<Course_chapters> chapters = new HashSet<Course_chapters>() ;
@@ -115,7 +115,7 @@ public class Course implements Serializable {
 	public String toString() {
 		return "Course [id=" + id + ", courseTitle=" + courseTitle + ", description=" + description + ", rate=" + rate
 				+ ", price=" + price + ", accomplishmentStatus=" + accomplishmentStatus + ", accomplishmentPercentage="
-				+ accomplishmentPercentage + ", validationStatus=" + validationStatus + ", courses=" + courses + "]";
+				+ accomplishmentPercentage + ", validationStatus=" + validationStatus +  "]";
 	}
 	public String getImage_url() {
 		return image_url;
