@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="187.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="networkClient.main.Course_p_addController">
+   <children>
+      <Text fill="#a0a2ab" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Title : " />
+      <Text fill="#a0a2ab" layoutX="14.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Description : " />
+      <Text fill="#a0a2ab" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Source (URL) : " />
+      <TextField fx:id="course_p_title" layoutX="220.0" layoutY="2.0" prefHeight="25.0" prefWidth="266.0" />
+      <TextField fx:id="course_p_url" layoutX="220.0" layoutY="35.0" prefHeight="25.0" prefWidth="266.0" />
+      <TextField fx:id="course_p_desc" layoutX="141.0" layoutY="102.0" prefHeight="53.0" prefWidth="424.0" />
+      <Text fill="#a0a2ab" layoutX="14.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Domain : " />
+      <TextField fx:id="course_p_domain" layoutX="220.0" layoutY="69.0" prefHeight="25.0" prefWidth="266.0" />
+      <JFXButton fx:id="add_course_p" layoutX="481.0" layoutY="161.0" onAction="#p_course" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #151928;" text="Propose Course" textFill="#a0a2ab" />
+      <JFXButton fx:id="back" layoutX="4.0" layoutY="161.0" onAction="#back" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #151928;" text="Back" textFill="#a0a2ab" />
+   </children>
+</AnchorPane>

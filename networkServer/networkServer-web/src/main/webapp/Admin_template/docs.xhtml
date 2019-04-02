@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- Mirrored from www.primefaces.org/harmony/docs.xhtml;jsessionid=node01evgdczz43nin1i1cr1myme39c124434.node0 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Apr 2019 11:51:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core" 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" >
+	  
+<head id="j_idt2">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <meta name="apple-mobile-web-app-capable" content="yes" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/theme.css29b1.css?ln=primefaces-harmony-absolution" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/fa/font-awesome.css408e.css?ln=primefaces&amp;v=6.2" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/components.css408e.css?ln=primefaces&amp;v=6.2" /><script type="text/javascript" src="javax.faces.resource/jquery/jquery.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/jquery/jquery-plugins.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/core.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/components.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><link type="text/css" rel="stylesheet" href="javax.faces.resource/css/nanoscroller.css7d3b.css?ln=harmony-layout" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/css/layout-absolution.css7d3b.css?ln=harmony-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
+        <title>Documentation</title><script type="text/javascript" src="javax.faces.resource/js/nanoscroller.js7d3b.xhtml?ln=harmony-layout"></script><script type="text/javascript" src="javax.faces.resource/js/layout.js7d3b.xhtml?ln=harmony-layout"></script>
+        <style type="text/css">
+            .docs h1 {
+                margin-top: 30px;
+            }
+            
+            .docs p,
+            .docs li {
+                line-height: 1.5;
+            }
+            
+            .docs pre {
+                font-family: monospace;
+                background-color: #bcc9cf;
+                color: #333333;
+                padding: 1em;
+                font-size: 14px;
+                border-radius: 3px;
+                overflow: auto;
+            }
+        </style></head><body>
+        <div class="layout-wrapper layout-menu-static ">
+
+    <div class="layout-topbar"><a href="dashboard.html" class="logo-container"><img id="j_idt14" src="javax.faces.resource/images/harmony-logo.png7d3b.png?ln=harmony-layout" alt="" />
+            <span class="app-name">HARMONY</span></a>
+
+        <div class="topbar-content">
+            <a href="#" id="topbar-sidebar-button">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="search-input">
+                <i class="fa fa-search icon-search"></i>
+                <input type="text" />
+            </div>
+
+            <a href="#" id="topbar-quickmenu-button">
+                QUICK MENU
+            </a>
+
+            <div class="topbar-icons">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="fa fa-paper-plane-o topbar-icon-plane"></i>
+                            <span class="icon-label">Send Mail</span>
+                        </a>
+                        <div class="layout-quickmenu-tooltip">
+                            <div class="layout-quickmenu-tooltip-arrow"></div>
+                            <div class="layout-quickmenu-tooltip-text">Send Mail</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-calendar topbar-icon-calendar"></i>
+                            <span class="icon-label">Add Event</span>
+                        </a>
+                        <div class="layout-quickmenu-tooltip">
+                            <div class="layout-quickmenu-tooltip-arrow"></div>
+                            <div class="layout-quickmenu-tooltip-text">Add Event</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-pencil-square-o topbar-icon-notes"></i>
+                            <span class="icon-label">New Post</span>
+                        </a>
+                        <div class="layout-quickmenu-tooltip">
+                            <div class="layout-quickmenu-tooltip-arrow"></div>
+                            <div class="layout-quickmenu-tooltip-text">New Post</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-sun-o topbar-icon-settings"></i>
+                            <span class="icon-label">Settings</span>
+                        </a>
+                        <div class="layout-quickmenu-tooltip">
+                            <div class="layout-quickmenu-tooltip-arrow"></div>
+                            <div class="layout-quickmenu-tooltip-text">Settings</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a id="topbar-right-panel-button" href="#">
+                <i class="fa fa-ellipsis-v"></i>
+            </a>
+            <a id="topbar-profile-menu-button" href="#"><img id="j_idt17" src="javax.faces.resource/images/avatar.png7d3b.png?ln=harmony-layout" alt="" class="topbar-profile" />
+                <span>Kate Winston</span>
+            </a>
+
+            <ul id="topbar-profile-menu">
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon fa fa-fw fa-paint-brush"></i>
+                        <span class="topbar-item-name">Change Theme</span>
+                    </a>
+                    <ul>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-moon-o"></i>
+                                <span>Dark Topbar</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-sun-o"></i>
+                                <span>Light Topbar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon fa fa-fw fa-heart"></i>
+                        <span class="topbar-item-name">Favorites</span>
+                    </a>
+                    <ul>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-paint-brush"></i>
+                                <span>Change Theme</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-star-o"></i>
+                                <span>Favorites</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-lock"></i>
+                                <span>Lock Screen</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-picture-o"></i>
+                                <span>Wallpaper</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon material-icons animated swing fa fa-fw fa-lock"></i>
+                        <span class="topbar-item-name">Lock Screen</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon fa fa-fw fa-picture-o"></i>
+                        <span class="topbar-item-name">Wallpaper</span>
+                    </a>
+                    <ul>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-tasks"></i>
+                                <span>Pending tasks</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-calendar-check-o"></i>
+                                <span>Meeting today</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-download"></i>
+                                <span>Download</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-plane"></i>
+                                <span>Book flight</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="layout-right-panel">
+        <div class="nano">
+            <div class="nano-content right-panel-scroll-content">
+<form id="j_idt20" name="j_idt20" method="post" action="https://www.primefaces.org/harmony/docs.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt20" value="j_idt20" />
+<div id="j_idt20:j_idt21" class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-hidden-container ui-tabs-top" data-widget="widget_j_idt20_j_idt21"><ul class="ui-tabs-nav ui-helper-reset ui-widget-header ui-corner-all" role="tablist"><li class="ui-tabs-header ui-state-default ui-tabs-selected ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" data-index="0"><a href="#j_idt20:j_idt21:j_idt22" tabindex="-1">Status</a></li><li class="ui-tabs-header ui-state-default ui-corner-top" role="tab" aria-expanded="false" aria-selected="false" data-index="1"><a href="#j_idt20:j_idt21:j_idt24" tabindex="-1">Inbox</a></li><li class="ui-tabs-header ui-state-default ui-corner-top" role="tab" aria-expanded="false" aria-selected="false" data-index="2"><a href="#j_idt20:j_idt21:j_idt34" tabindex="-1">Notes</a></li></ul><div class="ui-tabs-panels"><div id="j_idt20:j_idt21:j_idt22" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false" data-index="0">
+                            <div class="submenu-content settings">
+                                <div class="ui-g">
+                                    <div class="ui-g-12 ui-md-6">
+                                        <div class="status-box wireless-status">
+                                            <i class="fa fa-wifi box-icon"></i>
+                                            <i class="fa fa-angle-right icon-details"></i>
+                                            <span class="status-name">WIRELESS STATUS</span>
+                                            <span class="status">Stable</span>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-md-6">
+                                        <div class="status-box cooling-systems">
+                                            <i class="fa fa-snowflake-o box-icon"></i>
+                                            <i class="fa fa-angle-right icon-details"></i>
+                                            <span class="status-name">COOLING SYSTEMS</span>
+                                            <span class="status">Stable</span>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-md-6">
+                                        <div class="status-box hq-security">
+                                            <i class="fa fa-user-secret box-icon"></i>
+                                            <i class="fa fa-angle-right icon-details"></i>
+                                            <span class="status-name">HQ SECURITY</span>
+                                            <span class="status">Critical</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-g-12 ui-md-6">
+                                        <div class="status-box help-desk-load">
+                                            <i class="fa fa-life-ring box-icon"></i>
+                                            <i class="fa fa-angle-right icon-details"></i>
+                                            <span class="status-name">HELP DESK LOAD</span>
+                                            <div class="progress-bar">
+                                                <div class="progress"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-md-6">
+                                        <div class="status-box meeting-intensity">
+                                            <i class="fa fa-calendar box-icon"></i>
+                                            <i class="fa fa-angle-right icon-details"></i>
+                                            <span class="status-name">MEETING INTENSITY</span>
+                                            <span class="status">Stable</span>
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12 ui-md-6">
+                                        <div class="status-box energy-backup ">
+                                            <i class="fa fa-plug box-icon"></i>
+                                            <i class="fa fa-angle-right icon-details"></i>
+                                            <span class="status-name">ENERGY BACKUP</span>
+                                            <div class="progress-bar">
+                                                <div class="progress"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div id="j_idt20:j_idt21:j_idt24" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-helper-hidden" role="tabpanel" aria-hidden="true" data-index="1">
+                            <div class="submenu-content messages">
+                                <ul>
+                                    <li><img id="j_idt20:j_idt21:j_idt26" src="javax.faces.resource/images/avatar-john.png7d3b.png?ln=harmony-layout" alt="" />
+                                        <span class="messager-name">John Swisher
+                                            <span class="time-stamp">24m</span>
+                                        </span>
+                                        <span class="message-text">User interface review is done.</span>
+                                        <div class="message-actions">
+                                            <i class="fa fa-times-circle delete"></i>
+                                            <i class="fa fa-check-circle check"></i>
+                                        </div>
+                                    </li>
+                                    <li><img id="j_idt20:j_idt21:j_idt28" src="javax.faces.resource/images/avatar-warren.png7d3b.png?ln=harmony-layout" alt="" />
+                                        <span class="messager-name">Warren Shaw
+                                            <span class="time-stamp">2h</span>
+                                        </span>
+                                        <span class="message-text">Uh, we have sort of a problem here.</span>
+                                        <div class="message-actions">
+                                            <i class="fa fa-times-circle delete"></i>
+                                            <i class="fa fa-check-circle check"></i>
+                                        </div>
+                                    </li>
+                                    <li><img id="j_idt20:j_idt21:j_idt30" src="javax.faces.resource/images/avatar-brenda.png7d3b.png?ln=harmony-layout" alt="" />
+                                        <span class="messager-name">Brenda Soto
+                                            <span class="time-stamp">9h</span>
+                                        </span>
+                                        <span class="message-text">You apparently didn’t put one of the new coversheets on TPS.</span>
+                                        <div class="message-actions">
+                                            <i class="fa fa-times-circle delete"></i>
+                                            <i class="fa fa-check-circle check"></i>
+                                        </div>
+                                    </li>
+                                    <li><img id="j_idt20:j_idt21:j_idt32" src="javax.faces.resource/images/avatar-arlene.png7d3b.png?ln=harmony-layout" alt="" />
+                                        <span class="messager-name">Arlene Welch
+                                            <span class="time-stamp">7d</span>
+                                        </span>
+                                        <span class="message-text">Meeting reports attached.</span>
+                                        <div class="message-actions">
+                                            <i class="fa fa-times-circle delete"></i>
+                                            <i class="fa fa-check-circle check"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div></div><div id="j_idt20:j_idt21:j_idt34" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-helper-hidden" role="tabpanel" aria-hidden="true" data-index="2">
+                            <div class="submenu-content notes">
+                                <ul>
+                                    <li>
+                                        <span class="note-reminder">You have
+                                            <span>24</span> notes in
+                                            <span>4</span> categories</span><button id="j_idt20:j_idt21:j_idt36" name="j_idt20:j_idt21:j_idt36" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only important raised-btn" type="button"><span class="ui-button-text ui-c">Important</span></button><script id="j_idt20:j_idt21:j_idt36_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt20_j_idt21_j_idt36",{id:"j_idt20:j_idt21:j_idt36"});</script><button id="j_idt20:j_idt21:j_idt37" name="j_idt20:j_idt21:j_idt37" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only work raised-btn" type="button"><span class="ui-button-text ui-c">Work</span></button><script id="j_idt20:j_idt21:j_idt37_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt20_j_idt21_j_idt37",{id:"j_idt20:j_idt21:j_idt37"});</script><button id="j_idt20:j_idt21:j_idt38" name="j_idt20:j_idt21:j_idt38" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only school raised-btn" type="button"><span class="ui-button-text ui-c">School</span></button><script id="j_idt20:j_idt21:j_idt38_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt20_j_idt21_j_idt38",{id:"j_idt20:j_idt21:j_idt38"});</script>
+                                        <span class="note-add-more">+ Add More Categories</span>
+                                        <div class="note-seperator"></div>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-square important"></i>
+                                        <span class="note-header">Q3 BUDGET PLANNING</span>
+                                        <span class="note-date">23.33 2/7/2018</span>
+                                        <span class="note-details">Leverage agile frameworks to provide a robust synopsis for high level overviews.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-square important"></i>
+                                        <span class="note-header">EXECUTIVE INFLUENCER OUTREACH</span>
+                                        <span class="note-date">23.33 2/7/2018</span>
+                                        <span class="note-details">Bring to the table win-win survival strategies to ensure proactive domination. </span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-square school"></i>
+                                        <span class="note-header">DEVELOP SELLING TRAINING</span>
+                                        <span class="note-date">23.33 2/7/2018</span>
+                                        <span class="note-details">Capitalize on low hanging fruit to identify a ballpark value added activity to beta
+                                            test. </span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-square important"></i>
+                                        <span class="note-header">MEETING W/ PRODUCT TEAM</span>
+                                        <span class="note-date">23.33 2/7/2018</span>
+                                        <span class="note-details">Podcasting operational change management inside of workflows to establish a framework.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-square work"></i>
+                                        <span class="note-header">INVESTIGATE FOLLOWER PROGRAMS</span>
+                                        <span class="note-date">23.33 2/7/2018</span>
+                                        <span class="note-details">Collaboratively administrate empowered markets via plug-and-play networks. </span>
+                                    </li>
+                                </ul>
+                            </div></div></div><input type="hidden" id="j_idt20:j_idt21_activeIndex" name="j_idt20:j_idt21_activeIndex" value="0" autocomplete="off" /></div><script id="j_idt20:j_idt21_s" type="text/javascript">PrimeFaces.cw("TabView","widget_j_idt20_j_idt21",{id:"j_idt20:j_idt21",effectDuration:"normal",scrollable:false});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-7521573348165996920:7062763427297703184" autocomplete="off" />
+</form>
+
+                <div class="nano-scroll-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-sidebar">
+        <div class="nano">
+            <div class="nano-content menu-scroll-content">
+
+<form id="menuform" name="menuform" method="post" action="https://www.primefaces.org/harmony/dashboard.xhtml;jsessionid=node01evgdczz43nin1i1cr1myme39c124434.node0" enctype="application/x-www-form-urlencoded"><input type="hidden" name="menuform" value="menuform" />
+<ul id="menuform:j_idt41" class="layout-menu">
+
+
+
+<li id="menuform:om_dashboard" role="menuitem"><a href="http://localhost:18080/networkServer-web/Admin_template/dashboard.jsf">
+<i class="fa fa-fw fa-dashboard fa-fw" /><span>Dashboard</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dashboard</div></div></li>
+
+
+
+<li id="menuform:om_empty" role="menuitem">
+<a href="http://localhost:18080/networkServer-web/Admin_template/docs.jsf">
+<i class="fa fa-fw fa-square-o fa-fw" /><span>Courses Management</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Courses Management</div></div></li>
+<li id="menuform:om_customization" role="menuitem"><a href="#"><i class="fa fa-fw fa-cog fa-fw" /><span>Layouts</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Layouts</div></div>
+<ul role="menu">
+<li id="menuform:om_customization_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_customization_1':'menuform:om_customization_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-bars fa-fw" /><span>Static</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Static</div></div></li>
+<li id="menuform:om_customization_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_customization_2':'menuform:om_customization_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-bars fa-fw" /><span>Overlay</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Overlay</div></div></li>
+<li id="menuform:om_customization_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_customization_3':'menuform:om_customization_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-bars fa-fw" /><span>Slim</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Slim</div></div></li>
+<li id="menuform:om_customization_4" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_customization_4':'menuform:om_customization_4'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-bars fa-fw" /><span>Horizontal</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Horizontal</div></div></li>
+<li id="menuform:om_orientation" role="menuitem"><a href="#"><i class="fa fa-fw fa-align-right fa-fw" /><span>Orientation</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Orientation</div></div>
+<ul role="menu">
+<li id="menuform:om_ltr" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_ltr':'menuform:om_ltr'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-align-left fa-fw" /><span>LTR</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">LTR</div></div></li>
+<li id="menuform:om_rtl" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_rtl':'menuform:om_rtl'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-align-right fa-fw" /><span>RTL</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">RTL</div></div></li></ul></li></ul></li>
+<li id="menuform:om_themes" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Themes</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Themes</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Flat</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Flat</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_2" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Absolution</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Absolution</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_2_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_2_1':'menuform:om_themes_flat_2_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_2_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_2_2':'menuform:om_themes_flat_2_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_2_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_2_3':'menuform:om_themes_flat_2_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_1" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Rebirth</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Rebirth</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_1_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_1_1':'menuform:om_themes_flat_1_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_1_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_1_2':'menuform:om_themes_flat_1_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_1_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_1_3':'menuform:om_themes_flat_1_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_3" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Hope</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Hope</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_3_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_3_1':'menuform:om_themes_flat_3_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_3_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_3_2':'menuform:om_themes_flat_3_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_3_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_3_3':'menuform:om_themes_flat_3_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_4" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Bliss</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Bliss</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_4_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_4_1':'menuform:om_themes_flat_4_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_4_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_4_2':'menuform:om_themes_flat_4_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_4_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_4_3':'menuform:om_themes_flat_4_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_5" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Grace</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Grace</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_5_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_5_1':'menuform:om_themes_flat_5_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_5_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_5_2':'menuform:om_themes_flat_5_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_5_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_5_3':'menuform:om_themes_flat_5_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_6" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Dusk</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dusk</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_6_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_6_1':'menuform:om_themes_flat_6_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_6_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_6_2':'menuform:om_themes_flat_6_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_6_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_6_3':'menuform:om_themes_flat_6_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_7" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Navy</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Navy</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_7_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_7_1':'menuform:om_themes_flat_7_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_7_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_7_2':'menuform:om_themes_flat_7_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_7_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_7_3':'menuform:om_themes_flat_7_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_8" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Infinity</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Infinity</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_8_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_8_1':'menuform:om_themes_flat_8_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_8_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_8_2':'menuform:om_themes_flat_8_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_8_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_8_3':'menuform:om_themes_flat_8_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_9" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Fate</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Fate</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_9_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_9_1':'menuform:om_themes_flat_9_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_9_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_9_2':'menuform:om_themes_flat_9_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_9_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_9_3':'menuform:om_themes_flat_9_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_10" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Ruby</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Ruby</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_10_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_10_1':'menuform:om_themes_flat_10_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_10_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_10_2':'menuform:om_themes_flat_10_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_10_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_10_3':'menuform:om_themes_flat_10_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_flat_11" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Comfort</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Comfort</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_flat_11_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_11_1':'menuform:om_themes_flat_11_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_flat_11_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_11_2':'menuform:om_themes_flat_11_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_flat_11_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_flat_11_3':'menuform:om_themes_flat_11_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li></ul></li>
+<li id="menuform:om_themes_gradient" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Gradient</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Gradient</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_1" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Faith</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Faith</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_1_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_1_1':'menuform:om_themes_gradient_1_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_1_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_1_2':'menuform:om_themes_gradient_1_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_1_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_1_3':'menuform:om_themes_gradient_1_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_2" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Violet</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Violet</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_2_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_2_1':'menuform:om_themes_gradient_2_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_2_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_2_2':'menuform:om_themes_gradient_2_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_2_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_2_3':'menuform:om_themes_gradient_2_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_3" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Honor</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Honor</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_3_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_3_1':'menuform:om_themes_gradient_3_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_3_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_3_2':'menuform:om_themes_gradient_3_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_3_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_3_3':'menuform:om_themes_gradient_3_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_4" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Rebel</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Rebel</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_4_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_4_1':'menuform:om_themes_gradient_4_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_4_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_4_2':'menuform:om_themes_gradient_4_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_4_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_4_3':'menuform:om_themes_gradient_4_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_5" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Vanity</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Vanity</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_5_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_5_1':'menuform:om_themes_gradient_5_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_5_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_5_2':'menuform:om_themes_gradient_5_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_5_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_5_3':'menuform:om_themes_gradient_5_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_6" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Valor</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Valor</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_6_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_6_1':'menuform:om_themes_gradient_6_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_6_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_6_2':'menuform:om_themes_gradient_6_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_6_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_6_3':'menuform:om_themes_gradient_6_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_7" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Merit</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Merit</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_7_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_7_1':'menuform:om_themes_gradient_7_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_7_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_7_2':'menuform:om_themes_gradient_7_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_7_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_7_3':'menuform:om_themes_gradient_7_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_8" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Esprit</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Esprit</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_8_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_8_1':'menuform:om_themes_gradient_8_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_8_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_8_2':'menuform:om_themes_gradient_8_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_8_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_8_3':'menuform:om_themes_gradient_8_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_9" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Concord</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Concord</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_9_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_9_1':'menuform:om_themes_gradient_9_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_9_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_9_2':'menuform:om_themes_gradient_9_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_9_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_9_3':'menuform:om_themes_gradient_9_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_10" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Dulce</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dulce</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_10_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_10_1':'menuform:om_themes_gradient_10_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_10_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_10_2':'menuform:om_themes_gradient_10_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_10_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_10_3':'menuform:om_themes_gradient_10_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_gradient_11" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Royal</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Royal</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_gradient_11_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_11_1':'menuform:om_themes_gradient_11_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_gradient_11_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_11_2':'menuform:om_themes_gradient_11_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_gradient_11_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_gradient_11_3':'menuform:om_themes_gradient_11_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li></ul></li>
+<li id="menuform:om_themes_image" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Image</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Image</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_1" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Hazel</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Hazel</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_1_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_1_1':'menuform:om_themes_image_1_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_1_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_1_2':'menuform:om_themes_image_1_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_1_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_1_3':'menuform:om_themes_image_1_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_image_2" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Essence</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Essence</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_2_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_2_1':'menuform:om_themes_image_2_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_2_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_2_2':'menuform:om_themes_image_2_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_2_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_2_3':'menuform:om_themes_image_2_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_image_3" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Eternity</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Eternity</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_3_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_3_1':'menuform:om_themes_image_3_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_3_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_3_2':'menuform:om_themes_image_3_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_3_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_3_3':'menuform:om_themes_image_3_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_image_4" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Clarity</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Clarity</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_4_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_4_1':'menuform:om_themes_image_4_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_4_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_4_2':'menuform:om_themes_image_4_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_4_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_4_3':'menuform:om_themes_image_4_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_image_5" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Solace</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Solace</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_5_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_5_1':'menuform:om_themes_image_5_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_5_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_5_2':'menuform:om_themes_image_5_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_5_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_5_3':'menuform:om_themes_image_5_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_image_6" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Joy</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Joy</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_6_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_6_1':'menuform:om_themes_image_6_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_6_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_6_2':'menuform:om_themes_image_6_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_6_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_6_3':'menuform:om_themes_image_6_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_image_7" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Purity</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Purity</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_7_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_7_1':'menuform:om_themes_image_7_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_7_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_7_2':'menuform:om_themes_image_7_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_7_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_7_3':'menuform:om_themes_image_7_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_image_8" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Euclid</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Euclid</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_8_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_8_1':'menuform:om_themes_image_8_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_8_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_8_2':'menuform:om_themes_image_8_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_8_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_8_3':'menuform:om_themes_image_8_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_image_9" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Elegance</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Elegance</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_9_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_9_1':'menuform:om_themes_image_9_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_9_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_9_2':'menuform:om_themes_image_9_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_9_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_9_3':'menuform:om_themes_image_9_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li>
+<li id="menuform:om_themes_image_10" role="menuitem"><a href="#"><i class="fa fa-fw fa-paint-brush fa-fw" /><span>Tranquil</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Tranquil</div></div>
+<ul role="menu">
+<li id="menuform:om_themes_image_10_1" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_10_1':'menuform:om_themes_image_10_1'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square-o fa-fw" /><span>Colored</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Colored</div></div></li>
+<li id="menuform:om_themes_image_10_2" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_10_2':'menuform:om_themes_image_10_2'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Light</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Light</div></div></li>
+<li id="menuform:om_themes_image_10_3" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:om_themes_image_10_3':'menuform:om_themes_image_10_3'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-fw fa-square fa-fw" /><span>Dark</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Dark</div></div></li></ul></li></ul></li></ul></li>
+<li id="menuform:om_components" role="menuitem"><a href="#"><i class="fa fa-fw fa-bars fa-fw" /><span>Components</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Components</div></div>
+<ul role="menu">
+<li id="menuform:om_sample" role="menuitem"><a href="sample.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-columns fa-fw" /><span>Sample Page</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Sample Page</div></div></li>
+<li id="menuform:om_forms" role="menuitem"><a href="forms.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-code fa-fw" /><span>Forms</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Forms</div></div></li>
+<li id="menuform:om_data" role="menuitem"><a href="data.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-table fa-fw" /><span>Data</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Data</div></div></li>
+<li id="menuform:om_panels" role="menuitem"><a href="panel.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-list-alt fa-fw" /><span>Panels</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Panels</div></div></li>
+<li id="menuform:om_overlays" role="menuitem"><a href="overlay.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-square fa-fw" /><span>Overlays</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Overlays</div></div></li>
+<li id="menuform:om_menus" role="menuitem"><a href="menu.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-minus-square-o fa-fw" /><span>Menus</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Menus</div></div></li>
+<li id="menuform:om_messages" role="menuitem"><a href="messages.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-circle-o-notch fa-fw" /><span>Messages</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Messages</div></div></li>
+<li id="menuform:om_charts" role="menuitem"><a href="charts.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-area-chart fa-fw" /><span>Charts</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Charts</div></div></li>
+<li id="menuform:om_file" role="menuitem"><a href="file.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-arrow-circle-o-up fa-fw" /><span>File</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">File</div></div></li>
+<li id="menuform:om_misc" role="menuitem"><a href="misc.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-user-secret fa-fw" /><span>Misc</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Misc</div></div></li></ul></li>
+<li id="menuform:om_default" role="menuitem"><a href="#"><i class="fa fa-fw fa-cube fa-fw" /><span>Pages</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Pages</div></div>
+<ul role="menu">
+<li id="menuform:om_empty" role="menuitem"><a href="http://localhost:18080/networkServer-web/Admin_template/docs.jsf"><i class="fa fa-fw fa-square-o fa-fw" /><span></span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Courses Management</div></div></li>
+<li id="menuform:om_login" role="menuitem"><a href="login.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Login</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Login</div></div></li>
+<li id="menuform:om_db_landing" role="menuitem"><a href="landing.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-certificate fa-fw" /><span>Landing</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Landing</div></div></li>
+<li id="menuform:om_error" role="menuitem"><a href="error.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-exclamation-circle fa-fw" /><span>Error</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Error</div></div></li>
+<li id="menuform:om_404" role="menuitem"><a href="404.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-times fa-fw" /><span>404</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">404</div></div></li>
+<li id="menuform:om_access" role="menuitem"><a href="access.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-exclamation-triangle fa-fw" /><span>Access Denied</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Access Denied</div></div></li></ul></li>
+<li id="menuform:om_hierarchy" role="menuitem"><a href="#"><i class="fa fa-fw fa-sitemap fa-fw" /><span>Hierarchy</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Hierarchy</div></div>
+<ul role="menu">
+<li id="menuform:om_sm1" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Submenu 1</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Submenu 1</div></div>
+<ul role="menu">
+<li id="menuform:om_sm11" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Submenu 1.1</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Submenu 1.1</div></div>
+<ul role="menu">
+<li id="menuform:om_lnk111" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Link 1.1.1</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Link 1.1.1</div></div></li>
+<li id="menuform:om_lnk112" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Link 1.1.2</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Link 1.1.2</div></div></li>
+<li id="menuform:om_lnk113" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Link 1.1.3</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Link 1.1.3</div></div></li></ul></li>
+<li id="menuform:om_sm12" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Submenu 1.2</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Submenu 1.2</div></div>
+<ul role="menu">
+<li id="menuform:om_lnk121" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Link 1.2.1</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Link 1.2.1</div></div></li></ul></li></ul></li>
+<li id="menuform:om_sm2" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Submenu 2</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Submenu 2</div></div>
+<ul role="menu">
+<li id="menuform:om_sm21" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Submenu 2.1</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Submenu 2.1</div></div>
+<ul role="menu">
+<li id="menuform:om_lnk211" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Link 2.1.1</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Link 2.1.1</div></div></li>
+<li id="menuform:om_lnk212" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Link 2.1.2</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Link 2.1.2</div></div></li></ul></li>
+<li id="menuform:om_sm22" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Submenu 2.2</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Submenu 2.2</div></div>
+<ul role="menu">
+<li id="menuform:om_lnk221" role="menuitem"><a href="#"><i class="fa fa-fw fa-sign-in fa-fw" /><span>Link 2.2.1</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Link 2.2.1</div></div></li></ul></li></ul></li></ul></li>
+<li id="menuform:om_doc" role="menuitem"><a href="docs.xhtml%3bjsessionid%3dnode01evgdczz43nin1i1cr1myme39c124434.html"><i class="fa fa-fw fa-file-code-o fa-fw" /><span>Docs</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Docs</div></div></li>
+<li id="menuform:om_buy" role="menuitem"><a href="https://www.primefaces.org/layouts/harmony"><i class="fa fa-fw fa-credit-card-alt fa-fw" /><span>Buy Now</span></a>
+<div class="layout-menu-tooltip">
+<div class="layout-menu-tooltip-arrow" />
+<div class="layout-menu-tooltip-text">Buy Now</div></div></li></ul>
+<script id="menuform:j_idt41_s" type="text/javascript">PrimeFaces.cw("Harmony","me",{id:"menuform:j_idt41"});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:69" value="5975277272169006125:7489247769605427521" autocomplete="off" /></form>
+        
+         
+            </div>
+        </div>
+    </div>
+
+           <div class="layout-main">
+                <div class="route-bar">
+                    <div class="route-bar-breadcrumb">
+                        <i class="fa fa-home"></i> <span>/ </span>
+                    </div>
+
+    <ul class="route-bar-menu">
+        <li>
+            <a href="#">
+                <i class="fa fa-asterisk"></i>
+                <span>Overview</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-paper-plane"></i>
+                <span>Demos</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-file-code-o"></i>
+                <span>Documentation</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-life-saver"></i>
+                <span>Support</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </li>
+    </ul><script id="j_idt47_s" type="text/javascript">$(function(){PrimeFaces.cw("Tooltip","widget_j_idt47",{id:"j_idt47",showEffect:"fade",hideEffect:"fade",showDelay:0,globalSelector:".route-bar-menu a",position:"bottom"});});</script>
+                </div>
+
+                <div class="layout-content">
+    
+        <div class="ui-g">
+            <div class="ui-g-12">
+            <div class="card docs">
+     <h:form>   
+             <h:dataTable id="CoursesTable" value="#{coursebean.return_course()}" var="course" border="1">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                <h:outputText value="#{course.id}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Title</f:facet>
+                <h:outputText value="#{course.courseTitle}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Domain</f:facet>
+                <h:outputText value="#{course.getDomain()}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Price</f:facet>
+                <h:outputText value="#{course.price}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Status</f:facet>
+                <h:outputText value="#{course.validationStatus}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Update</f:facet>
+                <h:commandButton action="#{coursebean.mod_course(course)}" value="Update" class="btn btn-primary" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">Deletes</f:facet>
+                <h:commandButton action="#{coursebean.del_course(course)}" value="Delete" class="btn btn-danger" />
+            </h:column>
+        </h:dataTable>
+         </h:form>       
+            </div>
+            
+          
+            </div>
+        </div>
+                </div>
+
+    <div class="layout-footer"><a href="dashboard.html" class="logo-container"><img id="j_idt53" src="javax.faces.resource/images/harmony-logo.png7d3b.png?ln=harmony-layout" alt="" />
+            <span class="app-name">NETWORK</span></a>
+
+        <div class="footer-icons">
+            <ul>
+                <li>
+                    <a>
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+                <div class="layout-mask"></div>
+            </div>
+        </div><div id="j_idt57" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt57_start" style="display:none">
+               <i class="fa fa-2x fa-circle-o-notch fa-spin ajax-status-icon" aria-hidden="true"></i></div><div id="j_idt57_complete" style="display:none"></div></div><script id="j_idt57_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt57",{id:"j_idt57"});});</script></body>
+
+</ui:composition>
+<!-- Mirrored from www.primefaces.org/harmony/docs.xhtml;jsessionid=node01evgdczz43nin1i1cr1myme39c124434.node0 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Apr 2019 11:51:23 GMT -->
+</html>

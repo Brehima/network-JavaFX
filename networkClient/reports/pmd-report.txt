@@ -1,0 +1,940 @@
+src/main/java/networkClient/main/Chapter_modelController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Chapter_modelController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Chapter_modelController.java:29:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Chapter_modelController.java:29:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Chapter_modelController.java:29:	The class name 'Chapter_modelController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:29:	The class name 'Chapter_modelController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:31:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:31:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:31:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'chapter_number' is not final.
+src/main/java/networkClient/main/Chapter_modelController.java:31:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'chapter_number' is not final.
+src/main/java/networkClient/main/Chapter_modelController.java:31:	The field name 'chapter_number' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:31:	The field name 'chapter_number' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:33:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:33:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Chapter_modelController.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Chapter_modelController.java:33:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'chapter_title' is not final.
+src/main/java/networkClient/main/Chapter_modelController.java:33:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'chapter_title' is not final.
+src/main/java/networkClient/main/Chapter_modelController.java:33:	The field name 'chapter_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:33:	The field name 'chapter_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:35:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:35:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Chapter_modelController.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Chapter_modelController.java:35:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'chapter_url' is not final.
+src/main/java/networkClient/main/Chapter_modelController.java:35:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'chapter_url' is not final.
+src/main/java/networkClient/main/Chapter_modelController.java:35:	The field name 'chapter_url' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:35:	The field name 'chapter_url' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:37:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:37:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:37:	The field name 'Addbtn' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:37:	The field name 'Addbtn' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:37:	Variables should start with a lowercase character, 'Addbtn' starts with uppercase character.
+src/main/java/networkClient/main/Chapter_modelController.java:37:	Variables should start with a lowercase character, 'Addbtn' starts with uppercase character.
+src/main/java/networkClient/main/Chapter_modelController.java:39:	Explicit type arguments can be replaced by Diamond Operator
+src/main/java/networkClient/main/Chapter_modelController.java:39:	Explicit type arguments can be replaced by Diamond Operator
+src/main/java/networkClient/main/Chapter_modelController.java:39:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:39:	Field comments are required
+src/main/java/networkClient/main/Chapter_modelController.java:45:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Chapter_modelController.java:45:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Chapter_modelController.java:45:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Chapter_modelController.java:45:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Chapter_modelController.java:45:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Chapter_modelController.java:45:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Chapter_modelController.java:51:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Chapter_modelController.java:51:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Chapter_modelController.java:51:	The instance method name 'AddAction' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:51:	The instance method name 'AddAction' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Chapter_modelController.java:52:	Local variable 'chp' could be declared final
+src/main/java/networkClient/main/Chapter_modelController.java:52:	Local variable 'chp' could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:25:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:25:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:25:	The class name 'Course_Chapter_ModelController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:25:	The class name 'Course_Chapter_ModelController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:27:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:27:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:29:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:29:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:29:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'finish_chapter' is not final.
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:29:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'finish_chapter' is not final.
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:29:	The field name 'finish_chapter' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:29:	The field name 'finish_chapter' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:31:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:31:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:31:	Field my_courses has the same name as a method
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:31:	Field my_courses has the same name as a method
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:31:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'my_courses' is not final.
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:31:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'my_courses' is not final.
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:31:	The field name 'my_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:31:	The field name 'my_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:33:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:33:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:35:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:35:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:35:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_title' is not final.
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:35:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_title' is not final.
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:35:	The field name 'course_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:35:	The field name 'course_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:37:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:37:	Field comments are required
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:37:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_link' is not final.
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:37:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_link' is not final.
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:37:	The field name 'course_link' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:37:	The field name 'course_link' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:43:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:43:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:43:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:43:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:43:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:43:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:48:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:48:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:49:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:49:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:49:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:49:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:49:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:49:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:50:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:50:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:54:	Document empty method body
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:54:	Document empty method body
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:54:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:54:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:54:	The instance method name 'Next_chapter' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:54:	The instance method name 'Next_chapter' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:59:	Document empty method body
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:59:	Document empty method body
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:59:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:59:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:59:	The instance method name 'my_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:59:	The instance method name 'my_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:63:	Document empty method body
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:63:	Document empty method body
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:63:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:63:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:63:	The instance method name 'go_home' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:63:	The instance method name 'go_home' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:67:	Document empty method body
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:67:	Document empty method body
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:67:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:67:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:67:	The instance method name 'chapter_url_text' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_Chapter_ModelController.java:67:	The instance method name 'chapter_url_text' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_ModelController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_ModelController.java:33:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_ModelController.java:33:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_ModelController.java:33:	The class name 'Course_ModelController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:33:	The class name 'Course_ModelController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:35:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:35:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:35:	Private field 'role' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/networkClient/main/Course_ModelController.java:35:	Private field 'role' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/networkClient/main/Course_ModelController.java:38:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:38:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:38:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Course_photo' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:38:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Course_photo' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:38:	The field name 'Course_photo' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:38:	The field name 'Course_photo' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:38:	Variables should start with a lowercase character, 'Course_photo' starts with uppercase character.
+src/main/java/networkClient/main/Course_ModelController.java:38:	Variables should start with a lowercase character, 'Course_photo' starts with uppercase character.
+src/main/java/networkClient/main/Course_ModelController.java:40:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:40:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:40:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_title' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:40:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_title' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:40:	The static field name 'course_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:40:	The static field name 'course_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:42:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:42:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:42:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Course_link' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:42:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Course_link' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:42:	The field name 'Course_link' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:42:	The field name 'Course_link' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:42:	Variables should start with a lowercase character, 'Course_link' starts with uppercase character.
+src/main/java/networkClient/main/Course_ModelController.java:42:	Variables should start with a lowercase character, 'Course_link' starts with uppercase character.
+src/main/java/networkClient/main/Course_ModelController.java:44:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:44:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:46:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:46:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:46:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:46:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:46:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'view_course' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:46:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'view_course' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:46:	The field name 'view_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:46:	The field name 'view_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:48:	Avoid excessively long variable names like course_model_price_visibility
+src/main/java/networkClient/main/Course_ModelController.java:48:	Avoid excessively long variable names like course_model_price_visibility
+src/main/java/networkClient/main/Course_ModelController.java:48:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:48:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:48:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:48:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:48:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_model_price_visibility' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:48:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_model_price_visibility' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:48:	The field name 'course_model_price_visibility' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:48:	The field name 'course_model_price_visibility' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:50:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:50:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:50:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:50:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:50:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Price_text' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:50:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Price_text' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:50:	The field name 'Price_text' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:50:	The field name 'Price_text' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:50:	Variables should start with a lowercase character, 'Price_text' starts with uppercase character.
+src/main/java/networkClient/main/Course_ModelController.java:50:	Variables should start with a lowercase character, 'Price_text' starts with uppercase character.
+src/main/java/networkClient/main/Course_ModelController.java:52:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:52:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:52:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:52:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:52:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'rating_text' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:52:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'rating_text' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:52:	The field name 'rating_text' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:52:	The field name 'rating_text' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:54:	Avoid excessively long variable names like course_percentage_status
+src/main/java/networkClient/main/Course_ModelController.java:54:	Avoid excessively long variable names like course_percentage_status
+src/main/java/networkClient/main/Course_ModelController.java:54:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:54:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:54:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_percentage_status' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:54:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_percentage_status' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:54:	The field name 'course_percentage_status' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:54:	The field name 'course_percentage_status' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:56:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:56:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:56:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:56:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:56:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'edit_course' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:56:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'edit_course' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:56:	The field name 'edit_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:56:	The field name 'edit_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:58:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:58:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:58:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:58:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:58:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'delete_course' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:58:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'delete_course' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:58:	The field name 'delete_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:58:	The field name 'delete_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:60:	Avoid excessively long variable names like course_model_status_visibility
+src/main/java/networkClient/main/Course_ModelController.java:60:	Avoid excessively long variable names like course_model_status_visibility
+src/main/java/networkClient/main/Course_ModelController.java:60:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:60:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:60:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:60:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:60:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_model_status_visibility' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:60:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_model_status_visibility' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:60:	The field name 'course_model_status_visibility' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:60:	The field name 'course_model_status_visibility' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:62:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:62:	Field comments are required
+src/main/java/networkClient/main/Course_ModelController.java:62:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:62:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_ModelController.java:62:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_desc' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:62:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_desc' is not final.
+src/main/java/networkClient/main/Course_ModelController.java:62:	The field name 'course_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:62:	The field name 'course_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:68:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_ModelController.java:68:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_ModelController.java:68:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:68:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:68:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:68:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:71:	Avoid using Literals in Conditional Statements
+src/main/java/networkClient/main/Course_ModelController.java:71:	Avoid using Literals in Conditional Statements
+src/main/java/networkClient/main/Course_ModelController.java:71:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/networkClient/main/Course_ModelController.java:71:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/networkClient/main/Course_ModelController.java:79:	Avoid using Literals in Conditional Statements
+src/main/java/networkClient/main/Course_ModelController.java:79:	Avoid using Literals in Conditional Statements
+src/main/java/networkClient/main/Course_ModelController.java:79:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/networkClient/main/Course_ModelController.java:79:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/networkClient/main/Course_ModelController.java:90:	Avoid variables with short names like im
+src/main/java/networkClient/main/Course_ModelController.java:90:	Avoid variables with short names like im
+src/main/java/networkClient/main/Course_ModelController.java:90:	Local variable 'im' could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:90:	Local variable 'im' could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:92:	Do not add empty strings
+src/main/java/networkClient/main/Course_ModelController.java:92:	Do not add empty strings
+src/main/java/networkClient/main/Course_ModelController.java:93:	Do not add empty strings
+src/main/java/networkClient/main/Course_ModelController.java:93:	Do not add empty strings
+src/main/java/networkClient/main/Course_ModelController.java:98:	Avoid variables with short names like c
+src/main/java/networkClient/main/Course_ModelController.java:98:	Avoid variables with short names like c
+src/main/java/networkClient/main/Course_ModelController.java:98:	Parameter 'c' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:98:	Parameter 'c' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:98:	Public method and constructor comments are required
+src/main/java/networkClient/main/Course_ModelController.java:98:	Public method and constructor comments are required
+src/main/java/networkClient/main/Course_ModelController.java:105:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:105:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:105:	The instance method name 'go_to_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:105:	The instance method name 'go_to_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_ModelController.java:108:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:108:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:108:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_ModelController.java:108:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_ModelController.java:108:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_ModelController.java:108:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_ModelController.java:109:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:109:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:110:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_ModelController.java:110:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_View_ModelController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_View_ModelController.java:43:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_View_ModelController.java:43:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_View_ModelController.java:43:	The class name 'Course_View_ModelController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:43:	The class name 'Course_View_ModelController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:45:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:45:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:45:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Course_page_0' is not final.
+src/main/java/networkClient/main/Course_View_ModelController.java:45:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Course_page_0' is not final.
+src/main/java/networkClient/main/Course_View_ModelController.java:45:	The field name 'Course_page_0' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:45:	The field name 'Course_page_0' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:45:	Variables should start with a lowercase character, 'Course_page_0' starts with uppercase character.
+src/main/java/networkClient/main/Course_View_ModelController.java:45:	Variables should start with a lowercase character, 'Course_page_0' starts with uppercase character.
+src/main/java/networkClient/main/Course_View_ModelController.java:47:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:47:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:49:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:49:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:49:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:49:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:51:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:51:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:51:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:51:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Course_title' is not final.
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Course_title' is not final.
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	The field name 'Course_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	The field name 'Course_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	Variables should start with a lowercase character, 'Course_title' starts with uppercase character.
+src/main/java/networkClient/main/Course_View_ModelController.java:53:	Variables should start with a lowercase character, 'Course_title' starts with uppercase character.
+src/main/java/networkClient/main/Course_View_ModelController.java:55:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:55:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:55:	The field name 'Enroll' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:55:	The field name 'Enroll' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:55:	Variables should start with a lowercase character, 'Enroll' starts with uppercase character.
+src/main/java/networkClient/main/Course_View_ModelController.java:55:	Variables should start with a lowercase character, 'Enroll' starts with uppercase character.
+src/main/java/networkClient/main/Course_View_ModelController.java:57:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:57:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:57:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:57:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:57:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_desc' is not final.
+src/main/java/networkClient/main/Course_View_ModelController.java:57:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_desc' is not final.
+src/main/java/networkClient/main/Course_View_ModelController.java:57:	The field name 'course_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:57:	The field name 'course_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:59:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:59:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:59:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:59:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_View_ModelController.java:59:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_url' is not final.
+src/main/java/networkClient/main/Course_View_ModelController.java:59:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_url' is not final.
+src/main/java/networkClient/main/Course_View_ModelController.java:59:	The field name 'course_url' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:59:	The field name 'course_url' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:61:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:61:	Field comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:61:	The field name 'Close' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:61:	The field name 'Close' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:61:	Variables should start with a lowercase character, 'Close' starts with uppercase character.
+src/main/java/networkClient/main/Course_View_ModelController.java:61:	Variables should start with a lowercase character, 'Close' starts with uppercase character.
+src/main/java/networkClient/main/Course_View_ModelController.java:68:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_View_ModelController.java:68:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_View_ModelController.java:68:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:68:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:68:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:68:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:73:	Avoid variables with short names like im
+src/main/java/networkClient/main/Course_View_ModelController.java:73:	Avoid variables with short names like im
+src/main/java/networkClient/main/Course_View_ModelController.java:73:	Local variable 'im' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:73:	Local variable 'im' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:75:	Do not add empty strings
+src/main/java/networkClient/main/Course_View_ModelController.java:75:	Do not add empty strings
+src/main/java/networkClient/main/Course_View_ModelController.java:76:	Do not add empty strings
+src/main/java/networkClient/main/Course_View_ModelController.java:76:	Do not add empty strings
+src/main/java/networkClient/main/Course_View_ModelController.java:80:	Avoid variables with short names like c
+src/main/java/networkClient/main/Course_View_ModelController.java:80:	Avoid variables with short names like c
+src/main/java/networkClient/main/Course_View_ModelController.java:80:	Parameter 'c' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:80:	Parameter 'c' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:80:	Public method and constructor comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:80:	Public method and constructor comments are required
+src/main/java/networkClient/main/Course_View_ModelController.java:87:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:87:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:87:	The instance method name 'close_course_view' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:87:	The instance method name 'close_course_view' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:88:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:88:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:88:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_View_ModelController.java:88:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_View_ModelController.java:88:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_View_ModelController.java:88:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_View_ModelController.java:89:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_View_ModelController.java:89:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_View_ModelController.java:94:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:94:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:94:	The instance method name 'enroll_in_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:94:	The instance method name 'enroll_in_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_View_ModelController.java:95:	Avoid variables with short names like ce
+src/main/java/networkClient/main/Course_View_ModelController.java:95:	Avoid variables with short names like ce
+src/main/java/networkClient/main/Course_View_ModelController.java:95:	Local variable 'ce' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:95:	Local variable 'ce' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:97:	Avoid variables with short names like u
+src/main/java/networkClient/main/Course_View_ModelController.java:97:	Avoid variables with short names like u
+src/main/java/networkClient/main/Course_View_ModelController.java:97:	Local variable 'u' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:97:	Local variable 'u' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:98:	Do not start a literal by 0 unless its an octal value
+src/main/java/networkClient/main/Course_View_ModelController.java:98:	Do not start a literal by 0 unless its an octal value
+src/main/java/networkClient/main/Course_View_ModelController.java:100:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:100:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:101:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:101:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:102:	Avoid variables with short names like s
+src/main/java/networkClient/main/Course_View_ModelController.java:102:	Avoid variables with short names like s
+src/main/java/networkClient/main/Course_View_ModelController.java:102:	Local variable 's' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:102:	Local variable 's' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_View_ModelController.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_View_ModelController.java:105:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:105:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_View_ModelController.java:105:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_View_ModelController.java:105:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_View_ModelController.java:105:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_View_ModelController.java:105:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_View_ModelController.java:106:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_View_ModelController.java:106:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_client_proposeController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_client_proposeController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_client_proposeController.java:20:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_client_proposeController.java:20:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_client_proposeController.java:20:	The class name 'Course_client_proposeController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:20:	The class name 'Course_client_proposeController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:22:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:22:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:24:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:24:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:26:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:26:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:26:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_title' is not final.
+src/main/java/networkClient/main/Course_client_proposeController.java:26:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_title' is not final.
+src/main/java/networkClient/main/Course_client_proposeController.java:26:	The field name 'course_p_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:26:	The field name 'course_p_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:28:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:28:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:28:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_url' is not final.
+src/main/java/networkClient/main/Course_client_proposeController.java:28:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_url' is not final.
+src/main/java/networkClient/main/Course_client_proposeController.java:28:	The field name 'course_p_url' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:28:	The field name 'course_p_url' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:30:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:30:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:30:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_desc' is not final.
+src/main/java/networkClient/main/Course_client_proposeController.java:30:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_desc' is not final.
+src/main/java/networkClient/main/Course_client_proposeController.java:30:	The field name 'course_p_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:30:	The field name 'course_p_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:32:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:32:	Field comments are required
+src/main/java/networkClient/main/Course_client_proposeController.java:32:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_domain' is not final.
+src/main/java/networkClient/main/Course_client_proposeController.java:32:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_domain' is not final.
+src/main/java/networkClient/main/Course_client_proposeController.java:32:	The field name 'course_p_domain' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:32:	The field name 'course_p_domain' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_client_proposeController.java:38:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_client_proposeController.java:38:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_client_proposeController.java:38:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_client_proposeController.java:38:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_client_proposeController.java:38:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_client_proposeController.java:38:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_p_addController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Course_p_addController.java:33:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_p_addController.java:33:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Course_p_addController.java:33:	The class name 'Course_p_addController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:33:	The class name 'Course_p_addController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:35:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:35:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_p_addController.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_p_addController.java:35:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_title' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:35:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_title' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:35:	The field name 'course_p_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:35:	The field name 'course_p_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:37:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:37:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_p_addController.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_p_addController.java:37:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_url' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:37:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_url' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:37:	The field name 'course_p_url' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:37:	The field name 'course_p_url' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:39:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:39:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:39:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_p_addController.java:39:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_p_addController.java:39:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_desc' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:39:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_desc' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:39:	The field name 'course_p_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:39:	The field name 'course_p_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:41:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:41:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:41:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_p_addController.java:41:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Course_p_addController.java:41:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_domain' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:41:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_p_domain' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:41:	The field name 'course_p_domain' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:41:	The field name 'course_p_domain' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:43:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:43:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:43:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'add_course_p' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:43:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'add_course_p' is not final.
+src/main/java/networkClient/main/Course_p_addController.java:43:	The field name 'add_course_p' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:43:	The field name 'add_course_p' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:45:	Field back has the same name as a method
+src/main/java/networkClient/main/Course_p_addController.java:45:	Field back has the same name as a method
+src/main/java/networkClient/main/Course_p_addController.java:45:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:45:	Field comments are required
+src/main/java/networkClient/main/Course_p_addController.java:51:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_p_addController.java:51:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Course_p_addController.java:51:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:51:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:51:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:51:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:56:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:56:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:56:	The instance method name 'p_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:56:	The instance method name 'p_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Course_p_addController.java:57:	Avoid variables with short names like c
+src/main/java/networkClient/main/Course_p_addController.java:57:	Avoid variables with short names like c
+src/main/java/networkClient/main/Course_p_addController.java:57:	Local variable 'c' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:57:	Local variable 'c' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:62:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:62:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:63:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:63:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:64:	Avoid variables with short names like s
+src/main/java/networkClient/main/Course_p_addController.java:64:	Avoid variables with short names like s
+src/main/java/networkClient/main/Course_p_addController.java:64:	Local variable 's' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:64:	Local variable 's' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_p_addController.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_p_addController.java:67:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:67:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:67:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_p_addController.java:67:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_p_addController.java:67:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_p_addController.java:67:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_p_addController.java:68:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_p_addController.java:68:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_p_addController.java:72:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:72:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:73:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:73:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Course_p_addController.java:73:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_p_addController.java:73:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_p_addController.java:73:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_p_addController.java:73:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Course_p_addController.java:74:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Course_p_addController.java:74:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/CoursesClientController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/CoursesClientController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/CoursesClientController.java:35:	Each class should declare at least one constructor
+src/main/java/networkClient/main/CoursesClientController.java:35:	Each class should declare at least one constructor
+src/main/java/networkClient/main/CoursesClientController.java:37:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:37:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/CoursesClientController.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/CoursesClientController.java:37:	The field name 'Vcourses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:37:	The field name 'Vcourses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:37:	Variables should start with a lowercase character, 'Vcourses' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:37:	Variables should start with a lowercase character, 'Vcourses' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:39:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:39:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:39:	The field name 'Homebutton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:39:	The field name 'Homebutton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:39:	Variables should start with a lowercase character, 'Homebutton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:39:	Variables should start with a lowercase character, 'Homebutton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:41:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:41:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:41:	The field name 'Profilebutton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:41:	The field name 'Profilebutton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:41:	Variables should start with a lowercase character, 'Profilebutton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:41:	Variables should start with a lowercase character, 'Profilebutton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:43:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:43:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:43:	The field name 'JObutton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:43:	The field name 'JObutton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:43:	Variables should start with a lowercase character, 'JObutton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:43:	Variables should start with a lowercase character, 'JObutton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:45:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:45:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:45:	The field name 'EnterButton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:45:	The field name 'EnterButton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:45:	Variables should start with a lowercase character, 'EnterButton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:45:	Variables should start with a lowercase character, 'EnterButton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:47:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:47:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:47:	The field name 'Eventbutton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:47:	The field name 'Eventbutton' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:47:	Variables should start with a lowercase character, 'Eventbutton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:47:	Variables should start with a lowercase character, 'Eventbutton' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:49:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:49:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:51:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:51:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:53:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:53:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:53:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'My_courses' is not final.
+src/main/java/networkClient/main/CoursesClientController.java:53:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'My_courses' is not final.
+src/main/java/networkClient/main/CoursesClientController.java:53:	The field name 'My_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:53:	The field name 'My_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:53:	Variables should start with a lowercase character, 'My_courses' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:53:	Variables should start with a lowercase character, 'My_courses' starts with uppercase character.
+src/main/java/networkClient/main/CoursesClientController.java:55:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:55:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:55:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'propose_course' is not final.
+src/main/java/networkClient/main/CoursesClientController.java:55:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'propose_course' is not final.
+src/main/java/networkClient/main/CoursesClientController.java:55:	The field name 'propose_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:55:	The field name 'propose_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:61:	Avoid variables with short names like rb
+src/main/java/networkClient/main/CoursesClientController.java:61:	Avoid variables with short names like rb
+src/main/java/networkClient/main/CoursesClientController.java:61:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:61:	Field comments are required
+src/main/java/networkClient/main/CoursesClientController.java:63:	Avoid variables with short names like rb
+src/main/java/networkClient/main/CoursesClientController.java:63:	Avoid variables with short names like rb
+src/main/java/networkClient/main/CoursesClientController.java:63:	Found 'UR'-anomaly for variable 'c' (lines '63'-'72').
+src/main/java/networkClient/main/CoursesClientController.java:63:	Found 'UR'-anomaly for variable 'c' (lines '63'-'72').
+src/main/java/networkClient/main/CoursesClientController.java:63:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:63:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:63:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:63:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:66:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:66:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:67:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:67:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:68:	Avoid variables with short names like s
+src/main/java/networkClient/main/CoursesClientController.java:68:	Avoid variables with short names like s
+src/main/java/networkClient/main/CoursesClientController.java:68:	Local variable 's' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:68:	Local variable 's' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:69:	Local variable 'list' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:69:	Local variable 'list' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:69:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/CoursesClientController.java:69:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/CoursesClientController.java:70:	Local variable 'c' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:70:	Local variable 'c' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:73:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:73:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:73:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:73:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:73:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:73:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:80:	'catch' branch identical to 'NamingException' branch
+src/main/java/networkClient/main/CoursesClientController.java:80:	'catch' branch identical to 'NamingException' branch
+src/main/java/networkClient/main/CoursesClientController.java:86:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:86:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:86:	The instance method name 'all_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:86:	The instance method name 'all_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:91:	Document empty method body
+src/main/java/networkClient/main/CoursesClientController.java:91:	Document empty method body
+src/main/java/networkClient/main/CoursesClientController.java:91:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:91:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:91:	The instance method name 'go_to_my_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:91:	The instance method name 'go_to_my_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:98:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:98:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:98:	The instance method name 'Propose_a_course_to_admin' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:98:	The instance method name 'Propose_a_course_to_admin' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/CoursesClientController.java:101:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:101:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:101:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:101:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:101:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:101:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/CoursesClientController.java:102:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:102:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:103:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/CoursesClientController.java:103:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Courses_adminController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Courses_adminController.java:35:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Courses_adminController.java:35:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Courses_adminController.java:35:	The class name 'Courses_adminController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:35:	The class name 'Courses_adminController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:37:	Avoid excessively long variable names like courses_propositions
+src/main/java/networkClient/main/Courses_adminController.java:37:	Avoid excessively long variable names like courses_propositions
+src/main/java/networkClient/main/Courses_adminController.java:37:	Field comments are required
+src/main/java/networkClient/main/Courses_adminController.java:37:	Field comments are required
+src/main/java/networkClient/main/Courses_adminController.java:37:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'courses_propositions' is not final.
+src/main/java/networkClient/main/Courses_adminController.java:37:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'courses_propositions' is not final.
+src/main/java/networkClient/main/Courses_adminController.java:37:	The field name 'courses_propositions' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:37:	The field name 'courses_propositions' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:39:	Avoid excessively long variable names like search_admin_courses
+src/main/java/networkClient/main/Courses_adminController.java:39:	Avoid excessively long variable names like search_admin_courses
+src/main/java/networkClient/main/Courses_adminController.java:39:	Field comments are required
+src/main/java/networkClient/main/Courses_adminController.java:39:	Field comments are required
+src/main/java/networkClient/main/Courses_adminController.java:39:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'search_admin_courses' is not final.
+src/main/java/networkClient/main/Courses_adminController.java:39:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'search_admin_courses' is not final.
+src/main/java/networkClient/main/Courses_adminController.java:39:	The field name 'search_admin_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:39:	The field name 'search_admin_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:41:	Field comments are required
+src/main/java/networkClient/main/Courses_adminController.java:41:	Field comments are required
+src/main/java/networkClient/main/Courses_adminController.java:41:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'add_admin_courses' is not final.
+src/main/java/networkClient/main/Courses_adminController.java:41:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'add_admin_courses' is not final.
+src/main/java/networkClient/main/Courses_adminController.java:41:	The field name 'add_admin_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:41:	The field name 'add_admin_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:43:	Field comments are required
+src/main/java/networkClient/main/Courses_adminController.java:43:	Field comments are required
+src/main/java/networkClient/main/Courses_adminController.java:43:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_adminController.java:43:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_adminController.java:43:	The field name 'Vcourses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:43:	The field name 'Vcourses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:43:	Variables should start with a lowercase character, 'Vcourses' starts with uppercase character.
+src/main/java/networkClient/main/Courses_adminController.java:43:	Variables should start with a lowercase character, 'Vcourses' starts with uppercase character.
+src/main/java/networkClient/main/Courses_adminController.java:49:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Courses_adminController.java:49:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Courses_adminController.java:49:	Found 'UR'-anomaly for variable 'c' (lines '49'-'59').
+src/main/java/networkClient/main/Courses_adminController.java:49:	Found 'UR'-anomaly for variable 'c' (lines '49'-'59').
+src/main/java/networkClient/main/Courses_adminController.java:49:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:49:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:49:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:49:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:53:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:53:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:54:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:54:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:55:	Avoid variables with short names like s
+src/main/java/networkClient/main/Courses_adminController.java:55:	Avoid variables with short names like s
+src/main/java/networkClient/main/Courses_adminController.java:55:	Local variable 's' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:55:	Local variable 's' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:56:	Local variable 'list' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:56:	Local variable 'list' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:56:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Courses_adminController.java:56:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Courses_adminController.java:57:	Local variable 'c' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:57:	Local variable 'c' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:60:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:60:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:60:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:60:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:60:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:60:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:61:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:61:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:67:	'catch' branch identical to 'NamingException' branch
+src/main/java/networkClient/main/Courses_adminController.java:67:	'catch' branch identical to 'NamingException' branch
+src/main/java/networkClient/main/Courses_adminController.java:73:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:73:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:73:	The instance method name 'go_to_proposed_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:73:	The instance method name 'go_to_proposed_courses' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:75:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:75:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:75:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:75:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:75:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:75:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:76:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:76:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:77:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:77:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:87:	Document empty method body
+src/main/java/networkClient/main/Courses_adminController.java:87:	Document empty method body
+src/main/java/networkClient/main/Courses_adminController.java:87:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:87:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:87:	The instance method name 'search_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:87:	The instance method name 'search_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:91:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:91:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:91:	The instance method name 'add_a_new_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:91:	The instance method name 'add_a_new_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_adminController.java:93:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:93:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:93:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:93:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:93:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:93:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_adminController.java:94:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:94:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:95:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Courses_adminController.java:95:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Courses_admin_addController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Courses_admin_addController.java:38:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Courses_admin_addController.java:38:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Courses_admin_addController.java:38:	The class name 'Courses_admin_addController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:38:	The class name 'Courses_admin_addController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:40:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:40:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:42:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:42:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:42:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:42:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:42:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_title' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:42:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_title' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:42:	The field name 'course_a_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:42:	The field name 'course_a_title' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:44:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:44:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:44:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:44:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:44:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_domain' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:44:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_domain' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:44:	The field name 'course_a_domain' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:44:	The field name 'course_a_domain' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:46:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:46:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:46:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:46:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:46:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_price' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:46:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_price' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:46:	The field name 'course_a_price' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:46:	The field name 'course_a_price' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:48:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:48:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:48:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:48:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:48:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_source' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:48:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_source' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:48:	The field name 'course_a_source' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:48:	The field name 'course_a_source' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:50:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:50:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:50:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:50:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:50:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_desc' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:50:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_a_desc' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:50:	The field name 'course_a_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:50:	The field name 'course_a_desc' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:52:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:52:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:52:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_chapters' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:52:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_chapters' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:52:	The field name 'course_chapters' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:52:	The field name 'course_chapters' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	Avoid excessively long variable names like course_chapters_set
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	Avoid excessively long variable names like course_chapters_set
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_chapters_set' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_chapters_set' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	The field name 'course_chapters_set' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:54:	The field name 'course_chapters_set' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:56:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:56:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:56:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_add_a' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:56:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'course_add_a' is not final.
+src/main/java/networkClient/main/Courses_admin_addController.java:56:	The static field name 'course_add_a' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:56:	The static field name 'course_add_a' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:58:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:58:	Field comments are required
+src/main/java/networkClient/main/Courses_admin_addController.java:58:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:58:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/networkClient/main/Courses_admin_addController.java:64:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Courses_admin_addController.java:64:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Courses_admin_addController.java:64:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:64:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:64:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:64:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:69:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:69:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:70:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:70:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:70:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:70:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:70:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:70:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:71:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Courses_admin_addController.java:71:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Courses_admin_addController.java:75:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:75:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:75:	The instance method name 'set_chapters' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:75:	The instance method name 'set_chapters' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:76:	Avoid variables with short names like i
+src/main/java/networkClient/main/Courses_admin_addController.java:76:	Avoid variables with short names like i
+src/main/java/networkClient/main/Courses_admin_addController.java:76:	Local variable 'i' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:76:	Local variable 'i' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:76:	Useless parentheses.
+src/main/java/networkClient/main/Courses_admin_addController.java:76:	Useless parentheses.
+src/main/java/networkClient/main/Courses_admin_addController.java:79:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:79:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:79:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:79:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:79:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:79:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:80:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:80:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:86:	Found 'UR'-anomaly for variable 'chap' (lines '86'-'101').
+src/main/java/networkClient/main/Courses_admin_addController.java:86:	Found 'UR'-anomaly for variable 'chap' (lines '86'-'101').
+src/main/java/networkClient/main/Courses_admin_addController.java:86:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:86:	Parameter 'event' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:86:	The instance method name 'add_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:86:	The instance method name 'add_course' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_admin_addController.java:87:	Avoid variables with short names like c
+src/main/java/networkClient/main/Courses_admin_addController.java:87:	Avoid variables with short names like c
+src/main/java/networkClient/main/Courses_admin_addController.java:87:	Local variable 'c' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:87:	Local variable 'c' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:95:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:95:	Local variable 'ctx' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:96:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:96:	Local variable 'obj' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:97:	Avoid variables with short names like s
+src/main/java/networkClient/main/Courses_admin_addController.java:97:	Avoid variables with short names like s
+src/main/java/networkClient/main/Courses_admin_addController.java:97:	Local variable 's' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:97:	Local variable 's' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:98:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Courses_admin_addController.java:98:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Courses_admin_addController.java:99:	Local variable 'chap' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:99:	Local variable 'chap' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:107:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:107:	Local variable 'primaryStage' could be declared final
+src/main/java/networkClient/main/Courses_admin_addController.java:107:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:107:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:107:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:107:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/Courses_admin_addController.java:108:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Courses_admin_addController.java:108:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:6:	Package name contains upper case characters
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:19:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:19:	Each class should declare at least one constructor
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:19:	The class name 'Courses_proposed_AdminController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:19:	The class name 'Courses_proposed_AdminController' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:21:	Field comments are required
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:21:	Field comments are required
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:27:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:27:	Avoid variables with short names like rb
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:27:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:27:	Parameter 'rb' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:27:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/Courses_proposed_AdminController.java:27:	Parameter 'url' is not assigned and could be declared final
+src/main/java/networkClient/main/main.java:1:	Package name contains upper case characters
+src/main/java/networkClient/main/main.java:1:	Package name contains upper case characters
+src/main/java/networkClient/main/main.java:13:	Avoid short class names like main
+src/main/java/networkClient/main/main.java:13:	Avoid short class names like main
+src/main/java/networkClient/main/main.java:13:	Each class should declare at least one constructor
+src/main/java/networkClient/main/main.java:13:	Each class should declare at least one constructor
+src/main/java/networkClient/main/main.java:13:	Header comments are required
+src/main/java/networkClient/main/main.java:13:	Header comments are required
+src/main/java/networkClient/main/main.java:13:	The class name 'main' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/main.java:13:	The class name 'main' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/networkClient/main/main.java:15:	Field comments are required
+src/main/java/networkClient/main/main.java:15:	Field comments are required
+src/main/java/networkClient/main/main.java:18:	Parameter 'primaryStage' is not assigned and could be declared final
+src/main/java/networkClient/main/main.java:18:	Parameter 'primaryStage' is not assigned and could be declared final
+src/main/java/networkClient/main/main.java:21:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/main.java:21:	Local variable 'root' could be declared final
+src/main/java/networkClient/main/main.java:21:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/main.java:21:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/main.java:21:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/main.java:21:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/networkClient/main/main.java:22:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/main.java:22:	Local variable 'scene' could be declared final
+src/main/java/networkClient/main/main.java:36:	Classes should not have non-constructor methods with the same name as the class
+src/main/java/networkClient/main/main.java:36:	Classes should not have non-constructor methods with the same name as the class
+src/main/java/networkClient/main/main.java:36:	Parameter 'args' is not assigned and could be declared final
+src/main/java/networkClient/main/main.java:36:	Parameter 'args' is not assigned and could be declared final

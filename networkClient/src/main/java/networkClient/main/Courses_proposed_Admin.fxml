@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="741.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="networkClient.main.Courses_proposed_AdminController">
+   <children>
+      <JFXButton fx:id="back" layoutX="14.0" layoutY="524.0" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #151928;" text="Back" textFill="#a0a2ab" />
+      <ScrollPane layoutX="9.0" layoutY="14.0" prefHeight="493.0" prefWidth="723.0" style="-fx-background-color: #2D3447;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="726.0" style="-fx-background-color: #2D3447;">
+               <children>
+                  <VBox layoutX="-1.0" prefHeight="480.0" prefWidth="715.0" style="-fx-background-color: #2D3447;" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
