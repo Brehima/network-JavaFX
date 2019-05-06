@@ -33,6 +33,19 @@ public class main {
 		String jndiName1="networkServer-ear/networkServer-ejb/CandidatProfilService!tn.redhats.network.networkServer.services.CandidatProfilServiceRemote";
 		Context context =  new InitialContext();
 		CandidatProfilServiceRemote proxy= (CandidatProfilServiceRemote) context.lookup(jndiName1);
+		User us1 = proxy.findUserByUsername("toto");
+	//	User us2 = proxy.findUserByUsername("lolo");
+	 //   us1.getUsers().add(us2);
+	  //  System.out.println(us1.getUsers());
+		//us1.getProfile()
+		CandidateProfile profile = (CandidateProfile)us1.getProfile();
+		profile.getEducation().add("hello2");
+		us1.setProfile(profile);
+	    User fin = proxy.updateUser(us1);
+	    User mm = proxy.findUserByUsername("toto");
+	   
+	    System.out.println(fin);
+	    //System.out.println("---"+us1.getUsers());
 //		CandidatProfilServiceRemote proxy = getProxy();
 //		User user = new User();
 //		CandidateProfile candidate = new CandidateProfile();
@@ -55,7 +68,7 @@ public class main {
 		System.out.println(proxy.updateProfil(candidate));*/
 		
 		//SignUp_fxmlController.sendEmailBySSl(SignUp_fxmlController.generateCode(),"brehima.coulibaly@esprit.tn");
-		System.out.println(proxy.searchContact("toto"));
+		//System.out.println(proxy.searchContact("toto"));
 	//  System.out.println(	BCrypt.hashpw("admin", BCrypt.gensalt()) );
 	}
 

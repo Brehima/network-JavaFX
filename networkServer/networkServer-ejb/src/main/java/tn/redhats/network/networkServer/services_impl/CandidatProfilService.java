@@ -2,6 +2,7 @@ package tn.redhats.network.networkServer.services_impl;
 
 import java.util.List;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
 import javax.ejb.Stateless;
 import javax.persistence.Query;
@@ -24,6 +25,7 @@ import tn.redhats.network.networkServer.services.CandidatProfilServiceLocal;
 import tn.redhats.network.networkServer.services.CandidatProfilServiceRemote;
 
 @Stateless
+@LocalBean
 public class CandidatProfilService implements CandidatProfilServiceLocal,CandidatProfilServiceRemote {
 	
 	@PersistenceContext(unitName="networkServer-ejb")
@@ -306,11 +308,7 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 			//u.setMessages(user.getMessages());
 			u.setPassword(user.getPassword());
 			//u.setProfile(user.getProfile());
-			u.setUsername(user.getUsername());
-			System.out.println("------------------------------------SIZEUsers"+u.getUsers());
-			System.out.println("-------------------------------user:"+u);
-		   if(u.getUsers().size()>0)
-		   {		   
+			u.setUsername(user.getUsername());			   
 			   for(User i:user.getUsers())
 			   {
 				   if(!u.getUsers().contains(i))
@@ -318,18 +316,43 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 					   u.getUsers().add(i);
 				   }
 			   }
-		   }
-		   else
-		   {
-			   u.getUsers().add(user);
-		   }
+			/*  if(((CandidateProfile)u.getProfile()).getEducation().size() > 0)
+			 {
+			   for(String ch: ((CandidateProfile)u.getProfile()).getEducation())
+		       {
+		    	  em.remove(ch);
+		       }
+			 }  */
+			   System.out.println("-----------------avant---" +((CandidateProfile)u.getProfile()).getEducation() );
+			   System.out.println("-----------------apres---" +((CandidateProfile)user.getProfile()).getEducation() );
+		       for(String ch: ((CandidateProfile)user.getProfile()).getEducation())
+		       {
+		    	   if(! ((CandidateProfile)u.getProfile()).getEducation().contains(ch) )
+					{
+		    		   ((CandidateProfile)u.getProfile()).getEducation().add(ch);
+					}
+		       }
+		  /* if(((CandidateProfile)u.getProfile()).getVolunteeringExperiences().size() > 0)
+				 {
+		       for(String ch: ((CandidateProfile)u.getProfile()).getVolunteeringExperiences())
+		       {
+		    	  em.remove(ch);
+		       }
+			  }*/
+		       for(String ch: ((CandidateProfile)user.getProfile()).getVolunteeringExperiences())
+		       {
+		    	   if(! ((CandidateProfile)u.getProfile()).getVolunteeringExperiences().contains(ch) )
+					{
+		    		   ((CandidateProfile)u.getProfile()).getVolunteeringExperiences().add(ch);
+					}
+		       }
 			em.flush();
 			//updateUser(user);
 		    return u;
 		}
 		return null;
 	}
-
+    //public U
 	@Override
 	public User updateLogginAttempts(User user) {
 	
@@ -377,10 +400,12 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 				{
 					if(status.equals("ACCEPT"))
 					{
+						//adding both contact in each users contact list
 						User user = i.getReceiver();
 						user.getUsers().add(i.getSender());
-						
-						if(updateUser(user)!=null)
+						User user2 = i.getSender();
+						user2.getUsers().add(i.getReceiver());
+						if(updateUser(user)!=null && updateUser(user2)!=null)
 						{
 							em.remove(i);
 						}

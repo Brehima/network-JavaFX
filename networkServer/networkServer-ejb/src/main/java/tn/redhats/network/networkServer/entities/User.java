@@ -47,9 +47,9 @@ public class User implements Serializable {
 	@JoinColumn(name="user_fk")
 	private User user;
 	
-	@OneToMany(mappedBy="user", fetch = FetchType.EAGER)
+
 	@Column
-	@ElementCollection(targetClass=User.class)
+	@ElementCollection(targetClass=User.class,fetch = FetchType.EAGER)
 	private List<User> users;
 	
 	@OneToMany
@@ -165,6 +165,24 @@ public class User implements Serializable {
 	}
 	public void setLoginAttempts(int loginAttempts) {
 		this.loginAttempts = loginAttempts;
+	}
+	
+	@Override
+	public int hashCode() {
+		return 5;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (id != other.id)
+			return false;
+		return true;
 	}
 	@Override
 	public String toString() {

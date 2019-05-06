@@ -6,7 +6,7 @@ import javafx.scene.control.TextInputControl;
 
 public class usernameValidator extends ValidatorBase{
 	public Boolean checkExistUsername = true;
-	
+	public String msg="";
 	@Override
 	protected void eval() {
 		// TODO Auto-generated method stub
@@ -21,26 +21,27 @@ public class usernameValidator extends ValidatorBase{
            
             if(valeur.length()<=3 )
             {
-                message.setValue( "this username is too short");
+                msg= "this username is too short";
                 hasErrors.set(true);
             }
             else
             {
             	if(checkExistUsername==true)
             	{
-                	message.setValue("this username already exist");
+                	msg="this username already exist";
                 	hasErrors.set(true);
             	}
             	else
             	{
-                    message.setValue("");
+                    msg="";
                     hasErrors.set(false);
             	}
             	
             }
                        
         } catch (Exception e) {
-        	message.setValue("please enter your username");
+        
+        	msg="please enter your username";
             hasErrors.set(true);
         }
 	}

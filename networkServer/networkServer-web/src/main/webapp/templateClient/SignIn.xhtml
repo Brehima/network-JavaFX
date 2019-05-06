@@ -1,0 +1,63 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templateClient/template.xhtml">
+ 	<ui:define name="title">SignIn</ui:define>    
+    <ui:define name="content">
+   			<div class="jumbotron" style="background-image: url(&quot;images/slider-hero.jpg&quot;);">
+		
+		<div class="container">
+		
+		<div class="row">
+		
+		<div class="col-sm-5">
+		
+		<h1 class="heading">Join NetWork</h1>
+		
+		</div>
+		
+		<div class="col-sm-7">
+		
+		<div class="slider-box-appointment">
+		
+		<div class="header">
+		
+		<h3 class="heading font-2 text-center">Sign In</h3>
+		</div>
+		
+		<hr class="hr-2" />
+		
+		<div class="body">
+		<h:form id="signInForm">
+		 			
+			 <div class="form-group">
+			    <h:outputText value="Username"/>   
+				<p:inputText class="form-control"  value="#{signInBean.username}" type="text" placeholder="User Name/Email" />
+			</div>
+			
+			
+			
+			<div class="form-group">
+				<h:outputText value="Password"/>
+				<p:password class="form-control" id="feedback" value="#{signInBean.password}"  />
+			
+			</div>
+			
+		
+			
+			
+		    <h:commandButton class="btn btn-black btn-block" id="btn" value="Sign In" action="#{signInBean.step1Finish()}" />
+	        <h:message  class="justify" style="color:red" for="btn"  />
+			
+		</h:form>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+    </ui:define> 
+          
+</ui:composition>

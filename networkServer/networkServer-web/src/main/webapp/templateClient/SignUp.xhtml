@@ -1,0 +1,141 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templateClient/template.xhtml">
+ 	<ui:define name="title">Sign Up</ui:define>    
+    <ui:define name="content">
+			   		<script type="text/javascript">
+			    PrimeFaces.locales['es'] = {
+			        closeText: 'Cerrar',
+			        prevText: 'Anterior',
+			        nextText: 'Siguiente',
+			        monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+			        monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+			        dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+			        dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+			        dayNamesMin: ['D', 'L', 'M', 'X', 'J', 'V', 'S'],
+			        weekHeader: 'Semana',
+			        firstDayOfWeek: 1,
+			        isRTL: false,
+			        showMonthAfterYear: false,
+			        yearSuffix: '',
+			        timeOnlyTitle: 'Sólo hora',
+			        timeText: 'Tiempo',
+			        hourText: 'Hora',
+			        minuteText: 'Minuto',
+			        secondText: 'Segundo',
+			        currentText: 'Fecha actual',
+			        ampm: false,
+			        month: 'Mes',
+			        week: 'Semana',
+			        day: 'Día',
+			        allDayText: 'Todo el día'
+			    };
+			</script>
+			 
+			<script type="text/javascript">
+			    //<![CDATA[
+			    function dateTemplateFunc(date) {
+			        return '<span style="background-color:' + ((date.day < 21 && date.day > 10) ? '#81C784' : 'inherit') + ';border-radius:50%;padding: .25em;width: 1.75em; height:1.75em; display:block;">' + date.day + '</span>';
+			    }
+			    //]]>
+			</script>
+			 
+			<style type="text/css">
+			    .value {
+			        font-weight: bold;
+			    }
+			</style>	 
+		<div class="jumbotron" style="background-image: url(&quot;images/slider-hero.jpg&quot;);">
+		
+		<div class="container">
+		
+		<div class="row">
+		
+		<div class="col-sm-5">
+		
+		<h1 class="heading">Join NetWork</h1>
+		
+		</div>
+		
+		<div class="col-sm-7">
+		
+		<div class="slider-box-appointment">
+		
+		<div class="header">
+		
+		<h3 class="heading font-2 text-center">Sign Up</h3>
+		</div>
+		
+		<hr class="hr-2" />
+		
+		<div class="body">
+		<h:form id="signInForm">
+		 			
+			 <div class="form-group">
+			    <h:outputText value="First Name"/>   
+				<p:inputText class="form-control"  value="#{signUpBean.firstName}" type="text" placeholder="First Name" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputText value="Last Name"/>
+				<p:inputText class="form-control"  value="#{signUpBean.lastName}" type="text" placeholder="Last Name" />
+			</div>
+			<div class="form-group">
+				<h:outputText value="User Name"/>
+				<p:inputText class="form-control"  value="#{signUpBean.username}" type="text" placeholder="Username" />
+			</div>
+			<div class="form-group">
+			    <h:outputText value="Email"/>
+				<p:inputText class="form-control"  value="#{signUpBean.email}" type="text" placeholder="your Email" />
+			</div>
+			<div class="form-group">
+			  <p:outputLabel for="dateNaiss" value="Birth date"/>
+			  <p:datePicker class="form-control date-select" id="dateNaiss" value="#{signUpBean.birthDate}"/> 
+			</div>
+			
+			<div class="form-group">
+				<h:outputText value="Password"/>
+				<p:password class="form-control" id="feedback" value="#{signUpBean.password}" feedback="true"
+							 promptLabel="your password "
+							 weakLabel="weak password"
+							 goodLabel="can be more strong"
+							 strongLabel="nice strong password" />
+			
+			</div>
+			
+		
+			<div class="form-group">
+				<p:outputLabel  for="gender" value="Gender"/>
+				<p:selectOneMenu class="form-control" id="gender" value="#{signUpBean.sexe}">
+					<f:selectItem itemLabel="Man" itemValue="Man" />
+					<f:selectItem itemLabel="Womman" itemValue="Womman" />
+				</p:selectOneMenu>
+			</div>
+			
+		
+			
+			<div class="form-group">
+				<p:outputLabel   value="Introduction"/>
+				<p:inputTextarea class="form-control" value="#{signUpBean.introduction}" placeholder="tell us about you in few words" rows="3" cols="33" counter="display" maxlength="100" counterTemplate="{0} characters remaining." autoResize="false"/>
+				
+				<br/>
+				<h:outputText id="display" style="color:yellow"/>
+			</div>
+			
+		    <h:commandButton class="btn btn-black btn-block" value="Sign Up" action="#{signUpBean.SignUp()}" />
+	
+			
+		</h:form>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+   			 
+    </ui:define> 
+          
+</ui:composition>

@@ -5,9 +5,13 @@
  */
 package tn.redhats.network.networkClient.javafx.candidateProfile;
 
+import java.awt.Button;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -15,16 +19,34 @@ import javax.naming.NamingException;
 
 import org.mindrot.jbcrypt.BCrypt;
 
+import com.jfoenix.animation.alert.JFXAlertAnimation;
+import com.jfoenix.controls.JFXAlert;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialogLayout;
 import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXSpinner;
 import com.jfoenix.controls.JFXTextField;
 
+import de.jensd.fx.glyphs.GlyphsBuilder;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIcon;
+import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.stage.Modality;
 import networkClient.main.candidateFXMain;
 import networkClient.main.main;
 import tn.redhats.network.networkServer.entities.Code2FACandidate;
@@ -45,12 +67,16 @@ public class SignIn_fxmlController implements Initializable {
 	private JFXTextField userID;
 	@FXML
 	private JFXPasswordField userpass;
+    @FXML
+    private JFXSpinner spinner;
+    
 	public static User userConnected;
 	public static String generatedCode;
+	public static Alert ale = new Alert(AlertType.INFORMATION);
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     	userConnected = new User();
-    	
+        spinner.setVisible(false);
         // TODO
     }    
     
@@ -65,6 +91,7 @@ public class SignIn_fxmlController implements Initializable {
 				CandidatProfilServiceRemote proxy = (CandidatProfilServiceRemote) context.lookup(jndiName1);
 				User user =  proxy.signInStepOne(id);
 				System.out.println("userConnectedLog1:"+user);
+				  
 				if(user!=null)
 				{
 					if(user.getLoginAttempts() <= 3)
@@ -79,9 +106,27 @@ public class SignIn_fxmlController implements Initializable {
 								//code.setIdUser(userConnected.getId());
 								//code.setCode(generatedCode);
 								//proxy.addCode(code);
-								SignUp_fxmlController.sendEmailBySSl(generatedCode, user.getEmail());
 								
-								loadStep2Code();
+								spinner.setVisible(true);
+								Timer time = new Timer();
+								time.schedule(new TimerTask() {
+									
+									@Override
+									public void run() {
+									 	
+									  SignUp_fxmlController.sendEmailBySSl(generatedCode, user.getEmail());
+									
+									  spinner.setVisible(false);
+									  Platform.runLater(()->{
+										
+										  loadStep2Code();
+									  });
+									}
+								}, 3000);
+								
+								
+								
+								
 							}
 						else
 						{
@@ -160,5 +205,14 @@ public class SignIn_fxmlController implements Initializable {
  			// TODO Auto-generated catch block
  			e.printStackTrace();
  		}
+    }
+    public static void showAlert()
+    {
+    
+		ale.setTitle("Notification ");
+		ale.setHeaderText("You have a new friend request");
+		ale.setContentText("please check your contact page to proceed further!");
+		ale.showAndWait();
+         
     }
 }

@@ -9,6 +9,11 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import com.jfoenix.animation.alert.JFXAlertAnimation;
+import com.jfoenix.controls.JFXAlert;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialogLayout;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,7 +21,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import tn.redhats.network.networkServer.services.CandidatProfilServiceRemote;
 
@@ -33,8 +40,8 @@ public class candidateFXMain extends Application {
       
         //Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/signUp_fxml.fxml"));
       //  Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/profilePage.fxml"));
-      //Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/signIN_fxml.fxml"));
-        Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/contactPage.fxml"));
+      Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/signIN_fxml.fxml"));
+     //   Parent root  = FXMLLoader.load(getClass().getResource("/tn/redhats/network/networkClient/javafx/candidateProfile/contactPage.fxml"));
         //JFXDecorator decorator = new JFXDecorator(stage, root);
         //decorator.setCustomMaximize(false);
         //decorator.setBorder(Border.EMPTY);
@@ -45,11 +52,12 @@ public class candidateFXMain extends Application {
         stage.setScene(scene);
         stage.setIconified(false);
         candidateFXMain.stage=stage;
+       
         stage.show();
         
         
     }
-
+	 
     /**
      * @param args the command line arguments
      */

@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
@@ -38,9 +39,9 @@
                         </ImageView>
                         <JFXButton buttonType="RAISED" layoutX="919.0" layoutY="23.0" onMouseClicked="#loadSignIn" ripplerFill="RED" style="-fx-background-color: #151928;" text="Sign IN" textFill="#a0a2ab" />
                         <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="23.0" onMouseClicked="#loadSignIn" ripplerFill="RED" style="-fx-background-color: #151928;" text="&lt; preview" textFill="#a0a2ab" />
-                        <HBox layoutX="291.0" layoutY="168.0" prefHeight="501.0" prefWidth="426.0">
+                        <HBox layoutX="291.0" layoutY="168.0" prefHeight="524.0" prefWidth="426.0">
                            <children>
-                              <VBox prefHeight="461.0" prefWidth="426.0">
+                              <VBox prefHeight="518.0" prefWidth="426.0">
                                  <children>
                                     <JFXTextField fx:id="firstName" focusColor="WHITE" labelFloat="true" onKeyReleased="#validateFirstName" prefHeight="25.0" prefWidth="366.0" promptText="first name" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab">
                                        <opaqueInsets>
@@ -59,9 +60,21 @@
                                        </opaqueInsets>
                                     </JFXComboBox>
                                     <JFXTextField fx:id="email" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="47.0" onKeyReleased="#validateEmail" prefHeight="25.0" prefWidth="366.0" promptText="email" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab" />
+                                    <Label fx:id="msgEmail" prefHeight="17.0" prefWidth="400.0" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </Label>
                                     <JFXTextField fx:id="username" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="174.0" onKeyReleased="#validateUsername" prefHeight="25.0" prefWidth="366.0" promptText="username" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab" />
+                                    <Label fx:id="msgUserName" prefHeight="17.0" prefWidth="400.0" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin></Label>
                                     <JFXPasswordField fx:id="password" focusColor="WHITE" labelFloat="true" onKeyReleased="#validatePassword" promptText="password" style="-fx-padding: 20; -fx-text-inner-color: white;" unFocusColor="#a0a2ab" />
-                                    <Label fx:id="passLabel" prefHeight="39.0" prefWidth="411.0" style="-fx-padding: 20;" textFill="WHITE" />
+                                    <Label fx:id="passLabel" prefHeight="17.0" prefWidth="400.0" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin></Label>
                                  </children>
                                  <opaqueInsets>
                                     <Insets />
@@ -112,7 +125,7 @@
                                     </Lighting>
                                  </effect>
                                  <children>
-                                    <JFXTextArea fx:id="introduction" focusColor="WHITE" labelFloat="true" prefHeight="85.0" prefWidth="426.0" promptText="tell us about you in less than 50 words" style="-fx-text-inner-color: white;" unFocusColor="#a0a2ab">
+                                    <JFXTextArea fx:id="introduction" focusColor="WHITE" labelFloat="true" prefHeight="85.0" prefWidth="426.0" promptText="tell us about you " style="-fx-text-inner-color: white;" unFocusColor="#a0a2ab">
                                        <padding>
                                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                        </padding></JFXTextArea>
@@ -134,6 +147,7 @@
                            </children>
                         </HBox>
                         <JFXButton layoutX="876.0" layoutY="657.0" onMouseClicked="#finishSignUp" ripplerFill="#006fff" style="-fx-background-color: #151928;" text="next &gt;" textFill="#a0a2ab" />
+                        <JFXSpinner fx:id="spinner2" layoutX="947.0" layoutY="653.0" prefHeight="33.0" prefWidth="40.0" />
                      </children>
                   </AnchorPane>
               </content>
@@ -174,7 +188,8 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <JFXButton layoutX="934.0" layoutY="673.0" onMouseClicked="#verifyUserCode" ripplerFill="#006fff" style="-fx-background-color: #151928;" text="finish" textFill="#a0a2ab" />
+                        <JFXButton layoutX="871.0" layoutY="673.0" onMouseClicked="#verifyUserCode" ripplerFill="#006fff" style="-fx-background-color: #151928;" text="finish" textFill="#a0a2ab" />
+                        <JFXSpinner fx:id="spinner3" layoutX="939.0" layoutY="672.0" prefHeight="28.0" prefWidth="32.0" />
                      </children>
                   </AnchorPane>
                </content>

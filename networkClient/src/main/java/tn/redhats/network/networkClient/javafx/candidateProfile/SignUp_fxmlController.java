@@ -19,6 +19,8 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.imageio.ImageIO;
 import javax.mail.Message;
@@ -39,11 +41,16 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXSpinner;
 import com.jfoenix.controls.JFXTabPane;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 
 import antlr.debug.Event;
+import de.jensd.fx.glyphs.GlyphsBuilder;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
@@ -114,6 +121,14 @@ public class SignUp_fxmlController implements Initializable {
 	private Label passLabel;
 	@FXML
 	private JFXTextField signUpCode;
+	@FXML
+	private Label msgEmail;
+	@FXML 
+	private Label msgUserName;
+	@FXML
+	private JFXSpinner spinner2;
+	@FXML
+	private JFXSpinner spinner3;
 	private String profileHashName;
 	
 	private File file;
@@ -121,18 +136,60 @@ public class SignUp_fxmlController implements Initializable {
 	private User user;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    	spinner2.setVisible(false);
+    	spinner3.setVisible(false);
         sexe.getItems().add("Man");
         sexe.getItems().add("Women");
         sexe.setStyle("-fx-padding:20px ; -fx-text-inner-color:white;-fx-text-fill:white;");
-    	firstName.getValidators().add(new NameValidator());
-    	lastName.getValidators().add(new NameValidator());
-    	birthDate.getValidators().add(new BirthDateValidator());
-    	email.getValidators().add(new EmailValidator());
-    	username.getValidators().add(new usernameValidator());
-    	password.getValidators().add(new passwordValidator());
+        NameValidator firstNameValidator = new NameValidator();
+        firstNameValidator.setIcon(GlyphsBuilder.create(FontAwesomeIconView.class)
+        								    .glyph(FontAwesomeIcon.WARNING)
+        								    .size("1em")
+        								    .styleClass("error")
+        								    .build());  
+    	firstName.getValidators().add(firstNameValidator);
+    	
+    	NameValidator lastNameValidator = new NameValidator();
+        lastNameValidator.setIcon(GlyphsBuilder.create(FontAwesomeIconView.class)
+        								    .glyph(FontAwesomeIcon.WARNING)
+        								    .size("1em")
+        								    .styleClass("error")
+        								    .build());
+    	lastName.getValidators().add(lastNameValidator);
+    	
+    	BirthDateValidator birthDateValidator= new BirthDateValidator();
+    	birthDateValidator.setIcon(GlyphsBuilder.create(FontAwesomeIconView.class)
+				    .glyph(FontAwesomeIcon.WARNING)
+				    .size("1em")
+				    .styleClass("error")
+				    .build());   	
+    	birthDate.getValidators().add(birthDateValidator);
+    	
+    	EmailValidator emailValidator = new EmailValidator();
+    	emailValidator.setIcon(GlyphsBuilder.create(FontAwesomeIconView.class)
+			    .glyph(FontAwesomeIcon.WARNING)
+			    .size("1em")
+			    .styleClass("error")
+			    .build());   	
+    	email.getValidators().add(emailValidator);
+    	
+    	usernameValidator userValidator = new usernameValidator();
+    	userValidator.setIcon(GlyphsBuilder.create(FontAwesomeIconView.class)
+			    .glyph(FontAwesomeIcon.WARNING)
+			    .size("1em")
+			    .styleClass("error")
+			    .build());   	
+    	username.getValidators().add(userValidator);
+    	
+    	passwordValidator passValidator = new passwordValidator();
+    	passValidator.setIcon(GlyphsBuilder.create(FontAwesomeIconView.class)
+			    .glyph(FontAwesomeIcon.WARNING)
+			    .size("1em")
+			    .styleClass("error")
+			    .build());   	
+    	password.getValidators().add(passValidator);
     	
     	profileHashName="";	
-    	passLabel = new Label();
     	user = new User();
         
     }    
@@ -186,14 +243,27 @@ public class SignUp_fxmlController implements Initializable {
 				User newUser = proxy.findUserByUsername(user.getUsername());
 				if(newUser!=null)
 				{
-					generatedCode = SignUp_fxmlController.generateCode();
-					Code2FACandidate code = new Code2FACandidate();
-					code.setIdUser(newUser.getId());
-					code.setCode(generatedCode);
-					//proxy.addCode(code);
-					sendEmailBySSl(code.getCode(), user.getEmail());
+					
 					this.user = newUser;
-					goToStep3SignUp();
+					SignIn_fxmlController.userConnected=this.user;
+					spinner2.setVisible(true);
+					Timer time2 = new Timer();
+					time2.schedule(new TimerTask() {
+						
+						@Override
+						public void run() {
+							generatedCode = SignUp_fxmlController.generateCode();
+							Code2FACandidate code = new Code2FACandidate();
+							code.setIdUser(newUser.getId());
+							code.setCode(generatedCode);
+							//proxy.addCode(code);
+							sendEmailBySSl(code.getCode(), SignIn_fxmlController.userConnected.getEmail());
+						    spinner2.setVisible(false);
+						  Platform.runLater(()->{
+							  goToStep3SignUp();
+						  });
+						}
+					}, 3000);
 				}
 				
 			} catch (NamingException e) {
@@ -269,6 +339,7 @@ public class SignUp_fxmlController implements Initializable {
     		 firstName.focusColorProperty().setValue(c);
     		 firstName.getValidators().get(0).setMessage("you must enter at list 4 caracter");
     	}
+    
     }
     public void validateLastName()
     {
@@ -286,6 +357,8 @@ public class SignUp_fxmlController implements Initializable {
     		 lastName.focusColorProperty().setValue(c);
     		 lastName.getValidators().get(0).setMessage("you must enter at list 4 caracter");
     	}
+    	validateFirstName();
+    	
     }
     public void validateDate()
     {
@@ -307,6 +380,8 @@ public class SignUp_fxmlController implements Initializable {
     		 //lastName.focusColorProperty().setValue(c);
     		 birthDate.getValidators().get(0).setMessage("your age should be between 18 and 70 year old");
     	}
+    	validateLastName();
+    	
     	
     }
     public void validateEmail()
@@ -331,22 +406,36 @@ public class SignUp_fxmlController implements Initializable {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		
     	if(this.email.validate())
     	{
+    		String msg=((EmailValidator)email.getValidators().get(0)).msg;
+    		
     		Color c = Color.web("#008000"); //green
             email.validate();
             email.focusColorProperty().setValue(c);
-            System.out.println(email.getValidators().get(0).getMessage());
-            //email.getValidators().get(0).setMessage("");
+            msgEmail.setTextFill(c);
+            msgEmail.setText(msg);
+           // email.getValidators().get(0).setMessage(msg);
+            System.out.println("aft:"+msg);
+           
     	}
     	else
     	{
+    		String msg=((EmailValidator)email.getValidators().get(0)).msg;
     		 Color c = Color.web("#ef3a23"); //red
     		 email.validate();
     		 email.focusColorProperty().setValue(c);
-    		 System.out.println(email.getValidators().get(0).getMessage());
+    		// email.getValidators().get(0).setMessage(msg);
+    		 msgEmail.setTextFill(c);
+             msgEmail.setText(msg);
+    		  System.out.println("aft:"+msg);
+    		 
     		// email.getValidators().get(0).setMessage("please enter a valid email and non existent email");
     	}
+    	
+    	validateDate();
+    
     }
     public void validateUsername()
     {
@@ -372,36 +461,36 @@ public class SignUp_fxmlController implements Initializable {
 			}
    	if(this.username.validate())
    	{
+   		String msg=((usernameValidator)username.getValidators().get(0)).msg;
    		Color c = Color.web("#008000"); //green
-           username.validate();
-           username.focusColorProperty().setValue(c);
-           System.out.println(username.getValidators().get(0).getMessage());
-        
+        username.validate();
+        username.focusColorProperty().setValue(c);
+        msgUserName.setTextFill(c);
+        msgUserName.setText(msg);
    	}
    	else
    	{
+   		 String msg=((usernameValidator)username.getValidators().get(0)).msg;
    		 Color c = Color.web("#ef3a23"); //red
    		 username.validate();
    		 username.focusColorProperty().setValue(c);
-   		 System.out.println(username.getValidators().get(0).getMessage());
-   		// email.getValidators().get(0).setMessage("please enter a valid email and non existent email");
+   	     msgUserName.setTextFill(c);
+         msgUserName.setText(msg);
    	}
     }
     public void validatePassword()
     {
-    	
+    	String msg=((passwordValidator)password.getValidators().get(0)).msg;
 
     	if(this.password.validate())
     	{
+    		
     		Color c = Color.web("#008000"); //green
     		password.validate();
     		password.focusColorProperty().setValue(c);
-    		System.out.println(passwordValidator.msg);
-    		password.getValidators().get(0).setMessage(passwordValidator.msg);
-    		password.getValidators().get(0).validate(); 
-    		password.setAccessibleText(passwordValidator.msg);
-    		passLabel.setText(passwordValidator.msg);
-    		passLabel.setTextFill(Color.web("#008000"));
+    		passLabel.setTextFill(c);
+    		passLabel.setText(msg);
+    		System.out.println(msg);
     		
     	}
     	else
@@ -409,14 +498,13 @@ public class SignUp_fxmlController implements Initializable {
     		 Color c = Color.web("#ef3a23"); //red
     		 password.validate();
     		 password.focusColorProperty().setValue(c);
-    		 System.out.println(passwordValidator.msg);
-    		 password.getValidators().get(0).setMessage(passwordValidator.msg);
-    		 password.getValidators().get(0).validate();
-    		 password.setAccessibleText(passwordValidator.msg);
-    		 passLabel.setText(passwordValidator.msg);
-     		 passLabel.setTextFill(Color.web("#ef3a23"));
-     		 
+    		 passLabel.setTextFill(c);
+     		 passLabel.setText(msg);
+     		 System.out.println(msg);
     	}
+    	
+    
+    
     }
     public void saveFile(File image)
     {
