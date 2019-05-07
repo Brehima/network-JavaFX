@@ -12,6 +12,7 @@ import tn.redhats.network.networkClient.javafx.candidateProfile.EmailValidator;
 import tn.redhats.network.networkClient.javafx.candidateProfile.SignUp_fxmlController;
 import tn.redhats.network.networkClient.javafx.candidateProfile.passwordValidator;
 import tn.redhats.network.networkServer.entities.CandidateProfile;
+import tn.redhats.network.networkServer.entities.EnterpriseProfile;
 import tn.redhats.network.networkServer.entities.User;
 import tn.redhats.network.networkServer.enumeration.Role;
 import tn.redhats.network.networkServer.services.AdminServiceRemote;
@@ -69,7 +70,14 @@ public class main {
 		
 		//SignUp_fxmlController.sendEmailBySSl(SignUp_fxmlController.generateCode(),"brehima.coulibaly@esprit.tn");
 		//System.out.println(proxy.searchContact("toto"));
-	  System.out.println(	BCrypt.checkpw("cr0cKM@IfUCan","$2a$10$75JujlAN9T42EpTIX2jl5O5Tc8QSjPf1aw.wN9LRyTPZme9eRiOey") );
+	  //System.out.println(	BCrypt.checkpw("cr0cKM@IfUCan","$2a$10$75JujlAN9T42EpTIX2jl5O5Tc8QSjPf1aw.wN9LRyTPZme9eRiOey") );
+	  User us2 = new User();
+	  us2.setFirstName("emp1"); us2.setLastName("emp1Last"); 
+	  EnterpriseProfile ent = new EnterpriseProfile();
+	  ent.setIntroduction("this is about the enter");
+	  ent.setJobField("Java");
+	  ent.getUsers().add(us2);
+	  proxy.addEnterprise(us2,ent);
 	}
 
 }

@@ -23,6 +23,8 @@ import org.primefaces.event.TabChangeEvent;
 import org.primefaces.event.TabCloseEvent;
 
 import tn.redhats.network.networkServer.entities.CandidateProfile;
+import tn.redhats.network.networkServer.entities.EnterpriseProfile;
+import tn.redhats.network.networkServer.entities.Profile;
 import tn.redhats.network.networkServer.entities.User;
 import tn.redhats.network.networkServer.services_impl.CandidatProfilService;
 
@@ -38,6 +40,8 @@ public class SignInBean
 	private List<String> competence;
 	private User connectedUser;
 	private User watchedProfile;
+	private EnterpriseProfile enterprise;
+	private String keyword="";
 	private String searchMail;
 	@EJB
 	CandidatProfilService candidateService;
@@ -121,6 +125,12 @@ public class SignInBean
 		user2FACode = user2faCode;
 	}
 	
+	public EnterpriseProfile getEnterprise() {
+		return enterprise;
+	}
+	public void setEnterprise(EnterpriseProfile enterprise) {
+		this.enterprise = enterprise;
+	}
 	public User getConnectedUser() {
 	
 		return connectedUser;
@@ -167,6 +177,21 @@ public class SignInBean
 		this.searchMail = searchMail;
 	
 	}
+	public String setCrazyMail(String mail)
+	{
+		setSearchMail(mail);
+		return getSearchMail();
+	}
+	
+	public String getKeyword() {
+		System.out.println("--------------------------------------------kkworget---"+keyword);
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+
+		System.out.println("--------------------------------------------kkworset---"+this.keyword);
+	}
 	public String showOtherProfile()
 	{
 		String email=searchMail;
@@ -177,6 +202,21 @@ public class SignInBean
 			return "/templateClient/contactProfile.jsf?faces-redirect=true";
 		}
 		return null;
+	}
+	public String showEnterprise(String website)
+	{
+		List<EnterpriseProfile> companies = candidateService.getallEnterprise(website);
+	    if(companies!=null && companies.size() > 0)
+	    {
+	    	enterprise = companies.get(0);
+	    	return "/templateClient/enterpriseProfile.jsf?faces-redirect=true";
+	    }
+		return null;
+		
+	}
+	public void followEnterprise()
+	{
+		addMessage("You are now following "+enterprise.getWebsite());
 	}
 	public String setPhotoProfile(String profile)
 	{
@@ -190,6 +230,7 @@ public class SignInBean
 		}     		
 		return profile;
 	}
+	
 	public 	String step1Finish()
 	{
 		User u = candidateService.signInStepOne(username);
@@ -226,6 +267,22 @@ public class SignInBean
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 		return "/templateClient/SignIn.jsf?faces-redirect=true";
 	}
-
-	
+    public CandidateProfile profileCandidate()
+    {
+    	return (CandidateProfile)watchedProfile.getProfile();
+    }
+    public List<EnterpriseProfile> findEnterprise()
+    {
+    	List<EnterpriseProfile> companies = candidateService.getallEnterprise(keyword);
+    	if(companies!=null)
+    	{
+    		System.out.println("----------------------------------"+keyword);
+    		return companies;
+    	}
+    	return null;
+    }
+    public void addMessage(String summary) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary, null);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
 }

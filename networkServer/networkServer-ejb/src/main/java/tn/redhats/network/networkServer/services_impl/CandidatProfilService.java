@@ -16,6 +16,7 @@ import com.sun.javafx.geom.AreaOp.NZWindOp;
 
 import tn.redhats.network.networkServer.entities.CandidateProfile;
 import tn.redhats.network.networkServer.entities.Code2FACandidate;
+import tn.redhats.network.networkServer.entities.EnterpriseProfile;
 import tn.redhats.network.networkServer.entities.JobOffer;
 import tn.redhats.network.networkServer.entities.Profile;
 import tn.redhats.network.networkServer.entities.User;
@@ -274,6 +275,22 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 		query.setParameter("status", user.getAccountStatus());
 		query.setParameter("id", user.getId());
 		query.executeUpdate();
+	}
+	@Override
+	public void addEnterprise(User u,EnterpriseProfile enter)
+	{
+		u.setProfile(enter);
+		em.persist(enter);
+		em.persist(u);
+	}
+	public List<EnterpriseProfile> getallEnterprise(String keyword)
+	{
+		Query query = em.createQuery("SELECT e from EnterpriseProfile e "+"where e.website like '%"+keyword+"%'"
+				   + "or e.jobField like '%"+keyword+"%'");
+		//TypedQuery<User> quer = em.createQuery("SELECT u FROM User u where u.username= :username",User.class);
+		List<EnterpriseProfile> companies =(List<EnterpriseProfile>) query.getResultList();
+
+		return companies;
 	}
 /*
  * private String firstName;

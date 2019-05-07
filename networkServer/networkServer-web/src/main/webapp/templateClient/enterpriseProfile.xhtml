@@ -15,7 +15,7 @@
 		<div class="col-sm-5">
 		
 		<div class="doctor-img">
-		<img src="images/users_profile/#{signInBean.setPhotoProfile(signInBean.watchedProfile.profile.photo)}" class="img-responsive " alt="" />
+		<img src="images/users_profile/#{signInBean.setPhotoProfile(signInBean.enterprise.photo)}" class="img-responsive " alt="" />
 		</div>
 		
 		<div class="doctor-contact">
@@ -23,9 +23,6 @@
 		<ul class="contact-list">
 		
 		  
-		<li>
-		<i class="fa fa-envelope" /> <h:outputText value="#{signInBean.watchedProfile.email}"/>  
-		</li>
 		</ul>
 		</div>
 		</div>
@@ -34,10 +31,10 @@
 		
 		<div class="doctor-details">
 		
-		<h2 class="doctor-name"><h:outputText value="#{signInBean.watchedProfile.firstName}"/> <h:outputText value=" #{signInBean.connectedUser.lastName}"/> </h2>
+		<h2 class="doctor-name"><h:outputText value="#{signInBean.enterprise.website}"/> </h2>
 		<div class="doctor-desig">
-		  <h:outputText value="#{signInBean.profileCandidate().skills}"  />
-		 
+		    <p:growl id="growl" life="2000" />
+		    <p:commandButton action="#{signInBean.followEnterprise()}" id="nonAjax" update="growl" value="follow"/>
 		
 		</div>
 		
@@ -53,24 +50,6 @@
 		
 
 		
-		<div class="row">
-		
-		<div class="col-sm-12 mt-60">
-		
-		
-		 <h:form id="formUserInfo" >
-		  <p:growl id="msgs" showDetail="true"/>
-			 <p:tabView dynamic="true" cache="true" effect="fold" >
-		        
-		        <p:tab title="Followed Enterprise" class="tab-pane">
-		            <h:panelGrid columns="2" cellpadding="10">
-		              
-		            </h:panelGrid>
-		        </p:tab>
-    			</p:tabView>
-		 </h:form>
-		</div>
-		</div>
 		
 		</div>
 		

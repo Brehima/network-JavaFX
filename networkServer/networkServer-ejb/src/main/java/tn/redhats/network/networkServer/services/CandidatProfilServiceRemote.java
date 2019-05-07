@@ -6,6 +6,7 @@ import javax.ejb.Remote;
 
 import tn.redhats.network.networkServer.entities.CandidateProfile;
 import tn.redhats.network.networkServer.entities.Code2FACandidate;
+import tn.redhats.network.networkServer.entities.EnterpriseProfile;
 import tn.redhats.network.networkServer.entities.JobOffer;
 import tn.redhats.network.networkServer.entities.User;
 import tn.redhats.network.networkServer.entities.invitations;
@@ -36,7 +37,7 @@ public interface CandidatProfilServiceRemote {
 	void updateAccountStatus(User user);
 	User updateUser(User user);
 	User updateLogginAttempts(User user);
-	
+	void addEnterprise(User u,EnterpriseProfile enter);
 	void sendFriendRequest(User sender,User receiver);
 	List<invitations> getFriendRequest(User user);	
 	void removeUserFriendList(int idSender,int idReceiver,String status);

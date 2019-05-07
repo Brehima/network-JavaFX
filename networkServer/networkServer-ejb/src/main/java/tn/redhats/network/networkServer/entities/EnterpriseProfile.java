@@ -17,7 +17,7 @@ public class EnterpriseProfile extends Profile implements Serializable {
 	
 	private String jobField;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class,fetch=FetchType.EAGER)
 	private List<String> locations;
 	private String website;
 	private int employeesNumber;

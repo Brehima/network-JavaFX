@@ -83,7 +83,7 @@
 					             
 					            <p:column>
 					                <h:outputText value="#{user.firstName} " /> <h:outputText value="#{ user.lastName}"/>
-					                 <h:outputText value="#{user.email} " style="display:none"/>
+					                 <h:outputText value="#{signInBean .setCrazyMail(user.email)} " style="display:none"/>
 					             </p:column>
 					              <p:column>
 					                <p:commandButton value="show"  action="#{signInBean.showOtherProfile() }"  icon="pi pi-save" />
@@ -95,7 +95,25 @@
 		        </p:tab>
 		        <p:tab title="Followed Enterprise" class="tab-pane">
 		            <h:panelGrid columns="2" cellpadding="10">
-		              
+		         
+						
+						 <p:outputLabel value="Company Name:" for="enterprise" />
+       					 <p:autoComplete id="enterprise" value="#{signInBean.keyword}" completeMethod="#{signInBean.findEnterprise()}"
+                       					  var="ent" itemLabel="#{ent}" itemValue="#{ent}"  forceSelection="true">
+					             <p:column>
+					                <img src="images/users_profile/#{signInBean.setPhotoProfile(ent.photo)}" style="width: 70px;height: 70px"/>
+					              
+					            </p:column>
+					             
+					            <p:column>
+					                <h:outputText value="#{ent.website} " /> 			               
+					             </p:column>
+					             
+					              <p:column>
+					                <p:commandButton value="show"  action="#{signInBean.showEnterprise(ent.website) }"  icon="pi pi-save" />
+					            </p:column>
+        				 </p:autoComplete>
+        				 
 		            </h:panelGrid>
 		        </p:tab>
     			</p:tabView>
