@@ -16,6 +16,7 @@ public class Message implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private Timestamp dateMessage;
 	private String message;

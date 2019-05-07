@@ -2,6 +2,7 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
@@ -17,18 +18,82 @@ public class EnterpriseProfile extends Profile implements Serializable {
 	
 	private String jobField;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class, fetch=FetchType.EAGER)
 	private List<String> locations;
 	private String website;
-	private int employeesNumber;
+	private String employeesNumber;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class, fetch=FetchType.EAGER)
 	private List<String> followers;
+	private String enterpriseName;
+	
 	private static final long serialVersionUID = 1L;
+	
+
+
+	public EnterpriseProfile(String introduction, String jobField, String website, String employeesNumber,
+			String enterpriseName) {
+		super(introduction);
+		this.jobField = jobField;
+		this.website = website;
+		this.employeesNumber = employeesNumber;
+		this.enterpriseName = enterpriseName;
+	}
+	
+
+
+	public EnterpriseProfile(String introduction, String photo, List<User> users, String jobField,
+			List<String> locations, String website, String employeesNumber, String enterpriseName) {
+		super(introduction, photo, users);
+		this.jobField = jobField;
+		this.locations = locations;
+		this.website = website;
+		this.employeesNumber = employeesNumber;
+		this.enterpriseName = enterpriseName;
+	}
+
+
+	
+
+
+	public String getEmployeesNumber() {
+		return employeesNumber;
+	}
+
+
+
+	public void setEmployeesNumber(String employeesNumber) {
+		this.employeesNumber = employeesNumber;
+	}
+
+
+
+	public List<String> getFollowers() {
+		return followers;
+	}
+
+
+	public void setFollowers(List<String> followers) {
+		this.followers = followers;
+	}
+
+
+	public String getEnterpriseName() {
+		return enterpriseName;
+	}
+
+
+	public void setEnterpriseName(String enterpriseName) {
+		this.enterpriseName = enterpriseName;
+	}
+
 
 	public EnterpriseProfile() {
 		super();
-	}   
+		locations = new ArrayList<String>();
+	}  
+
+
 	public String getJobField() {
 		return this.jobField;
 	}
@@ -50,18 +115,46 @@ public class EnterpriseProfile extends Profile implements Serializable {
 	public void setWebsite(String website) {
 		this.website = website;
 	}   
-	public int getEmployeesNumber() {
-		return this.employeesNumber;
+	
+	
+	public void setUser(User user) {
+		super.users.add(user);
+	}
+	
+	public List<User> getUsers() {
+		return super.users;
 	}
 
-	public void setEmployeesNumber(int employeesNumber) {
-		this.employeesNumber = employeesNumber;
-	}
+
+
 	@Override
 	public String toString() {
-		return "EnterpriseProfile [jobField=" + jobField + ", locations=" + locations + ", website=" + website
-				+ ", employeesNumber=" + employeesNumber + "]";
+		return "EnterpriseProfile [jobField=" + jobField + ", website=" + website + ", employeesNumber="
+				+ employeesNumber + ", enterpriseName=" + enterpriseName + ", id=" + id + ", introduction="
+				+ introduction + "]";
 	}
+
+
+
+	
+
+	
+	
+
+	
+	
+	
+	
+	
+
+	
+	
+
+	
+
+	
+
+	
 	
 	
    

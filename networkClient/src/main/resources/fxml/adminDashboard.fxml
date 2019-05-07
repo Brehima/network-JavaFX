@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneID" prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.admin.AdminDashboardController">
+   <children>
+      <VBox prefHeight="650.0" prefWidth="250.0" style="-fx-background-color: #151928;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #ef3a23;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" prefHeight="134.0" prefWidth="258.0" text="Admin panel" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@dashboard.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="80.0" prefWidth="169.0" text="Dashboard" textFill="#a0a2ab">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@project-management.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="81.0" prefWidth="169.0" text="Projects" textFill="#a0a2ab">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@puzzle.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="83.0" prefWidth="170.0" text="Resources" textFill="#a0a2ab">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@office-material.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="80.0" prefWidth="169.0" text="Documents" textFill="#a0a2ab">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="442.0" layoutY="36.0" text="Welcome to administration panel" textFill="#ef3a23">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="367.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Candidate.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="661.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@teamwork.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="367.0" layoutY="463.0" style="-fx-background-color: #151928;" text="Manage candidates" textFill="#a0a2ab" />
+      <JFXButton fx:id="buttonManageEnterprises" layoutX="661.0" layoutY="463.0" onAction="#clicManageEnterprises" style="-fx-background-color: #151928;" text="Manage enterprises" textFill="#a0a2ab" />
+      <JFXButton fx:id="signOutButton" layoutX="854.0" layoutY="599.0" onAction="#clicSignOut" style="-fx-background-color: #151928;" text="Sign out" textFill="#a0a2ab" />
+   </children>
+</AnchorPane>

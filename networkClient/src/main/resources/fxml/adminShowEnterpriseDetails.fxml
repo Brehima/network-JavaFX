@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneID" prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.admin.AdminShowEnterpriseDetailsController">
+   <children>
+      <Label layoutX="438.0" layoutY="35.0" text="Enterprise profiles" textFill="#ef3a23" />
+      <ImageView fitHeight="68.0" fitWidth="79.0" layoutX="358.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@teamwork.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="79.0" layoutX="568.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@clipboard.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="backButton" layoutX="14.0" layoutY="28.0" onAction="#clicBack" text="Back" textFill="#a0a2ab">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@left-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="104.0" layoutY="161.0" text="Introduction : " textFill="#ef3a23" />
+      <Label layoutX="104.0" layoutY="203.0" text="Job field : " textFill="#ef3a23" />
+      <Label layoutX="105.0" layoutY="248.0" text="Website : " textFill="#ef3a23" />
+      <Label layoutX="105.0" layoutY="290.0" text="Employees number : " textFill="#ef3a23" />
+      <Label fx:id="introductionValue" layoutX="209.0" layoutY="161.0" text="Label" textFill="#a0a2ab" />
+      <Label fx:id="jobFieldValue" layoutX="181.0" layoutY="203.0" text="Label" textFill="#a0a2ab" />
+      <Label fx:id="websiteValue" layoutX="181.0" layoutY="248.0" text="Label" textFill="#a0a2ab" />
+      <Label fx:id="employeesNumberValue" layoutX="261.0" layoutY="290.0" text="Label" textFill="#a0a2ab" />
+      <ImageView fx:id="logoImageView" fitHeight="127.0" fitWidth="191.0" layoutX="702.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="780.0" layoutY="121.0" text="Logo" textFill="#ef3a23" />
+      <Label layoutX="423.0" layoutY="346.0" text="Profile administrators" textFill="#ef3a23" />
+      <TableView fx:id="table" layoutX="105.0" layoutY="395.0" prefHeight="200.0" prefWidth="786.0">
+         <columns>
+            <TableColumn fx:id="firstNameColumn" prefWidth="107.0" text="First name" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="113.0" text="Last name" />
+            <TableColumn fx:id="emailColumn" prefWidth="189.0" text="Email" />
+            <TableColumn fx:id="usernameColumn" prefWidth="168.0" text="Username" />
+            <TableColumn fx:id="roleColumn" prefWidth="208.0" text="Role" />
+         </columns>
+      </TableView>
+      <Label layoutX="104.0" layoutY="121.0" text="Enterprise name : " textFill="#ef3a23" />
+      <Label fx:id="enterpriseNameValue" layoutX="241.0" layoutY="121.0" text="Label" textFill="#a0a2ab" />
+      <Label layoutX="463.0" layoutY="121.0" text="Locations" textFill="#ef3a23" />
+      <ListView fx:id="locationsListView" layoutX="418.0" layoutY="161.0" prefHeight="148.0" prefWidth="154.0" />
+   </children>
+</AnchorPane>

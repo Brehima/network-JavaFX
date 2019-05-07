@@ -17,13 +17,14 @@ public class Post implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String description;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class, fetch=FetchType.EAGER)
 	private List<String> photos;
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class, fetch=FetchType.EAGER)
 	private List<String> videos;
 	private Timestamp datePost;
 	private int likesNumber;

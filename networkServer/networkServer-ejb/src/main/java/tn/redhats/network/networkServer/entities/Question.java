@@ -14,6 +14,7 @@ public class Question implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String question;
 	@OneToOne

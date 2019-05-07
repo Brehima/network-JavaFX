@@ -16,6 +16,7 @@ public class Course implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String courseTitle;
 	private String description;
@@ -26,7 +27,7 @@ public class Course implements Serializable {
 	private String validationStatus;
 	@OneToMany(mappedBy="course")	
 	@Column
-	@ElementCollection(targetClass=CourseEnrollement.class)
+	@ElementCollection(targetClass=CourseEnrollement.class, fetch=FetchType.EAGER)
 	private List<CourseEnrollement> courses;
 	
 	

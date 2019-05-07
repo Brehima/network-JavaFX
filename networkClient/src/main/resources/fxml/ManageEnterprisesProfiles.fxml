@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneID" prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.admin.ManageEnterprisesProfilesController">
+   <children>
+      <TableView fx:id="table" layoutX="97.0" layoutY="134.0" prefHeight="452.0" prefWidth="759.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="134.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="155.199951171875" text="Enterprise name" />
+          <TableColumn fx:id="jobFieldColumn" prefWidth="187.0" text="Job field" />
+            <TableColumn fx:id="websiteColumn" prefWidth="241.0" text="Website" />
+            <TableColumn fx:id="employeesNumberColumn" minWidth="0.0" prefWidth="174.0" text="Employees number" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="detailsButton" layoutX="265.0" layoutY="605.0" onAction="#clicDetails" style="-fx-background-color: #151928;" text="Show more details" textFill="#a0a2ab" />
+      <Label layoutX="417.0" layoutY="34.0" text="Enterprise profiles" textFill="#ef3a23" />
+      <ImageView fitHeight="68.0" fitWidth="79.0" layoutX="336.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@teamwork.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="79.0" layoutX="547.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@clipboard.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="backButton" layoutX="14.0" layoutY="28.0" onAction="#clicBack" text="Back" textFill="#a0a2ab">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@left-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="deleteButton" layoutX="560.0" layoutY="605.0" onAction="#clicDelete" style="-fx-background-color: #151928;" text="Delete profile" textFill="#a0a2ab" />
+   </children>
+</AnchorPane>

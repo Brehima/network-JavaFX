@@ -2,6 +2,7 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
@@ -16,17 +17,19 @@ public class JobOffer implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String description;
 	private String expertiseLevel;
 	private String location;
 	@OneToMany(mappedBy="jobOffer")
 	@Column
-	@ElementCollection(targetClass=JobApplication.class)
+	@ElementCollection(targetClass=JobApplication.class, fetch=FetchType.EAGER)
 	private List<JobApplication> jobApplication;
 	private static final long serialVersionUID = 1L;
 
 	public JobOffer() {
+		
 		super();
 	}   
 	public int getId() {

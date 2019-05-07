@@ -16,6 +16,7 @@ public class OnlineTest implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String testType;
 	private double score;
@@ -23,7 +24,7 @@ public class OnlineTest implements Serializable {
 	private Interview interview;
 	@OneToMany
 	@Column
-	@ElementCollection(targetClass=Question.class)
+	@ElementCollection(targetClass=Question.class, fetch=FetchType.EAGER)
 	private List<Question> questions;
 	@OneToOne
 	private JobApplication jobApplication;

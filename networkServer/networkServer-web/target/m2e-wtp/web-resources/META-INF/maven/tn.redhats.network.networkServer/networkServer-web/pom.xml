@@ -18,16 +18,22 @@
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.primefaces</groupId>
-			<artifactId>primefaces</artifactId>
-		</dependency>
+		
+		
+
 		<dependency>
 			<groupId>tn.redhats.network.networkServer</groupId>
 			<artifactId>networkServer-ejb</artifactId>
 			<type>ejb</type>
 			<scope>provided</scope>
 		</dependency>
+		
+		<dependency>
+		    <groupId>org.primefaces</groupId>
+		    <artifactId>primefaces</artifactId>
+		    <version>7.0</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
