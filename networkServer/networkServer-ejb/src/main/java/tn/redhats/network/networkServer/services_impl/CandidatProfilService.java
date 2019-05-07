@@ -307,6 +307,7 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 			u.setLoginAttempts(user.getLoginAttempts());
 			//u.setMessages(user.getMessages());
 			u.setPassword(user.getPassword());
+			
 			//u.setProfile(user.getProfile());
 			u.setUsername(user.getUsername());			   
 			   for(User i:user.getUsers())
@@ -423,6 +424,17 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
     
 	}
 
-	
+	public void updateAllUser(User user)
+	{
+		User u = em.find(User.class, user.getId());
+		if(u!=null)
+		{
+			u=user;
+			CandidateProfile profile = (CandidateProfile)u.getProfile();
+			System.out.println("##########-----------------------profile:"+profile);
+			em.merge(profile);
+			em.merge(u);
+		}
+	}
 	
 }

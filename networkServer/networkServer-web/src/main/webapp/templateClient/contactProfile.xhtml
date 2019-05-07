@@ -1,0 +1,82 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templateClient/template.xhtml">
+ 	<ui:define name="title">SignIn</ui:define>    
+    <ui:define name="content">
+	 <div class="doctor-single mt-80 mb-60">
+		
+		<div class="container">
+		
+		<div class="row">
+		
+		<div class="col-sm-5">
+		
+		<div class="doctor-img">
+		<img src="images/users_profile/#{signInBean.setPhotoProfile(signInBean.watchedProfile.profile.photo)}" class="img-responsive " alt="" />
+		</div>
+		
+		<div class="doctor-contact">
+		
+		<ul class="contact-list">
+		
+		  
+		<li>
+		<i class="fa fa-envelope" /> <h:outputText value="#{signInBean.watchedProfile.email}"/>  
+		</li>
+		</ul>
+		</div>
+		</div>
+		
+		<div class="col-sm-7">
+		
+		<div class="doctor-details">
+		
+		<h2 class="doctor-name"><h:outputText value="#{signInBean.watchedProfile.firstName}"/> <h:outputText value=" #{signInBean.connectedUser.lastName}"/> </h2>
+		<div class="doctor-desig">
+		  <p:chips id="chips" value="#{signInBean.watchProfile.profile.skills}" readonly="read" /> 
+		
+		</div>
+		
+		
+		
+		<hr class="hr-1 left" />
+		 <h:outputText value="#{signInBean.watchProfile.profile.introduction}" required="true" label="text" />
+		</div>
+		</div>
+		</div>
+		
+		<div class="clearfix" />
+		
+
+		
+		<div class="row">
+		
+		<div class="col-sm-12 mt-60">
+		
+		
+		 <h:form id="formUserInfo" >
+		  <p:growl id="msgs" showDetail="true"/>
+			 <p:tabView dynamic="true" cache="true" effect="fold" >
+		        
+		        <p:tab title="Followed Enterprise" class="tab-pane">
+		            <h:panelGrid columns="2" cellpadding="10">
+		              
+		            </h:panelGrid>
+		        </p:tab>
+    			</p:tabView>
+		 </h:form>
+		</div>
+		</div>
+		
+		</div>
+		
+		
+		
+		</div>
+		
+    </ui:define> 
+          
+</ui:composition>

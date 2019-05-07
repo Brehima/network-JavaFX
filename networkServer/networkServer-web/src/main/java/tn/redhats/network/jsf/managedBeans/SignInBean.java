@@ -1,5 +1,6 @@
 package tn.redhats.network.jsf.managedBeans;
 
+import java.util.List;
 import java.util.Properties;
 import java.util.Random;
 
@@ -18,7 +19,10 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import org.mindrot.jbcrypt.BCrypt;
+import org.primefaces.event.TabChangeEvent;
+import org.primefaces.event.TabCloseEvent;
 
+import tn.redhats.network.networkServer.entities.CandidateProfile;
 import tn.redhats.network.networkServer.entities.User;
 import tn.redhats.network.networkServer.services_impl.CandidatProfilService;
 
@@ -30,7 +34,11 @@ public class SignInBean
 	private String password;
 	private String user2FACode;
 	private String  code2FA;
+	private String introduction;
+	private List<String> competence;
 	private User connectedUser;
+	private User watchedProfile;
+	private String searchMail;
 	@EJB
 	CandidatProfilService candidateService;
     
@@ -114,19 +122,85 @@ public class SignInBean
 	}
 	
 	public User getConnectedUser() {
+	
 		return connectedUser;
 	}
 	public void setConnectedUser(User connectedUser) {
 		this.connectedUser = connectedUser;
+		
+	}
+	
+	
+	public User getWatchedProfile() {
+		return watchedProfile;
+	}
+	public void setWatchedProfile(User watchedProfile) {
+		this.watchedProfile = watchedProfile;
+	}
+	public String getIntroduction() {
+		introduction = connectedUser.getProfile().getIntroduction();
+		return introduction;
+	}
+	public void setIntroduction(String introduction) {
+				this.introduction = introduction;
+				connectedUser.getProfile().setIntroduction(introduction);
+				candidateService.updateAllUser(connectedUser);
+	}
+	
+	
+	public List<String> getCompetence() {
+		competence =  ((CandidateProfile)connectedUser.getProfile()).getSkills();
+		return competence;
+	}
+	public void setCompetence(List<String> competence) {
+		CandidateProfile profile = (CandidateProfile)connectedUser.getProfile();
+		profile.setSkills(competence);
+		connectedUser.setProfile(profile);
+		this.competence =  competence;
+		candidateService.updateAllUser(connectedUser);
+	}
+	
+	public String getSearchMail() {
+		return searchMail;
+	}
+	public void setSearchMail(String searchMail) {
+		this.searchMail = searchMail;
+	
+	}
+	public String showOtherProfile()
+	{
+		String email=searchMail;
+		System.out.println("-----------------------------------------------"+email);
+		watchedProfile = candidateService.findUserByEmail(email);
+		if(watchedProfile!=null)
+		{
+			return "/templateClient/contactProfile.jsf?faces-redirect=true";
+		}
+		return null;
+	}
+	public String setPhotoProfile(String profile)
+	{
+		//D://cours/JEE/workspace_PI/users_profile/F742D4B21F5E5D557A85824FBBBB27281D47B120FBC9F4527A865048042A6A91.png
+	
+		//String profile = connectedUser.getProfile().getPhoto();
+		if(profile!=null)
+		{
+			String[]tab=profile.split("\\/");			
+			profile=tab[6];
+		}     		
+		return profile;
 	}
 	public 	String step1Finish()
 	{
 		User u = candidateService.signInStepOne(username);
+		System.out.println("---------------passs--------------"+u);
 		if(u!=null)
 		{
 			if(BCrypt.checkpw(password,  u.getPassword()))
 			{
+				
 				this.code2FA  = generateCode();
+				
 				sendEmailBySSl(code2FA,u.getEmail());
 				return "/templateClient/SignIn2.jsf?faces-redirect=true";
 			}
@@ -140,6 +214,8 @@ public class SignInBean
 		if(user2FACode.equals(code2FA))
 		{
 			connectedUser =  candidateService.signInStepOne(username);
+			
+			
 			return "/templateClient/profile.jsf?faces-redirect=true";
 		}
 		 FacesContext.getCurrentInstance().addMessage("signIn2Form:btn", new FacesMessage("wrong code"));	    
@@ -150,5 +226,6 @@ public class SignInBean
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 		return "/templateClient/SignIn.jsf?faces-redirect=true";
 	}
+
 	
 }

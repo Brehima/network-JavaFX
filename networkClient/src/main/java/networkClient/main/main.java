@@ -69,7 +69,7 @@ public class main {
 		
 		//SignUp_fxmlController.sendEmailBySSl(SignUp_fxmlController.generateCode(),"brehima.coulibaly@esprit.tn");
 		//System.out.println(proxy.searchContact("toto"));
-	//  System.out.println(	BCrypt.hashpw("admin", BCrypt.gensalt()) );
+	  System.out.println(	BCrypt.checkpw("cr0cKM@IfUCan","$2a$10$75JujlAN9T42EpTIX2jl5O5Tc8QSjPf1aw.wN9LRyTPZme9eRiOey") );
 	}
 
 }
