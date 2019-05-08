@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class CandidateProfile extends Profile implements Serializable {
 
 	@Column
-	@ElementCollection(targetClass=String.class)
+	@ElementCollection(targetClass=String.class,fetch=FetchType.EAGER)
 	private List<String> education;
 	@Column
 	@ElementCollection(targetClass=String.class)

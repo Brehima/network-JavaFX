@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchronePane2" fx:id="anchronePane2" prefHeight="677.0" prefWidth="1299.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.view.post.Post1Controller">
+   <stylesheets>
+      <URL value="@Post.css" />
+   </stylesheets>
+   <children>
+      <JFXTextArea fx:id="taPost" layoutX="381.0" layoutY="128.0" opacity="0.52" prefHeight="153.0" prefWidth="680.0" promptText="Start a post" style="-fx-background-color: #eff5f5;">
+         <font>
+            <Font name="SansSerif Regular" size="31.0" />
+         </font>
+      </JFXTextArea>
+      <JFXButton fx:id="btnpost" layoutX="393.0" layoutY="293.0" mnemonicParsing="false" onAction="#onAddPost" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #151928;" text="Post" textFill="#a0a2ab" />
+      <JFXButton fx:id="delete" layoutX="490.0" layoutY="293.0" mnemonicParsing="false" onAction="#deletePost" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #151928;" text="Delete" textFill="#a0a2ab" />
+      <AnchorPane layoutX="376.0" layoutY="347.0" prefHeight="397.0" prefWidth="588.0">
+         <children>
+            <JFXScrollPane fx:id="spPost" layoutY="20.0" prefHeight="294.0" prefWidth="904.0" style="-fx-background-color: #FEFEFE;" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnUpload" layoutX="1071.0" layoutY="157.0" onAction="#uploadImage" prefHeight="36.0" prefWidth="91.0" style="-fx-background-color: #151928;" text="Upload image" textFill="#a0a2ab" />
+      <Label fx:id="lblUpload" layoutX="1170.0" layoutY="157.0" opacity="0.0" text="* Upload image" />
+      <JFXButton fx:id="btnUploadVid" layoutX="1071.0" layoutY="213.0" onAction="#uploadVideo" prefHeight="36.0" prefWidth="91.0" style="-fx-background-color: #151928;" text="Upload vidéo" textFill="#a0a2ab" />
+      <Label fx:id="lblVideo" layoutX="1170.0" layoutY="222.0" opacity="0.0" text="* Upload video" />
+      <ImageView fitHeight="35.0" fitWidth="58.0" layoutX="1096.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox layoutX="-7.0" layoutY="-9.0" prefHeight="57.0" prefWidth="1313.0" style="-fx-background-color: #2D3447;">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../consultMsg/54799435_503343500198680_2387955813181292544_n.png" />
+               </image>
+            </ImageView>
+            <TextField promptText="Search">
+               <HBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+            <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../../Esprit/Semestre%202/PI%20sem2/698627-icon-111-search-512.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="30.0" top="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <JFXButton style="-fx-background-color: #151928;" text="Home" textFill="#a0a2ab">
+               <graphic>
+                  <ImageView fx:id="imageHome" fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../consultMsg/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnChat" onAction="#goToChat" style="-fx-background-color: #151928;" text="Chat" textFill="#a0a2ab">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../consultMsg/Material_icons-04-33-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="10.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton style="-fx-background-color: #151928;" text="Profile" textFill="#a0a2ab">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../consultMsg/profile-icon-9.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="10.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnNotif" onAction="#goToNotif" style="-fx-background-color: #151928;" text="Notification" textFill="#a0a2ab">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../consultMsg/Basic-86-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

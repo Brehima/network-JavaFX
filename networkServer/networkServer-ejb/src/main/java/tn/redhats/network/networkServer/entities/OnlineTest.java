@@ -16,6 +16,7 @@ public class OnlineTest implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String testType;
 	private double score;

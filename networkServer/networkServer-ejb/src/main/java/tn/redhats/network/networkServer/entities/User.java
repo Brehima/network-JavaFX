@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
+
 import tn.redhats.network.networkServer.enumeration.Role;
 
 
@@ -20,6 +21,7 @@ public class User implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String firstName;
 	private String lastName;
@@ -39,25 +41,72 @@ public class User implements Serializable {
 	@ElementCollection(targetClass=JobApplication.class)
 	private List<JobApplication> jobApplication;
 	
+	
+	
+	@OneToMany
+	@Column
+	@ElementCollection(targetClass=Comment.class,fetch = FetchType.EAGER)
+	private List<Comment>comments ;
+	
+	
+	@OneToMany
+	@ElementCollection(targetClass=PostLike.class,fetch = FetchType.EAGER)
+	private List<PostLike> postLikes;
+	
+	
+	
+	
 	@ManyToOne
 	@JoinColumn(name="user_fk")
 	private User user;
 	
-	@OneToMany(mappedBy="user", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy="user")
 	@Column
-	@ElementCollection(targetClass=User.class)
+	@ElementCollection(targetClass=User.class, fetch=FetchType.EAGER)
 	private List<User> users;
 	
 	@OneToMany
 	@Column
-	@ElementCollection(targetClass=Message.class)
+	@ElementCollection(targetClass=Message.class,fetch = FetchType.EAGER)
 	private List<Message> messages;
+	
+	@OneToMany
+	@Column
+	@ElementCollection(targetClass=Post.class,fetch = FetchType.EAGER)
+	private List<Post>posts;
+	
+	
+	
+	@OneToMany
+	@Column
+	@ElementCollection(targetClass=Notification.class,fetch = FetchType.EAGER)
+	private List<Notification>notifications;
 	
 	private static final long serialVersionUID = 1L;
 
 	public User() {
 		super();
 	}   
+	
+	
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+
+
+	public List<Notification> getNotifications() {
+		return notifications;
+	}
+
+	public void setNotifications(List<Notification> notifications) {
+		this.notifications = notifications;
+	}
+
 	public int getId() {
 		return this.id;
 	}
@@ -142,14 +191,22 @@ public class User implements Serializable {
 	public void setMessages(List<Message> messages) {
 		this.messages = messages;
 	}
+
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", username=" + username
-				+ ", email=" + email + ", password=" + password + ", profile=" + profile + ", role=" + role + "]";
+				+ ", courses=" + courses + ", jobApplication=" + jobApplication + ", comments=" + comments
+				+ ", postLikes=" + postLikes + ", user=" + user + ", users=" + users + ", messages=" + messages
+				+ ", posts=" + posts + ", notifications=" + notifications + "]";
+	}
+
+	
+	
 	}
 
 	
 	
 	
    
-}
+

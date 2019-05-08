@@ -10,4 +10,24 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.jsf</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.faces</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	<context-param>
+<param-name>BootsFaces_THEME</param-name>
+<param-value>#{theme.internalTheme}</param-value>
+</context-param>
+<context-param>
+<param-name>BootsFaces_USETHEME</param-name>
+<param-value>true</param-value>
+</context-param>
+<context-param>
+<param-name>net.bootsfaces.blockUI</param-name>
+<param-value>#{blockUIBean.isBlockUIActive()}</param-value>
+</context-param>
 </web-app>

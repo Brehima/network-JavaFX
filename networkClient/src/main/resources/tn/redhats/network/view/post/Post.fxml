@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="anchronePane2" fx:id="anchronePane2" prefHeight="677.0" prefWidth="1299.0" style="-fx-background-color: #2D3447;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.view.post.PostController">
+    <stylesheets>
+        <URL value="@Post.css" />
+    </stylesheets>
+   <children>
+      <JFXTextArea fx:id="taPost" layoutX="381.0" layoutY="128.0" opacity="0.52" prefHeight="153.0" prefWidth="680.0" promptText="Start a post" style="-fx-background-color: #eff5f5;">
+         <font>
+            <Font name="SansSerif Regular" size="31.0" />
+         </font>
+      </JFXTextArea>
+      <JFXButton fx:id="btnpost" layoutX="393.0" layoutY="293.0" mnemonicParsing="false" onAction="#onAddPost" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #151928;" text="Post" textFill="#a0a2ab" />
+      <JFXButton fx:id="delete" layoutX="490.0" layoutY="293.0" mnemonicParsing="false" onAction="#deletePost" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #151928;" text="Delete" textFill="#a0a2ab" />
+      <AnchorPane layoutX="376.0" layoutY="344.0" prefHeight="311.0" prefWidth="904.0">
+         <children>
+            <JFXScrollPane fx:id="spPost" layoutY="20.0" prefHeight="294.0" prefWidth="904.0" style="-fx-background-color: #FEFEFE;" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnUpload" layoutX="1071.0" layoutY="157.0" onAction="#uploadImage" prefHeight="36.0" prefWidth="91.0" style="-fx-background-color: #151928;" text="Upload image" textFill="#a0a2ab" />
+      <Label fx:id="lblUpload" layoutX="1170.0" layoutY="157.0" opacity="0.0" text="* Upload image" />
+      <JFXButton fx:id="btnUploadVid" layoutX="1071.0" layoutY="213.0" onAction="#uploadVideo" prefHeight="36.0" prefWidth="91.0" style="-fx-background-color: #151928;" text="Upload vidéo" textFill="#a0a2ab" />
+      <Label fx:id="lblVideo" layoutX="1170.0" layoutY="222.0" opacity="0.0" text="* Upload video" />
+      <Text layoutX="121.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="129.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test1" wrappingWidth="143.00000122189522">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="121.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imen Haouala">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="35.0" fitWidth="58.0" layoutX="1096.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

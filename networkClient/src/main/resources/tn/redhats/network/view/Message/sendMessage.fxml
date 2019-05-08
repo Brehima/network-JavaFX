@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="422.0" prefWidth="610.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="tn.redhats.network.view.Message.SendMessageController">
+    <stylesheets>
+        <URL value="@sendmessage.css" />
+    </stylesheets>
+   <children>
+      <JFXTextArea fx:id="sendMsg" layoutX="17.0" layoutY="321.0" prefHeight="67.0" prefWidth="577.0" promptText="Write your message...">
+         <effect>
+            <Bloom />
+         </effect>
+      </JFXTextArea>
+      <JFXButton fx:id="btnSend" layoutX="432.0" layoutY="388.0" mnemonicParsing="false" onAction="#sendMsg" prefHeight="40.0" prefWidth="162.0" text="Send">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <JFXTextArea fx:id="allMsg" editable="false" layoutX="17.0" layoutY="108.0" prefHeight="207.0" prefWidth="577.0" style="-fx-border-color: #99000D; -fx-border-width: 3;" />
+      <Label fx:id="nameFriend" alignment="CENTER_RIGHT" layoutX="137.0" layoutY="-22.0" prefHeight="119.0" prefWidth="334.0" text="Boite de récéption" textAlignment="JUSTIFY" textFill="#e8abb1" textOverrun="CLIP" />
+      <Button fx:id="show" layoutX="433.0" layoutY="280.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="162.0" text="Show date" />
+   </children>
+</AnchorPane>

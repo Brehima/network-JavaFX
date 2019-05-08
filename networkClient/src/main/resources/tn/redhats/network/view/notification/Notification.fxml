@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.view.notification.NotificationController">
+    <stylesheets>
+        <URL value="@Notification.css" />
+    </stylesheets>
+   <children>
+      <JFXButton fx:id="notif" layoutX="62.0" layoutY="41.0" mnemonicParsing="false" onAction="#getNotif" style="-fx-background-color: #151928;" text="Notification" textFill="#a0a2ab">
+         <graphic>
+            <StackPane layoutX="57.0" layoutY="-13.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.rightAnchor="-10" AnchorPane.topAnchor="-10" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="lblNotif" alignment="TOP_LEFT" ellipsisString="" layoutX="135.0" layoutY="29.0" prefHeight="20.0" prefWidth="62.0" text="Label" textFill="WHITE">
+         <graphic>
+            <Circle id="lblNotif" fx:id="cercle" fill="#f7ecbe" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="listNotif" layoutX="102.0" layoutY="66.0" onMouseClicked="#setNotif" prefHeight="305.0" prefWidth="259.0" />
+   </children>
+</AnchorPane>

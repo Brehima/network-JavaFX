@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="905.0" style="-fx-background-size: 1200;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="tn.redhats.network.view.Message.ShowMessageController">
+    <stylesheets>
+        <URL value="@showmessage.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="361.0" layoutY="-54.0" prefHeight="138.0" prefWidth="215.0" text="Your freinds" textAlignment="CENTER" textFill="#b52222">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="203.0" fitWidth="597.0" layoutX="210.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="nameFriend" layoutX="516.0" layoutY="440.0" prefHeight="103.0" prefWidth="359.0" text="Label" />
+      <JFXListView fx:id="listFriends" layoutX="28.0" layoutY="166.0" prefHeight="384.0" prefWidth="223.0" style="-fx-background-color: transaprent;" />
+      <ImageView fitHeight="77.0" fitWidth="80.0" layoutX="27.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

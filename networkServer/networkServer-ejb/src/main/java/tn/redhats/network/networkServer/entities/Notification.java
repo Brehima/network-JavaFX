@@ -6,6 +6,10 @@ import java.sql.Timestamp;
 
 import javax.persistence.*;
 
+
+
+
+
 /**
  * Entity implementation class for Entity: Notification
  *
@@ -16,16 +20,38 @@ public class Notification implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
+	//private int idUserNotif;
 	private Timestamp dateNotification;
 	private String type;
 	private String description;
-	private String status;
+	private boolean seen;
+	
+	@ManyToOne
+	private User receiver;
 	private static final long serialVersionUID = 1L;
 
 	public Notification() {
 		super();
-	}   
+	} 
+	
+	public boolean isSeen() {
+		return seen;
+	}
+
+	public void setSeen(boolean seen) {
+		this.seen = seen;
+	}
+
+	public User getReceiver() {
+		return receiver;
+	}
+
+	public void setReceiver(User receiver) {
+		this.receiver = receiver;
+	}
+
 	public int getId() {
 		return this.id;
 	}
@@ -54,17 +80,27 @@ public class Notification implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}   
-	public String getStatus() {
-		return this.status;
-	}
+	
+	
+	
+	
+	
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
 	@Override
 	public String toString() {
 		return "Notification [id=" + id + ", dateNotification=" + dateNotification + ", type=" + type + ", description="
-				+ description + ", status=" + status + "]";
+				+ description + ", seen=" + seen + ", receiver=" + receiver + "]";
+	}
+
+	public Notification(Timestamp dateNotification, String type, String description,
+			String image) {
+		super();
+		
+		this.dateNotification = dateNotification;
+		this.type = type;
+		this.description = description;
+		
+		
 	}
 	
 	

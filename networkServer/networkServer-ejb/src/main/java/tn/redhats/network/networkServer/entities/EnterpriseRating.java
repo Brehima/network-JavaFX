@@ -13,6 +13,7 @@ public class EnterpriseRating implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private double rate;
 	@ManyToOne

@@ -16,10 +16,11 @@ public class Profile implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	protected int id;
 	protected String introduction;
 	protected String photo;
-	@OneToOne(mappedBy="profile")
+	@OneToOne(mappedBy="profile",cascade=CascadeType.REMOVE)
 	protected User user;
 	
 	private static final long serialVersionUID = 1L;

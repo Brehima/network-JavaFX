@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPane1" prefHeight="625.0" prefWidth="904.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.view.home.HomeController">
+    <stylesheets>
+        <URL value="@/styles/home.css" />
+    </stylesheets>
+   <children>
+      <HBox prefHeight="43.0" prefWidth="904.0" style="-fx-background-color: #2D3447;">
+         <children>
+            <TextField promptText="Search">
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+            <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../../../Esprit/Semestre%202/PI%20sem2/698627-icon-111-search-512.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="30.0" top="13.0" />
+               </HBox.margin>
+            </ImageView>
+            <JFXButton fx:id="btnHome" onAction="#goToHome" style="-fx-background-color: #151928;" text="Home" textFill="#a0a2ab">
+               <graphic>
+                  <ImageView fx:id="imageHome" fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../../../../Esprit/Semestre%202/PI%20sem2/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnChat" onAction="#goToChat" style="-fx-background-color: #151928;" text="Chat" textFill="#a0a2ab">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../../../../Esprit/Semestre%202/PI%20sem2/Material_icons-04-33-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton style="-fx-background-color: #151928;" text="Profile" textFill="#a0a2ab">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../../../../Esprit/Semestre%202/PI%20sem2/profile-icon-9.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnNotif" onAction="#goToNotif" style="-fx-background-color: #151928;" text="Notification" textFill="#a0a2ab">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../../../../Esprit/Semestre%202/PI%20sem2/Basic-86-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

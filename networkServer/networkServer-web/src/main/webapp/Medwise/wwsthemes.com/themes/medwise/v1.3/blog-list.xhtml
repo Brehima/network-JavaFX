@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions" lang="en" xml:lang="en"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+<h:head>
+
+	<meta charset="utf-8" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta name="description" content="" />
+
+	<meta name="author" content="" />
+
+
+
+
+
+
+	<!-- Favicon -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+	<!--Bootstrap Framework Version 3.3.7-->
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+	<!--Font Awesome Version 4.6.3 -->
+	<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+	<!-- Medical Icons -->
+	<link href="css/medical-icons.css" type="text/css" rel="stylesheet" />
+
+	<!-- Stylesheets -->
+	<link href="css/vendors.css" type="text/css" rel="stylesheet" />
+	<link href="css/style.css" type="text/css" rel="stylesheet" id="style" />
+	<link href="css/components.css" type="text/css" rel="stylesheet"
+		id="components" />
+
+	<!--Google Fonts-->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Volkhov:400,400i"
+		rel="stylesheet" />
+
+	<!-- Respond.js and HTML shiv provide HTML5 support in older browsers like IE9 and 8 -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</h:head>
+
+<h:body class="blog-list">
+
+
+	<!--  <h:outputScript name="js/jquery.min.js" />
+		<h:outputStylesheet name="css/font-awesome.css" />
+<h:outputStylesheet name="css/jssocials.css" />
+<h:outputStylesheet name="css/jssocials-theme-flat.css" />
+<h:outputScript name="js/jssocials.js" />
+
+	<main>		
+			<br />
+			<b:socialShare shares="twitter,linkedin,facebook,pinterest,whatsapp" disable-block="true" show-count="true" showLabel="true" />
+</main>
+    
+    -->
+	<div class="loader-backdrop">
+		<!-- Loader -->
+
+		<div class="loader"></div>
+	</div>
+
+	<header class="header-1"> <!-- Header Style 1 -->
+
+	<div class="topbar">
+		<!-- Topbar -->
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm-6">
+
+					<ul class="social">
+
+						<li><a href="#"><i class="fa fa-facebook" /></a></li>
+
+						<li><a href="#"><i class="fa fa-twitter" /></a></li>
+
+						<li><a href="#"><i class="fa fa-linkedin" /></a></li>
+
+						<li><a href="#"><i class="fa fa-vimeo" /></a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-6">
+
+					<ul class="contact">
+
+						<li><span>Email Us : </span> network@esprit.tn</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-default"> <!-- Navigation Bar -->
+
+	<div class="container">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#main-navigation"
+				aria-expanded="false">
+				<span class="sr-only">Toggle Menu</span> <i class="fa fa-bars" />
+			</button>
+			<a class="navbar-brand" href="home-version-1.html"> <img
+				src="images/logo-network.png" alt="" width="70" /> <!-- Replace with your Logo -->
+			</a>
+		</div>
+
+
+
+
+		<div class="collapse navbar-collapse" id="main-navigation">
+			<!-- Main Menu -->
+
+			<ul class="nav navbar-nav navbar-right">
+
+
+				<li class="active"><a href="#"> <span><img
+							src="images/icon1.png" alt="" /></span>Home
+				</a></li>
+
+				<li class="mega-sub-menu"><a href="#"> <span><img
+							src="images/icon1.png" alt="" /></span>Profile
+				</a></li>
+				<!-- Mega Menu -->
+
+				<li class="mega-menu-items"><a href="#"> <span><img
+							src="images/icon1.png" alt="" /></span>Message
+				</a></li>
+
+
+
+
+
+
+				<li class="mega-menu-items"><a href="#"> <span><img
+							src="images/icon1.png" alt="" /></span>Notification
+				</a>
+					<ul class="sub-menu">
+						<div class="notification-box active">
+							<div class="nt-title">
+
+								<a href="#" title="">Clear all</a>
+							</div>
+							<div class="nott-list">
+								<div class="notfication-details">
+									<div class="noty-user-img">
+										<img src="images/ny-img1.png" alt="" />
+									</div>
+									<div class="notification-info">
+										<h3>
+											<a href="#" title="">Jassica William</a>
+										</h3>
+										Comment on your project. <span>2 min ago</span>
+									</div>
+									<!--notification-info -->
+								</div>
+
+								<div class="view-all-nots">
+									<a href="#" title="">View All Notification</a>
+								</div>
+							</div>
+							<!--nott-list end-->
+						</div>
+						<!--notification-box end-->
+					</ul></li>
+
+
+				<li class="mega-menu-items"><a href="#"> <span><img
+							src="images/icon1.png" alt="" /></span>Companies
+				</a></li>
+
+			</ul>
+
+
+
+			<ul class="search-class">
+
+				<div class="search-bar">
+					<h:form>
+						<h:inputText type="text" name="search" placeholder="Search..."
+							style="margin-top: 50px;" />
+						<button type="submit">
+							<i class="fa fa-search"></i>
+						</button>
+					</h:form>
+				</div>
+				<!--search-bar end-->
+
+			</ul>
+
+
+
+
+
+
+		</div>
+
+	</div>
+	</nav> </header>
+
+	<div class="page-header">
+
+		<div class="container">
+
+
+			<div class="breadcrumb-2">
+
+				<ul class="breadcrumb">
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h:form enctype="multipart/form-data">
+
+		<div class="container mt-20 mb-20">
+
+			<div class="row">
+
+				<div class="col-sm-8">
+					<div class="blog-box">
+
+						<div class="widget">
+
+							<div class="post-topbar">
+								<div class="user-picy">
+									<img src="images/imen.png" alt="" width="50" height="50"
+										align="left" />
+								</div>
+								<div class="input-group">
+
+									<p:inputTextarea rows="5" cols="70" queryDelay="750"
+										minQueryLength="4" placeholder="Start a post..."
+										value="#{postBean.description}" />
+
+
+									<p:growl id="messages" showDetail="true" />
+									<h:inputFile value="#{postBean.uploadedFile}" mode="advanced"
+										dragDropSupport="false" sizeLimit="100000" fileLimit="3"
+										allowTypes="/(\.|\/)(gif|jpe?g|png)$/" />
+
+									<br /> <br />
+									<!-- <p:fileUpload value="#{postBean.videos}" mode="simple" skinSimple="true"/>
+     <br/> <br/> -->
+
+									<p:commandButton type="Submit" value="Post" ajax="false"
+										action="#{postBean.addPosts}" disabled="false"  class="btn btn-primary" />
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</h:form>
+
+
+
+	<div class="container mt-80 mb-60">
+
+		<div class="row">
+
+
+			<div class="col-sm-8">
+				<ui:repeat value="#{postBean.findAllPosts()}" var="field">
+
+					<div class="blog-box">
+<div class="user-picy">
+									
+								</div>
+						<div class="blog-header">
+						<h3 class="heading">
+								 <h:outputText
+										value="#{field.description}"></h:outputText>
+								
+							</h3>
+							<img src="images/#{field.photos}" class="img-responsive" alt="" />
+							<h:outputText value=""></h:outputText>
+							
+
+							<div class="blog-meta">
+
+								<ul class="meta-list">
+
+									<li class="posted-on">Posted On : <a href="#"> <h:outputText
+												value="#{field.datePost}">
+											</h:outputText>
+									</a>
+									</li>
+
+									<li class="posted-by">By : <a href="#"><h:outputText
+												value="imen">
+											</h:outputText></a></li>
+
+
+
+									
+									<h:form>
+										<div class="ed-opts">
+											<!-- 	<a href="#" title="" class="ed-opts-open"><i class="fa fa-ellipsis-v" /></a> -->
+											<ul class="ed-options active">
+												<h:commandButton value="Edit post" class="btn btn-primary"
+													action="#{postBean.displayPost(field.id)}" ></h:commandButton>
+
+
+												<h:commandButton action="#{postBean.deletePost(field.id)}"
+													class="btn btn-primary" value="Delete"
+													></h:commandButton>
+
+
+<h:commandButton value="like" class="btn btn-primary"
+													action="#{postBean.addLike(field.id)}"></h:commandButton>
+												<h:commandButton value="dislike"
+													class="btn btn-primary btn-danger"
+													action="#{postBean.delete(field.id)}"></h:commandButton>
+
+
+
+											</ul>
+										</div>
+									</h:form>
+
+
+									<h:outputScript name="js/jquery.min.js" />
+									<h:outputStylesheet name="css/font-awesome.css" />
+									<h:outputStylesheet name="css/jssocials.css" />
+									<h:outputStylesheet name="css/jssocials-theme-flat.css" />
+									<h:outputScript name="js/jssocials.js" />
+
+									<main> <br />
+									<b:socialShare
+										shares="twitter,linkedin,facebook,pinterest,whatsapp"
+										disable-block="true" show-count="true" showLabel="false" /> </main>
+								</ul>
+							</div>
+
+						</div>
+
+
+						<hr />
+
+
+
+						<!--  <div class="write-comment">
+                    
+                    <h:form>
+                                                        
+<div class="form-group">
+                                    <textarea class="form-control" id="comment-text" rows="5" placeholder="Write Your Message"/>
+                                 
+                                    <h:outputText value="#{CommentBean.text}"/>
+                                    <h:outputText value="#{CommentBean.dateComment}"></h:outputText>
+                                    <h:outputText value="#{CommentBean.likesNumber}" ></h:outputText>
+                                    <h:outputText value="#{CommentBean.dislikesNumber}" ></h:outputText>
+                                    
+                                    
+                                </div>
+                                </h:form>
+                            </div>
+                            
+
+                                
+<div class="btn-group">
+<h:form>
+<h:commandButton  type="submit" class="btn btn-primary" value="Write Comment"><i class="fa fa-pencil"></i></h:commandButton>
+        </h:form>-->
+
+						
+							<div class="comment-section">
+
+								<div class="post-comment">
+									<div class="cm_img">
+										<img src="images/bg-img4.png" alt="" />
+									</div>
+									<div class="comment_box"></div>
+
+									<div class="comment-btn">
+									<h:form>
+										<h:inputText class="form-control" id="comment-text" rows="4"
+											value="#{postBean.text}" placeholder="Write Your Comment" />
+
+										<h:commandButton type="submit" class="btn btn-primary"
+											value="Write Comment"
+											action="#{postBean.addComments(field)}">
+
+											<h:commandButton value="details" class="btn btn-primary"
+												action="#{postBean.Details(field.id)}"></h:commandButton>
+										</h:commandButton>
+																		</h:form>
+												
+										
+
+
+
+
+
+
+									</div>
+
+
+								</div>
+
+								<div class="plus-ic"></div>
+								<div class="comment-sec">
+									<ul>
+
+										<li>
+											<div class="comment-list">
+												<div class="bg-img"></div>
+												<div class="comment"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+
+							</div>
+
+					</div>
+
+
+
+
+				</ui:repeat>
+			</div>
+
+
+
+
+
+			<div class="col-sm-4">
+				<aside class="sidebar">
+
+				<div class="widget">
+
+					<h4 class="heading">Subscribe to Blog</h4>
+					<h:form class="search">
+						<!-- Search Form -->
+
+						<div class="input-group">
+							<input type="text" class="form-control"
+								placeholder="Your Email Id" /> <span class="input-group-btn">
+								<button class="btn btn-primary" type="button">
+									<i class="fa fa-paper-plane" />
+								</button>
+							</span>
+						</div>
+					</h:form>
+				</div>
+
+				<div class="widget widget-categories">
+
+					<h4 class="heading">Categories</h4>
+
+					<ul class="widget-list">
+
+						<li><a href="blog-list.html">Personality Development</a></li>
+
+						<li><a href="blog-list.html">Techonology</a></li>
+
+						<li><a href="blog-list.html">Life Teachings</a></li>
+
+						<li><a href="blog-list.html">Stress Management</a></li>
+
+						<li><a href="blog-list.html">Career</a></li>
+
+						<li><a href="blog-list.html">Techonology</a></li>
+
+						<li><a href="blog-list.html">Life Teachings</a></li>
+					</ul>
+				</div>
+
+				<div class="widget widget-tags">
+
+					<h4 class="heading">Trending Tags</h4>
+
+					<ul class="widget-list">
+
+						<li><a href="blog-list.html">Healthcare</a></li>
+
+						<li><a href="blog-list.html">Hair</a></li>
+
+						<li><a href="blog-list.html">Human Body</a></li>
+
+						<li><a href="blog-list.html">Psychotherapy</a></li>
+
+						<li><a href="blog-list.html">Stress Management</a></li>
+
+						<li><a href="blog-list.html">Diet Chart</a></li>
+
+						<li><a href="blog-list.html">Water Borne Disease</a></li>
+
+						<li><a href="blog-list.html">Healthcare</a></li>
+
+						<li><a href="blog-list.html">Hair</a></li>
+
+						<li><a href="blog-list.html">Human Body</a></li>
+
+						<li><a href="blog-list.html">Psychotherapy</a></li>
+
+						<li><a href="blog-list.html">Stress Management</a></li>
+					</ul>
+				</div>
+
+				
+				<div class="widget widget-social">
+
+					<h4 class="heading">We're Social</h4>
+
+					<ul class="social social-2x">
+
+						<li><a href="#"><i class=" fa fa-facebook" /></a></li>
+
+						<li><a href="#"><i class=" fa fa-twitter" /></a></li>
+
+						<li><a href="#"><i class=" fa fa-pinterest-p" /></a></li>
+
+						<li><a href="#"><i class=" fa fa-linkedin" /></a></li>
+
+						<li><a href="#"><i class=" fa fa-instagram" /></a></li>
+					</ul>
+				</div>
+
+				</aside>
+					
+				</div>
+				
+			</div>
+
+	</div>
+	<footer class="footer-1"> <!-- Footer Style 1 -->
+
+	<div class="footer-pri pt-20 pb-40">
+		<!-- Primary Footer -->
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm-12">
+
+					<div class="widget widget-message">
+
+						<p>Donate your eyes before you leave this world so that
+							someone else may enjoy its beauty.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-4">
+
+					<div class="widget widget-about">
+						<a href="home-version-1.html"> <img src="images/logo-dark.png"
+							alt="" /></a> <br /> <br />
+
+						<p>A wonderful serenity has taken possession of my entire
+							soul, like these sweet mornings of spring which I enjoy with my
+							whole heart. I am alone, and feel the charm of existence in this
+							spot.</p>
+
+						<hr />
+
+						<ul class="contact">
+
+							<li><i class="fa fa-phone" /> +24 123-456-7878</li>
+
+							<li><i class="fa fa-envelope" /> info@example.com</li>
+						</ul>
+
+						<hr />
+
+						<ul class="social social-2x">
+
+							<li><a href="#"><i class="fa fa-facebook" /></a></li>
+
+							<li><a href="#"><i class="fa fa-twitter" /></a></li>
+
+							<li><a href="#"><i class="fa fa-linkedin" /></a></li>
+
+							<li><a href="#"><i class="fa fa-vimeo" /></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+
+					<div class="widget widget-twitter">
+
+						<h4 class="heading">Latest Tweet</h4>
+
+						<p>
+							<a href="#">#medwise_template</a> the most amazing template for
+							medical use has been released. So, make a purchase now!
+						</p>
+					</div>
+
+					<hr />
+
+					<div class="widget widget-flickr">
+
+						<h4 class="heading">Flickr Stream</h4>
+
+						<ul>
+
+							<li><img src="images/flickr-1.jpg" alt="" /></li>
+
+							<li><img src="images/flickr-2.jpg" alt="" /></li>
+
+							<li><img src="images/flickr-3.jpg" alt="" /></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+
+					<div class="widget widget-blog">
+
+						<h4 class="heading">Hospital Timings</h4>
+
+						<table class="table table-bordered">
+
+							<tbody>
+								<tr>
+
+									<th>Day</th>
+
+									<th>Timing</th>
+								</tr>
+
+								<tr>
+
+									<td>Monday</td>
+
+									<td>0900-1900 hrs</td>
+								</tr>
+
+								<tr>
+
+									<td>Tuesday</td>
+
+									<td>0900-1900 hrs</td>
+								</tr>
+
+								<tr>
+
+									<td>Wednesday</td>
+
+									<td>0900-1900 hrs</td>
+								</tr>
+
+								<tr>
+
+									<td>Thursday</td>
+
+									<td>0900-1900 hrs</td>
+								</tr>
+
+								<tr>
+
+									<td>Friday</td>
+
+									<td>0900-1900 hrs</td>
+								</tr>
+
+								<tr>
+
+									<td>Saturday</td>
+
+									<td>1100-1600 hrs</td>
+								</tr>
+
+								<tr>
+
+									<td>Saturday</td>
+
+									<td>Closed</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-sec">
+		<!-- Secondary Footer -->
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm-12">
+					<span>© 2016 All Rights Reserved. <a
+						href="http://wwsthemes.com/" target="_blank">WWS Themes</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+
+	<div id="back">
+		<i class="fa fa-angle-up" />
+	</div>
+
+	<!-- JQuery Version 3.1.0 -->
+
+
+	<!-- Bootstrap Version 3.3.7 -->
+
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!-- Owl Carousel 2.0.0 -->
+
+	<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+
+	<!-- Custom JS -->
+
+	<script src="js/script.js" type="text/javascript"></script>
+
+	<!-- Mirrored from wwsthemes.com/themes/medwise/v1.3/blog-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 22:28:44 GMT -->
+</h:body>
+</h:html>

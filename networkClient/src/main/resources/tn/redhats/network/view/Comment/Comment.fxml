@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="apComment" prefHeight="677.0" prefWidth="1299.0" style="-fx-background-color: #2D3447;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rn.redhats.network.view.Comment.CommentController">
+    <stylesheets>
+        <URL value="@comment.css" />
+    </stylesheets>
+   <children>
+      <JFXButton id="btnComment" fx:id="btnComment" layoutX="1068.0" layoutY="151.0" onAction="#AddComment" opacity="0.0" prefHeight="70.0" prefWidth="75.0" text="Add" />
+      <ImageView fitHeight="41.0" fitWidth="57.0" layoutX="1085.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../consultMsg/add-comment-512.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="anchropaneA" layoutX="399.0" layoutY="335.0" prefHeight="265.0" prefWidth="776.0" style="-fx-background-color: #2D3447;">
+         <children>
+            <ScrollPane fx:id="scrollPaneComment" layoutX="1.0" layoutY="-6.0" prefHeight="271.0" prefWidth="768.0" style="-fx-background-color: #FEFEFE;" />
+         </children>
+      </AnchorPane>
+      <JFXTextArea fx:id="taComment" layoutX="481.0" layoutY="125.0" maxWidth="613.0" minWidth="276.0" prefHeight="148.0" prefWidth="606.0" promptText="Write your comment..." style="-fx-background-color: white;" />
+      <JFXTextField />
+      <JFXButton fx:id="btnBack" layoutX="1206.0" layoutY="14.0" onAction="#back" opacity="0.0" prefHeight="70.0" prefWidth="52.0" style="-fx-background-color: #151928;" text="Back" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font></JFXButton>
+      <Text layoutX="1058.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imen Haouala" wrappingWidth="95.9765625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

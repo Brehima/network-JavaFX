@@ -12,8 +12,18 @@
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
+	
 
 	<dependencies>
+	
+	<dependency>
+    <groupId>net.bootsfaces</groupId>
+    <artifactId>bootsfaces</artifactId>
+    <version>1.4.1</version>
+    <scope>compile</scope>
+</dependency>
+	
+
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -21,6 +31,7 @@
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
+			<version>7.0</version>
 		</dependency>
 		<dependency>
 			<groupId>tn.redhats.network.networkServer</groupId>
