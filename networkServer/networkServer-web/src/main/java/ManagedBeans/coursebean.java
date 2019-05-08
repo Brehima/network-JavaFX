@@ -125,19 +125,17 @@ public class coursebean implements Serializable{
 
 	
 	public void modifier (Course c) {
-		c.setId(c.getId());
-		c.setCourseTitle(c.getCourseTitle());
-		c.setDescription(c.getDescription());
-		c.setDomain(c.getDomain());
-		c.setImage_url(c.getImage_url());
-		c.setPrice(c.getPrice());
-		c.setRate(c.getRate());
-		c.setValidationStatus(c.getValidationStatus());
-		co.mod_course(c);
+		this.setId(c.getId());
+		this.setCourseTitle(c.getCourseTitle());
+		this.setDescription(c.getDescription());
+		this.setImage_url(c.getImage_url());
+		this.setPrice(c.getPrice());
+		this.setValidationStatus(c.getValidationStatus());
 	}
 	
 	public void update_course(){
 		co.mod_course(new Course(id, courseTitle, description, price, validationStatus, image_url));
+		
 		}
 	
 	
