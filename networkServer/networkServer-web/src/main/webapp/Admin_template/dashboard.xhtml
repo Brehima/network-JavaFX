@@ -1490,12 +1490,12 @@
                
 <div class="ui-g-12 ui-xl-6">
 <div id="j_idt68" class="ui-panel ui-widget ui-widget-content ui-corner-all weekly-progress" data-widget="widget_j_idt68">
-<div id="j_idt68_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Clients Placement</span></div>
+<div id="j_idt68_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Courses Rating ratio</span></div>
 <div id="j_idt68_content" class="ui-panel-content ui-widget-content">
 	<div>
 				
     
-      <h:inputHidden type="number" value="#{bean.entreprises()}" id="v3"/>
+      <h:inputHidden type="number" value="#{bean.courses ()}" id="v3"/>
       <h:inputHidden type="number" value="#{bean.users()}" id="v4"/>
       
       
@@ -1509,12 +1509,12 @@
 		var v4=parseInt(document.getElementById("v4").value);
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Enterprises',     3],
+          ['Courses',     v3],
           ['Users',     5],
         ]);
 
         var options = {
-          title: 'Users / Enterprises placement'
+          title: 'Courses and Rating Ratio placement'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
