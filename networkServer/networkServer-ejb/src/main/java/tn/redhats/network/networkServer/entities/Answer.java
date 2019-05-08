@@ -16,9 +16,18 @@ public class Answer implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
+	public Answer(String answer) {
+		super();
+		this.answer = answer;
+	}
 	private String answer;
 	@OneToOne(mappedBy="answer")
 	private Question question;
+	public Answer(int id, String answer) {
+		super();
+		this.id = id;
+		this.answer = answer;
+	}
 	private static final long serialVersionUID = 1L;
 
 	public Answer() {

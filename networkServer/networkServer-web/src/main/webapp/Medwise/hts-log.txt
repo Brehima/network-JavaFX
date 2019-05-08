@@ -1,0 +1,13 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 14 Mar 2018 23:24:04 at http://wwsthemes.com/themes/medwise/v1.3/home-version-1.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "fr, en, *" http://wwsthemes.com/themes/medwise/v1.3/home-version-1.html -O1 "C:\Mes Sites Web\WEB" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+23:28:53	Error: 	"Not Found" (404) at link wwsthemes.com/themes/medwise/v1.3/css/owl.video.play.png (from wwsthemes.com/themes/medwise/v1.3/css/vendors.css)
+23:28:59	Error: 	"Not Found" (404) at link wwsthemes.com/themes/medwise/v1.3/images/gallery-4.jpg (from wwsthemes.com/themes/medwise/v1.3/gallery.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 55 seconds : 218 links scanned, 215 files written (9578579 bytes overall) [7381865 bytes received at 25023 bytes/sec], 2991535 bytes transferred using HTTP compression in 93 files, ratio 22%, 6.4 requests per connection
+(2 errors, 0 warnings, 0 messages)

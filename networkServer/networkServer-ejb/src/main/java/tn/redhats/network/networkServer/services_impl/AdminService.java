@@ -1,11 +1,12 @@
 package tn.redhats.network.networkServer.services_impl;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 import tn.redhats.network.networkServer.services.AdminServiceLocal;
 import tn.redhats.network.networkServer.services.AdminServiceRemote;
 
-
+@LocalBean
 @Stateless
 public class AdminService implements AdminServiceLocal, AdminServiceRemote{
 	@Override

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.jobOffer.AddQuestController">
+   <children>
+      <JFXTabPane>
+         <tabs>
+            <Tab text="Add Question">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="373.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@1.jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXTextArea fx:id="textarea" focusColor="WHITE" layoutX="68.0" layoutY="102.0" onKeyReleased="#RedFunction" prefHeight="101.0" prefWidth="464.0" style="-fx-text-fill: white;" unFocusColor="#a0a2ab" />
+                        <Label layoutX="178.0" layoutY="52.0" text="Type a new question below:" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+                        <JFXButton fx:id="addbtn" layoutX="373.0" layoutY="259.0" onAction="#ADDONE" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #151928;" text="Add Question" textFill="#a0a2ab" />
+                        <JFXButton fx:id="addbtn1" layoutX="138.0" layoutY="259.0" onAction="#Lists" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #151928;" text="Show List" textFill="#a0a2ab" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</StackPane>

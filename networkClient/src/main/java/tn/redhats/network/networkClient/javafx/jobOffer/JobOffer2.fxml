@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.jobOffer.JobOffer2Controller">
+   <children>
+      <JFXTabPane>
+         <tabs>
+            <Tab text="General Informations">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="367.0" fitWidth="606.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="64.0" layoutY="87.0" prefHeight="38.0" prefWidth="140.0" text="Job Description" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="75.0" layoutY="203.0" prefHeight="38.0" prefWidth="140.0" text="Job Location" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="144.0" prefHeight="38.0" prefWidth="162.0" text="Job Expertise Level" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="195.0" layoutY="277.0" onAction="#Back" prefHeight="45.0" prefWidth="98.0" style="-fx-background-color: #151928;" text="Back" textFill="#a0a2ab">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="descTextId" layoutX="268.0" layoutY="71.0" prefHeight="70.0" prefWidth="319.0" text="desc" textFill="WHITE" />
+                        <Label fx:id="ExperTextId" layoutX="268.0" layoutY="144.0" prefHeight="38.0" prefWidth="140.0" text="desc" textFill="WHITE" />
+                        <Label fx:id="LocatTextId" layoutX="268.0" layoutY="203.0" prefHeight="38.0" prefWidth="140.0" text="desc" textFill="WHITE" />
+                        <JFXButton layoutX="310.0" layoutY="277.0" prefHeight="45.0" prefWidth="98.0" style="-fx-background-color: #151928;" text="Post" textFill="#a0a2ab">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</StackPane>

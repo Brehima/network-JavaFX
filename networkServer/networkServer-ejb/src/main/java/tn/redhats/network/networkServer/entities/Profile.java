@@ -24,7 +24,7 @@ public class Profile implements Serializable {
 	protected String introduction;
 	protected String photo;
 	@Column
-	@ElementCollection(targetClass=User.class)
+	@ElementCollection(targetClass=User.class,fetch=FetchType.EAGER)
 	@OneToMany (mappedBy="profile")
 	protected List<User> users;
 	private static final long serialVersionUID = 1L;

@@ -2,8 +2,10 @@ package tn.redhats.network.networkServer.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.LocalBean;
 import javax.persistence.*;
 
 /**
@@ -21,15 +23,41 @@ public class JobOffer implements Serializable {
 	private String description;
 	private String expertiseLevel;
 	private String location;
+	
+	public JobOffer(String description, String expertiseLevel, String location, List<JobApplication> jobApplication) {
+		super();
+		this.description = description;
+		this.expertiseLevel = expertiseLevel;
+		this.location = location;
+		this.jobApplication = jobApplication;
+	}
+	public JobOffer(String description, String expertiseLevel, String location) {
+		super();
+		this.description = description;
+		this.expertiseLevel = expertiseLevel;
+		this.location = location;
+	}
+	public JobOffer(int id, String description, String expertiseLevel, String location) {
+		super();
+		this.id = id;
+		this.description = description;
+		this.expertiseLevel = expertiseLevel;
+		this.location = location;
+	}
 	@OneToMany(mappedBy="jobOffer")
 	@Column
-	@ElementCollection(targetClass=JobApplication.class)
+	@ElementCollection(targetClass=JobApplication.class,fetch=FetchType.EAGER)
 	private List<JobApplication> jobApplication;
 	private static final long serialVersionUID = 1L;
 
 	public JobOffer() {
 		super();
+		 jobApplication = new ArrayList< JobApplication>();
 	}   
+	public JobOffer(int id) {
+		// TODO Auto-generated constructor stub
+		this.id = id;
+	}
 	public int getId() {
 		return this.id;
 	}
@@ -67,7 +95,7 @@ public class JobOffer implements Serializable {
 	@Override
 	public String toString() {
 		return "JobOffer [id=" + id + ", description=" + description + ", expertiseLevel=" + expertiseLevel
-				+ ", location=" + location + ", jobApplication=" + jobApplication + "]";
+				+ ", location=" + location;
 	}
 	
 	

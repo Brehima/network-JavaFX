@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.lang.String;
 import java.util.List;
 
+import javax.ejb.LocalBean;
 import javax.persistence.*;
 
 /**
@@ -11,7 +12,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-
+@LocalBean
 public class OnlineTest implements Serializable {
 
 	   
@@ -20,11 +21,20 @@ public class OnlineTest implements Serializable {
 	private int id;
 	private String testType;
 	private double score;
+	public OnlineTest(int id, String testType, double score) {
+		super();
+		this.id = id;
+		this.testType = testType;
+		this.score = score;
+	}
+	public OnlineTest(String testType, double score) {
+		super();
+		this.testType = testType;
+		this.score = score;
+	}
 	@OneToOne
 	private Interview interview;
-	@OneToMany
-	@Column
-	@ElementCollection(targetClass=Question.class)
+	@OneToMany(mappedBy = "test", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	private List<Question> questions;
 	@OneToOne
 	private JobApplication jobApplication;
