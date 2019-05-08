@@ -68,6 +68,18 @@ public class LikesService implements LikesServiceLocal,LikesServiceRemote{
 		return x;
 	}
 	
+	@Override
+	public long ratings () 
+	
+	{
+
+		Query query = em.createQuery("SELECT COUNT(c.id) AS NUMBER FROM CourseRating c");
+		Object res =  query.getSingleResult();
+		long x = ((Number) res).intValue();
+		print ("****************",x) ; 
+		return x;
+	}
+	
 
 	
 	

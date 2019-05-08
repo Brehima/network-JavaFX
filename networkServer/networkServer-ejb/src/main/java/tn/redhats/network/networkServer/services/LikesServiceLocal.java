@@ -10,6 +10,8 @@ public interface LikesServiceLocal {
 
 	public long daily_posts();
 
+	public long ratings();
+
 
 
 }

@@ -123,6 +123,13 @@ public class allBean {
 		return (""+x);
 	}
 	
+	public long rating()
+	{
+		int x = (int)like.ratings();
+		System.out.print(x);
+		return (x);
+	}
+	
 	
 	
 	

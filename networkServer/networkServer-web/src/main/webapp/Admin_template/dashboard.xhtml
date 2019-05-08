@@ -702,7 +702,7 @@
         ]);
 
         var options = {
-          title: 'Users / Enterprises placement'
+          title: 'Users / Enterprises placement',
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -734,13 +734,13 @@
 
 
 									<h:inputHidden type="number" value="#{bean.courses ()}" id="v3" />
-									<h:inputHidden type="number" value="#{bean.users()}" id="v4" />
+									<h:inputHidden type="number" value="#{bean.rating()}" id="v4" />
 
 
 									<script type="text/javascript"
 										src="https://www.gstatic.com/charts/loader.js"></script>
 									<script type="text/javascript">#{bean.entreprises ()}
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load('current', {'packages':['corechart']});#{bean.rating()}
       google.charts.setOnLoadCallback(drawChart);#{bean.entreprises ()}
       #{bean.entreprises ()}
       function drawChart() {
@@ -749,11 +749,12 @@
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
           ['Courses',     v3],
-          ['Users',     5],
+          ['Ratings',     v4],
         ]);
 
         var options = {
-          title: 'Courses and Rating Ratio place'
+          title: 'Courses and Rating Ratio placements',
+        pieHole: 0.6
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
