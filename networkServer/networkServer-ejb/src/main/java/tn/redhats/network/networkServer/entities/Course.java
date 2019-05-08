@@ -17,6 +17,16 @@ import javax.persistence.*;
 public class Course implements Serializable {
 
 	   
+	public Course(int id, String courseTitle, String description, double price, String validationStatus,
+			String image_url) {
+		super();
+		this.id = id;
+		this.courseTitle = courseTitle;
+		this.description = description;
+		this.price = price;
+		this.validationStatus = validationStatus;
+		this.image_url = image_url;
+	}
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;

@@ -35,7 +35,7 @@
         <div class="layout-wrapper layout-menu-static ">
 
     <div class="layout-topbar"><a href="dashboard.html" class="logo-container"><img id="j_idt14" src="javax.faces.resource/images/harmony-logo.png7d3b.png?ln=harmony-layout" alt="" />
-            <span class="app-name">HARMONY</span></a>
+            <span class="app-name">NetWork</span></a>
 
         <div class="topbar-content">
             <a href="#" id="topbar-sidebar-button">
@@ -97,8 +97,8 @@
             <a id="topbar-right-panel-button" href="#">
                 <i class="fa fa-ellipsis-v"></i>
             </a>
-            <a id="topbar-profile-menu-button" href="#"><img id="j_idt17" src="javax.faces.resource/images/avatar.png7d3b.png?ln=harmony-layout" alt="" class="topbar-profile" />
-                <span>Kate Winston</span>
+            <a id="topbar-profile-menu-button" href="#">
+                <span>Administrator</span>
             </a>
 
             <ul id="topbar-profile-menu">
@@ -1177,32 +1177,38 @@
              <h:dataTable id="CoursesTable" value="#{coursebean.return_course()}" var="course" border="1">
             <h:column>
                 <f:facet name="header">Id</f:facet>
-                <h:outputText value="#{course.id}" />
+                <h:inputText value="#{course.id}"></h:inputText>
             </h:column>
             <h:column>
                 <f:facet name="header">Title</f:facet>
-                <h:outputText value="#{course.courseTitle}" />
+                <h:inputText value="#{course.courseTitle}"></h:inputText>
             </h:column>
             <h:column>
-                <f:facet name="header">Domain</f:facet>
-                <h:outputText value="#{course.getDomain()}" />
+                <f:facet name="header">Description</f:facet>
+                <h:inputText value="#{course.description}"></h:inputText>
             </h:column>
+
             <h:column>
                 <f:facet name="header">Price</f:facet>
-                <h:outputText value="#{course.price}" />
+                <h:inputText value="#{course.price}"></h:inputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">URL</f:facet>
+                <h:inputText value="#{course.image_url}"></h:inputText>
             </h:column>
             <h:column>
                 <f:facet name="header">Status</f:facet>
-                <h:outputText value="#{course.validationStatus}" />
+                <h:inputText value="#{course.validationStatus}"></h:inputText>
             </h:column>
             <h:column>
-                <f:facet name="header">Update</f:facet>
-                <h:commandButton action="#{coursebean.mod_course(course)}" value="Update" class="btn btn-primary" />
-            </h:column>
+            <f:facet name="header">Update</f:facet>						
+			<h:commandButton value="Update" action="#{coursebean.modifier(course)}" />					
+			</h:column>
             <h:column>
-                <f:facet name="header">Deletes</f:facet>
+                <f:facet name="header">Delete</f:facet>
                 <h:commandButton action="#{coursebean.del_course(course)}" value="Delete" class="btn btn-danger" />
             </h:column>
+          
         </h:dataTable>
          </h:form>       
             </div>
@@ -1213,7 +1219,7 @@
                 </div>
 
     <div class="layout-footer"><a href="dashboard.html" class="logo-container"><img id="j_idt53" src="javax.faces.resource/images/harmony-logo.png7d3b.png?ln=harmony-layout" alt="" />
-            <span class="app-name">NETWORK</span></a>
+            <span class="app-name">NetWork</span></a>
 
         <div class="footer-icons">
             <ul>
