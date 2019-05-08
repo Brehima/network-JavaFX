@@ -52,8 +52,17 @@ public class Interview implements Serializable {
 		return this.onlineTest;
 	}
 
+	public Interview(int id) {
+		super();
+		this.id = id;
+	}
 	public void setOnlineTest(OnlineTest onlineTest) {
 		this.onlineTest = onlineTest;
+	}
+	public Interview(Timestamp interviewDate, String status) {
+		super();
+		this.interviewDate = interviewDate;
+		this.status = status;
 	}
 	@Override
 	public String toString() {

@@ -13,12 +13,25 @@ import javax.persistence.*;
 public class Question implements Serializable {
 
 	   
+	public Question(String question) {
+		super();
+		this.question = question;
+	}
+	public Question(int id, String question) {
+		super();
+		this.id = id;
+		this.question = question;
+	}
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String question;
-	@OneToOne
+	@OneToOne(cascade=CascadeType.REMOVE)
 	private Answer answer;
+	private String choice1;
+	private String choice2;
+	@ManyToOne
+	private OnlineTest test;
 	private static final long serialVersionUID = 1L;
 
 	public Question() {
@@ -43,6 +56,18 @@ public class Question implements Serializable {
 	}
 	public void setAnswer(Answer answer) {
 		this.answer = answer;
+	}
+	public String getChoice1() {
+		return choice1;
+	}
+	public void setChoice1(String choice1) {
+		this.choice1 = choice1;
+	}
+	public String getChoice2() {
+		return choice2;
+	}
+	public void setChoice2(String choice2) {
+		this.choice2 = choice2;
 	}
 	@Override
 	public String toString() {

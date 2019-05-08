@@ -20,7 +20,7 @@ public class JobApplication implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="idJobOffer", referencedColumnName="id", insertable=false, updatable=false)
 	private JobOffer jobOffer;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.REMOVE)
 	@JoinColumn(name="idUser", referencedColumnName="id", insertable=false, updatable=false)
 	private User user;
 	private static final long serialVersionUID = 1L;

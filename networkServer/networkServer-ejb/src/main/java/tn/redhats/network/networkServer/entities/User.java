@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.lang.String;
 import java.util.List;
 
+import javax.ejb.LocalBean;
 import javax.persistence.*;
 
 import tn.redhats.network.networkServer.enumeration.Role;
@@ -15,7 +16,7 @@ import tn.redhats.network.networkServer.enumeration.Role;
  *
  */
 @Entity
-
+@LocalBean
 public class User implements Serializable {
 
 	   
@@ -33,11 +34,11 @@ public class User implements Serializable {
 	private Role role;
 	@OneToMany(mappedBy="user")
 	@Column
-	@ElementCollection(targetClass=CourseEnrollement.class)
+	@ElementCollection(targetClass=CourseEnrollement.class,fetch=FetchType.EAGER)
 	private List<CourseEnrollement> courses;
 	@OneToMany(mappedBy="user")
 	@Column
-	@ElementCollection(targetClass=JobApplication.class)
+	@ElementCollection(targetClass=JobApplication.class,fetch=FetchType.EAGER)
 	private List<JobApplication> jobApplication;
 	
 	@ManyToOne
@@ -51,7 +52,7 @@ public class User implements Serializable {
 	
 	@OneToMany
 	@Column
-	@ElementCollection(targetClass=Message.class)
+	@ElementCollection(targetClass=Message.class,fetch=FetchType.EAGER)
 	private List<Message> messages;
 	
 	private static final long serialVersionUID = 1L;

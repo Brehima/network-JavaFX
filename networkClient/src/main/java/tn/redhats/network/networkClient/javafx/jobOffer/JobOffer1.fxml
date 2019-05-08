@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="Recherche" prefHeight="515.0" prefWidth="698.0" style="-fx-background-color: #353b48;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.jobOffer.JobOffer1Controller">
+   <children>
+      <StackPane prefHeight="516.0" prefWidth="698.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXTabPane prefHeight="515.0" prefWidth="698.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Job List">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="487.0" fitWidth="708.0" layoutX="-8.0" layoutY="-3.0" opacity="0.4" pickOnBounds="true">
+                           <image>
+                              <Image url="@1.jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="Delete" layoutX="230.0" layoutY="385.0" onAction="#DeleteAction" prefHeight="47.0" prefWidth="99.0" style="-fx-background-color: #151928;" text="Delete" textFill="#a0a2ab" />
+                        <TextField fx:id="Location" promptText="location" visible="false" />
+                        <TextField fx:id="ExpertiseLevel" promptText="ExpertiseLevel" visible="false" />
+                        <TextField fx:id="Description" promptText="description" visible="false" />
+                        <TableView fx:id="table" editable="true" layoutX="71.0" layoutY="91.0" prefHeight="268.0" prefWidth="551.0" style="-fx-background-color: 4AAAC4;">
+                           <columns>
+                              <TableColumn fx:id="id" prefWidth="37.0" text="ID" visible="false" />
+                              <TableColumn fx:id="descriptionT" onEditCommit="#changeCellEvent" prefWidth="332.0" text="Description" />
+                              <TableColumn fx:id="expertiseLevelT" onEditCommit="#changeCellEvent1" prefWidth="138.0" text="Expertise Level/Skills" />
+                              <TableColumn fx:id="locationT" onEditCommit="#changeCellEvent2" text="Location" />
+                           </columns>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </TableView>
+                        <JFXButton fx:id="next" layoutX="366.0" layoutY="385.0" onAction="#loadStep2Code" prefHeight="47.0" prefWidth="99.0" style="-fx-background-color: #151928;" text="SELECT" textFill="#a0a2ab" />
+                        <Label layoutX="245.0" layoutY="36.0" text="List of all Job Offers" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+
+   </children>
+</AnchorPane>
