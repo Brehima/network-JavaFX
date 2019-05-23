@@ -4,7 +4,13 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui"
 	template="/templateClient/template.xhtml">
- 	<ui:define name="title">SignIn</ui:define>    
+ 	<ui:define name="title">SignIn</ui:define>
+     <ui:define name="navigation">
+		  <li class="active"><a href="profile.jsf">Profile</a> </li>		
+		  <li ><a href="findjob.jsf">Find Jobs</a> </li>		
+		
+		  		
+	 </ui:define>
     <ui:define name="content">
 	 <div class="doctor-single mt-80 mb-60">
 		
@@ -72,25 +78,23 @@
 			 <p:tabView dynamic="true" cache="true" effect="fold" >
 		        <p:tab title="Contacts" >
 		            <h:panelGrid  >
-		                
-					      <p:selectOneListbox id="advanced" value="#{signInBean.connectedUser.users}" var="user" filter="true" filterMatchMode="contains">
-					            <f:selectItems value="#{signInBean.connectedUser.users}" var="u" itemLabel="display" itemValue="#{u}" />
-					           
-					            <p:column>
+		                  <p:dataTable var="user" value="#{signInBean.friends}" >
+		                  	<p:column headerText="">
 					                <img src="images/users_profile/#{signInBean.setPhotoProfile(user.profile.photo)}" style="width: 70px;height: 70px"/>
 					              
-					            </p:column>
+					         </p:column>
 					             
-					            <p:column>
+					         <p:column>
 					                <h:outputText value="#{user.firstName} " /> <h:outputText value="#{ user.lastName}"/>
 					                 <h:outputText value="#{signInBean .setCrazyMail(user.email)} " style="display:none"/>
-					             </p:column>
-					              <p:column>
-					                <p:commandButton value="show"  action="#{signInBean.showOtherProfile() }"  icon="pi pi-save" />
-					            </p:column>
-					             
-				
-					       </p:selectOneListbox>
+					         </p:column>
+					         <p:column>
+					                <p:commandButton value="show profile"  action="#{signInBean.showOtherProfile() }"  icon="pi pi-save" />
+					          </p:column>
+		                  	
+		                  </p:dataTable>
+		                  
+					      
 		            </h:panelGrid>
 		        </p:tab>
 		        <p:tab title="Followed Enterprise" class="tab-pane">
@@ -114,6 +118,27 @@
 					            </p:column>
         				 </p:autoComplete>
         				 
+		            </h:panelGrid>
+		            <h:panelGrid>
+		            
+		            		<p:dataTable var="prof" value="#{signInBean.followedEnterprise}" >
+		                  	<p:column headerText="">
+					                <img src="images/users_profile/#{signInBean.setPhotoProfile(prof.photo)}" style="width: 70px;height: 70px"/>
+					              
+					         </p:column>
+					             
+					         <p:column>
+					                <h:outputText value="#{prof.website} " />
+					               
+					         </p:column>
+					         <p:column>
+					           
+					                <p:commandButton value="show profile"  action="#{signInBean.showEnterprise(prof.website) }"  icon="pi pi-save" />
+					            
+					          </p:column>
+		                  	
+		                  </p:dataTable>
+		                  
 		            </h:panelGrid>
 		        </p:tab>
     			</p:tabView>

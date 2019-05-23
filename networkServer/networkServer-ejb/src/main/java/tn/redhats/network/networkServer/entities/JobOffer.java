@@ -69,6 +69,18 @@ public class JobOffer implements Serializable {
 		return "JobOffer [id=" + id + ", description=" + description + ", expertiseLevel=" + expertiseLevel
 				+ ", location=" + location + ", jobApplication=" + jobApplication + "]";
 	}
+	@Override
+	public boolean equals(Object o)
+	{
+		   if (o == this) {
+			      return true;
+			    }
+			    if (!(o instanceof JobOffer)) {
+			      return false;
+			    }
+			    JobOffer job = (JobOffer)o;
+			    return job.description.equals(description) ;
+	}
 	
 	
    

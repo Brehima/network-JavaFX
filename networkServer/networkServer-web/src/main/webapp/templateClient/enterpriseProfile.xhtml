@@ -33,15 +33,16 @@
 		
 		<h2 class="doctor-name"><h:outputText value="#{signInBean.enterprise.website}"/> </h2>
 		<div class="doctor-desig">
-		    <p:growl id="growl" life="2000" />
-		    <p:commandButton action="#{signInBean.followEnterprise()}" id="nonAjax" update="growl" value="follow"/>
-		
+		<h:form>
+		   <p:growl id="growl" life="2000" />
+		    <p:commandButton action="#{signInBean.followEnterprise(signInBean.enterprise.website)}" id="iconOnly" update="growl" value="#{signInBean.booleanString}" />
+		</h:form>
 		</div>
 		
 		
 		
 		<hr class="hr-1 left" />
-		 <h:outputText value="#{signInBean.watchedProfile.profile.introduction}" required="true" label="text" />
+		 <h:outputText value="#{signInBean.enterprise.introduction }" required="true" label="text" />
 		</div>
 		</div>
 		</div>
@@ -50,6 +51,14 @@
 		
 
 		
+		<div class="row">
+		
+		<div class="col-sm-12 mt-60">
+		
+		
+		
+		</div>
+		</div>
 		
 		</div>
 		

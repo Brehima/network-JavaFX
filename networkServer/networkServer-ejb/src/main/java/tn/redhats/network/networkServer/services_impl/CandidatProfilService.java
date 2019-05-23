@@ -292,6 +292,14 @@ public class CandidatProfilService implements CandidatProfilServiceLocal,Candida
 
 		return companies;
 	}
+	public List<JobOffer> findJobs(String keyword)
+	{
+		Query query = em.createQuery("SELECT j from  JobOffer j "+"where j.expertiseLevel like '%"+keyword+"%'");
+		//TypedQuery<User> quer = em.createQuery("SELECT u FROM User u where u.username= :username",User.class);
+		List<JobOffer> jobs =(List<JobOffer>) query.getResultList();
+
+		return jobs;
+	}
 /*
  * private String firstName;
 	private String lastName;
