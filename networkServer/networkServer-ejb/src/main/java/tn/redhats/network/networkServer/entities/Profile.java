@@ -32,7 +32,19 @@ public class Profile implements Serializable {
 	public Profile() {
 		super();
 		users= new ArrayList<User>();
-	}   
+	}  
+	public Profile(String introduction) {
+		super();
+		this.introduction = introduction;
+	}
+	
+	public Profile(String introduction, String photo, List<User> users) {
+		super();
+		users = new ArrayList<User>();
+		this.introduction = introduction;
+		this.photo = photo;
+		this.users = users;
+	}
 	public int getId() {
 		return this.id;
 	}

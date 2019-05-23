@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneID" prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.enterpriseProfile.CreateEventController">
+   <children>
+      <JFXButton fx:id="backButton" layoutX="22.0" layoutY="23.0" onAction="#clicBack" text="Back" textFill="#a0a2ab">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@left-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="395.0" layoutY="25.0" text="Post a new event" textFill="#ef3a23">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="74.0" fitWidth="79.0" layoutX="856.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@calendar.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="titleTextField" focusColor="WHITE" layoutX="329.0" layoutY="204.0" onKeyReleased="#eventTitleKeyReleased" prefHeight="50.0" prefWidth="292.0" promptText="   Event title" unFocusColor="#a0a2ab" />
+      <JFXTextArea fx:id="descriptionTextArea" focusColor="WHITE" layoutX="329.0" layoutY="316.0" onKeyReleased="#desriptionKeyReleased" prefHeight="91.0" prefWidth="292.0" promptText="   Description" unFocusColor="#a0a2ab" />
+      <JFXTextField fx:id="locationTextField" focusColor="WHITE" layoutX="329.0" layoutY="461.0" onKeyReleased="#locationKeyReleased" prefHeight="50.0" prefWidth="292.0" promptText="   Location" unFocusColor="#a0a2ab" />
+      <DatePicker fx:id="datePickerRDV" layoutX="327.0" layoutY="130.0" prefHeight="31.0" prefWidth="196.0" />
+      <JFXComboBox fx:id="hourMinCombobox" focusColor="WHITE" layoutX="531.0" layoutY="130.0" prefHeight="31.0" prefWidth="90.0" promptText="   Time" stylesheets="@style.css" />
+      <JFXButton fx:id="postButton" layoutX="430.0" layoutY="584.0" onAction="#clicPost" opacity="0.0" style="-fx-background-color: #151928;" text="Post event" textFill="#a0a2ab" />
+      <Label fx:id="titleLabel" layoutX="330.0" layoutY="266.0" opacity="0.0" text="Label" />
+      <Label fx:id="descriptionLabel" layoutX="330.0" layoutY="419.0" opacity="0.0" text="Label" />
+      <Label fx:id="locationLabel" layoutX="330.0" layoutY="522.0" opacity="0.0" text="Label" />
+   </children>
+</AnchorPane>

@@ -20,7 +20,7 @@ public class Event implements Serializable {
 	private int id;
 	private String title;
 	private String description;
-	private Timestamp dateEvent;
+	private String dateEvent;
 	private String location;
 	@ManyToOne
 	private EnterpriseProfile enterprise;
@@ -50,13 +50,16 @@ public class Event implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}   
-	public Timestamp getDateEvent() {
-		return this.dateEvent;
-	}
+	
 
-	public void setDateEvent(Timestamp dateEvent) {
+	
+	
+	public String getDateEvent() {
+		return dateEvent;
+	}
+	public void setDateEvent(String dateEvent) {
 		this.dateEvent = dateEvent;
-	}   
+	}
 	public String getLocation() {
 		return this.location;
 	}

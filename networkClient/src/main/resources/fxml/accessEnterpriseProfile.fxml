@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneID" prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.redhats.network.networkClient.javafx.enterpriseProfile.AccessEnterpriseProfileController">
+   <children>
+      <ImageView fx:id="logo" fitHeight="125.0" fitWidth="166.0" layoutX="770.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="EnterpriseName" layoutX="279.0" layoutY="51.0" text="Label" textFill="#ef3a23" underline="true">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="ManageProfileButton" layoutX="372.0" layoutY="440.0" onAction="#clicManageProfile" style="-fx-background-color: #151928;" text="Manage profile" textFill="#a0a2ab" />
+      <ImageView fx:id="manageImageView" fitHeight="116.0" fitWidth="106.0" layoutX="379.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@gears.png" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="650.0" prefWidth="250.0" style="-fx-background-color: #151928;">
+         <children>
+            <HBox prefHeight="141.0" prefWidth="250.0" style="-fx-background-color: #ef3a23;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" prefHeight="167.0" prefWidth="250.0" text="Navigation" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@followers.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="80.0" prefWidth="169.0" text="Followers" textFill="#a0a2ab">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@messenger.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="81.0" prefWidth="169.0" text="Messages" textFill="#a0a2ab">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@calendar.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="89.0" prefWidth="172.0" text="Events" textFill="#a0a2ab">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@blog.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="80.0" prefWidth="169.0" text="Posts" textFill="#a0a2ab">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="106.0" fitWidth="97.0" layoutX="564.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@calendar.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="eventsButton" layoutX="552.0" layoutY="440.0" onAction="#clicEvents" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #151928;" text="Events" textFill="#a0a2ab" />
+      <JFXButton fx:id="signoutButton" layoutX="845.0" layoutY="596.0" onAction="#clicSignOut" style="-fx-background-color: #151928;" text="Sign out" textFill="#a0a2ab" />
+   </children>
+</AnchorPane>

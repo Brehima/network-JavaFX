@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import tn.redhats.network.networkServer.enumeration.AccountStatus;
 import tn.redhats.network.networkServer.enumeration.Role;
 
 
@@ -53,6 +54,10 @@ public class User implements Serializable {
 	@Column
 	@ElementCollection(targetClass=Message.class)
 	private List<Message> messages;
+	
+	@Enumerated(EnumType.STRING)
+	private AccountStatus accountStatus;
+	private int loginAttempts;
 	
 	private static final long serialVersionUID = 1L;
 
@@ -142,6 +147,18 @@ public class User implements Serializable {
 	}
 	public void setMessages(List<Message> messages) {
 		this.messages = messages;
+	}
+	public AccountStatus getAccountStatus() {
+		return accountStatus;
+	}
+	public void setAccountStatus(AccountStatus accountStatus) {
+		this.accountStatus = accountStatus;
+	}
+	public int getLoginAttempts() {
+		return loginAttempts;
+	}
+	public void setLoginAttempts(int loginAttempts) {
+		this.loginAttempts = loginAttempts;
 	}
 	@Override
 	public String toString() {
